@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Nhazi",
+  "swd.screen.config.label.save_world_to": "Chekwaa ụwa na:",
+  "swd.screen.config.label.auto_download": "Budata na akpaghị aka:",
+  "swd.screen.config.label.include_entities": "Gụnyere ihe ndị dị ndụ:",
+  "swd.screen.config.label.include_player_data": "Gụnyere data onye ọkpụkpọ:",
+  "swd.screen.config.label.include_resource_packs": "Gụnyere ngwugwu akụrụngwa:",
+  "swd.screen.config.includes_heading": "Data gụnyere",
+  "swd.screen.config.placeholder.world_name": "Aha ụwa a ga-echekwa",
+  "swd.button.reset": "Tọgharịa",
+  "swd.button.save": "Chekwaa",
+  "swd.status.started_saving": "> Malitera ichekwa chunks...",
+  "swd.status.stopped_saving": "> Akwụsịla ichekwa chunks.",
+  "swd.status.villager_trade_saved": "> Echekwara data ahia onye obodo.",
+  "swd.status.enderchest_saved": "> Echekwara ihe dị n'ime igbe ender.",
+  "swd.status.container_saved": "> Echekwara ihe dị n'ime akpa.",
+  "swd.status.saving_chunk": "> Na-echekwa chunk %s"
+}

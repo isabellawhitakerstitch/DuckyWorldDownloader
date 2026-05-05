@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Instellen",
+  "swd.screen.config.label.save_world_to": "Welt spiekern in:",
+  "swd.screen.config.label.auto_download": "Automatsch daalladen:",
+  "swd.screen.config.label.include_entities": "Entitäten mitnehmen:",
+  "swd.screen.config.label.include_player_data": "Spelerdaten mitnehmen:",
+  "swd.screen.config.label.include_resource_packs": "Resource-Packs mitnehmen:",
+  "swd.screen.config.includes_heading": "Mitnahmen Daten",
+  "swd.screen.config.placeholder.world_name": "Naam för de Welt",
+  "swd.button.reset": "Trüggsetten",
+  "swd.button.save": "Spiekern",
+  "swd.status.started_saving": "> Chunks warrt spiekert...",
+  "swd.status.stopped_saving": "> Spiekern opheurt.",
+  "swd.status.villager_trade_saved": "> Dörpslüüd-Hanneldaten spiekert.",
+  "swd.status.enderchest_saved": "> Enderkist-Inholt spiekert.",
+  "swd.status.container_saved": "> Kist-Inholt spiekert.",
+  "swd.status.saving_chunk": "> Spieker Chunk %s"
+}

@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader konfigurācija",
+  "swd.screen.config.label.save_world_to": "Saglabāt pasauli kā:",
+  "swd.screen.config.label.auto_download": "Automātiska lejupielāde:",
+  "swd.screen.config.label.include_entities": "Iekļaut būtnes:",
+  "swd.screen.config.label.include_player_data": "Iekļaut spēlētāja datus:",
+  "swd.screen.config.label.include_resource_packs": "Iekļaut resursu pakas:",
+  "swd.screen.config.includes_heading": "Iekļautie dati",
+  "swd.screen.config.placeholder.world_name": "Pasaules nosaukums saglabāšanai",
+  "swd.button.reset": "Atiestatīt",
+  "swd.button.save": "Saglabāt",
+  "swd.status.started_saving": "> Sākta gabalu saglabāšana...",
+  "swd.status.stopped_saving": "> Gabalu saglabāšana apturēta.",
+  "swd.status.villager_trade_saved": "> Ciematnieku tirdzniecības dati saglabāti.",
+  "swd.status.enderchest_saved": "> Ender lādes saturs saglabāts.",
+  "swd.status.container_saved": "> Konteinera saturs saglabāts.",
+  "swd.status.saving_chunk": "> Saglabā gabalu %s"
+}

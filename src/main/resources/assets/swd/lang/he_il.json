@@ -1,0 +1,21 @@
+{
+  "swd.screen.config.title": "הגדרות Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "שמור עולם ב:",
+  "swd.screen.config.label.auto_download": "הורדה אוטומטית:",
+  "swd.screen.config.label.include_entities": "כלול ישויות:",
+  "swd.screen.config.label.include_player_data": "כלול נתוני שחקן:",
+  "swd.screen.config.label.include_resource_packs": "כלול חבילות משאבים:",
+  "swd.screen.config.includes_heading": "נתונים כלולים",
+  "swd.screen.config.placeholder.world_name": "שם העולם לשמירה",
+  "swd.button.reset": "איפוס",
+  "swd.button.save": "שמור",
+  "swd.tooltip.save_world_to.1": "קבע את שם העולם השמור.",
+  "swd.tooltip.save_world_to.2": "אם עולם בשם זה כבר קיים,",
+  "swd.tooltip.save_world_to.3": "הצ'אנקים החדשים ידרסו חלקים מהעולם ההוא.",
+  "swd.status.started_saving": "> שמירת צ'אנקים החלה...",
+  "swd.status.stopped_saving": "> שמירת צ'אנקים הופסקה.",
+  "swd.status.villager_trade_saved": "> נתוני סחר כפריים נשמרו.",
+  "swd.status.enderchest_saved": "> תוכן תיבת האנדר נשמר.",
+  "swd.status.container_saved": "> תוכן המיכל נשמר.",
+  "swd.status.saving_chunk": "> שומר צ'אנק %s"
+}

@@ -7,83 +7,169 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.CommonComponents;
 
 import java.util.List;
 
 public class SwdConfigScreen extends Screen {
     private final Screen parent;
-    private EditBox nameField;
-    private Checkbox autoDownloadCheckbox;
 
     // layout
     private int centerX;
-    private int nameLabelX, nameLabelY;
-    private int autoLabelX, autoLabelY;
+    private int includesHeaderX;
+    private int includesHeaderY;
+
+    private final List<SettingEntry> settings = new java.util.ArrayList<>();
 
     // description texts
     private static final List<Component> NAME_DESC = List.of(
-            Component.literal("Set the name of the saved world."),
-            Component.literal("If a world with this name already exists,"),
-            Component.literal("the new chunks overwrite parts of that world.")
+            Component.translatable("swd.tooltip.save_world_to.1"),
+            Component.translatable("swd.tooltip.save_world_to.2"),
+            Component.translatable("swd.tooltip.save_world_to.3")
     );
 
     private static final List<Component> AUTO_DESC = List.of(
-            Component.literal("Set whether worlds should be downloaded"),
-            Component.literal("automatically on server joining.")
+            Component.translatable("swd.tooltip.auto_download.1"),
+            Component.translatable("swd.tooltip.auto_download.2")
+    );
+
+    private static final List<Component> ENTITIES_DESC = List.of(
+            Component.translatable("swd.tooltip.include_entities.1"),
+            Component.translatable("swd.tooltip.include_entities.2")
+    );
+
+    private static final List<Component> PLAYER_DATA_DESC = List.of(
+            Component.translatable("swd.tooltip.include_player_data.1"),
+            Component.translatable("swd.tooltip.include_player_data.2")
+    );
+
+    private static final List<Component> RESOURCE_PACKS_DESC = List.of(
+            Component.translatable("swd.tooltip.include_resource_packs.1"),
+            Component.translatable("swd.tooltip.include_resource_packs.2")
     );
 
     public SwdConfigScreen(Screen parent) {
-        super(Component.literal("Simple World Downloader Config"));
+        super(Component.translatable("swd.screen.config.title"));
         this.parent = parent;
     }
 
     @Override
     protected void init() {
         this.centerX = this.width / 2;
+        this.settings.clear();
 
         // label positions (left side)
-        this.nameLabelX = centerX - 180;
-        this.nameLabelY = 75;
-        this.autoLabelX = centerX - 180;
-        this.autoLabelY = 115;
+        int nameLabelX = centerX - 180;
+        int nameLabelY = 75;
+        int autoLabelX = centerX - 180;
+        int autoLabelY = 100;
+        this.includesHeaderX = centerX - 180;
+        this.includesHeaderY = 120;
+        int entitiesLabelX = centerX - 180;
+        int entitiesLabelY = 145;
+        int playerDataLabelX = centerX - 180;
+        int playerDataLabelY = 165;
+        int resourcePacksLabelX = centerX - 180;
+        int resourcePacksLabelY = 185;
 
         // move inputs right + smaller text box
-        int nameFieldX = centerX - 20;   // was much more left before
+        int nameFieldX = centerX - 20;
         int nameFieldY = 70;
-        int nameFieldW = 150;            // smaller
+        int nameFieldW = 150;
         int nameFieldH = 20;
 
         int resetX = nameFieldX + nameFieldW + 10;
         int resetW = 60;
 
         int autoCheckboxX = centerX - 20;
-        int autoCheckboxY = 110;
+        int autoCheckboxY = 95;
+        int entitiesCheckboxX = centerX - 20;
+        int entitiesCheckboxY = 140;
+        int playerDataCheckboxX = centerX - 20;
+        int playerDataCheckboxY = 160;
+        int resourcePacksCheckboxX = centerX - 20;
+        int resourcePacksCheckboxY = 180;
 
-        this.nameField = new EditBox(this.font, nameFieldX, nameFieldY, nameFieldW, nameFieldH,
-                Component.literal("World name to save as"));
-        this.nameField.setMaxLength(128);
-        this.nameField.setValue(SwdClient.CONFIG.saveWorldTo != null ? SwdClient.CONFIG.saveWorldTo : "");
-        this.addRenderableWidget(this.nameField);
+        // dynamic settings list
+        this.settings.add(new StringSettingEntry(
+                Component.translatable("swd.screen.config.label.save_world_to"),
+                NAME_DESC,
+                nameLabelX,
+                nameLabelY,
+                nameFieldX,
+                nameFieldY,
+                nameFieldW,
+                nameFieldH,
+                () -> SwdClient.CONFIG.saveWorldTo != null ? SwdClient.CONFIG.saveWorldTo : "",
+                value -> SwdClient.CONFIG.saveWorldTo = value
+        ));
 
-        this.addRenderableWidget(Button.builder(Component.literal("Reset"), b -> {
-            this.nameField.setValue("");
+        this.settings.add(new BooleanSettingEntry(
+                Component.translatable("swd.screen.config.label.auto_download"),
+                AUTO_DESC,
+                autoLabelX,
+                autoLabelY,
+                autoCheckboxX,
+                autoCheckboxY,
+                () -> SwdClient.CONFIG.autoDownload,
+                value -> SwdClient.CONFIG.autoDownload = value
+        ));
+
+        this.settings.add(new BooleanSettingEntry(
+                Component.translatable("swd.screen.config.label.include_entities"),
+                ENTITIES_DESC,
+                entitiesLabelX,
+                entitiesLabelY,
+                entitiesCheckboxX,
+                entitiesCheckboxY,
+                () -> SwdClient.CONFIG.includeEntities,
+                value -> SwdClient.CONFIG.includeEntities = value
+        ));
+
+        this.settings.add(new BooleanSettingEntry(
+                Component.translatable("swd.screen.config.label.include_player_data"),
+                PLAYER_DATA_DESC,
+                playerDataLabelX,
+                playerDataLabelY,
+                playerDataCheckboxX,
+                playerDataCheckboxY,
+                () -> SwdClient.CONFIG.includePlayerData,
+                value -> SwdClient.CONFIG.includePlayerData = value
+        ));
+
+        this.settings.add(new BooleanSettingEntry(
+                Component.translatable("swd.screen.config.label.include_resource_packs"),
+                RESOURCE_PACKS_DESC,
+                resourcePacksLabelX,
+                resourcePacksLabelY,
+                resourcePacksCheckboxX,
+                resourcePacksCheckboxY,
+                () -> SwdClient.CONFIG.includeResourcePacks,
+                value -> SwdClient.CONFIG.includeResourcePacks = value
+        ));
+
+        for (SettingEntry setting : this.settings) {
+            setting.addWidgets(this);
+        }
+
+        this.addRenderableWidget(Button.builder(Component.translatable("swd.button.reset"), b -> {
+            for (SettingEntry setting : this.settings) {
+                if (setting instanceof StringSettingEntry stringSetting) {
+                    stringSetting.setValue("");
+                }
+            }
             SwdClient.CONFIG.saveWorldTo = "";
         }).pos(resetX, nameFieldY).width(resetW).build());
 
-        this.autoDownloadCheckbox = Checkbox.builder(Component.empty(), this.font)
-                .pos(autoCheckboxX, autoCheckboxY)
-                .selected(SwdClient.CONFIG.autoDownload)
-                .build();
-        this.addRenderableWidget(this.autoDownloadCheckbox);
-
-        this.addRenderableWidget(Button.builder(Component.literal("Save"), b -> {
-            SwdClient.CONFIG.saveWorldTo = this.nameField.getValue().trim();
-            SwdClient.CONFIG.autoDownload = this.autoDownloadCheckbox.selected();
+        this.addRenderableWidget(Button.builder(Component.translatable("swd.button.save"), b -> {
+            for (SettingEntry setting : this.settings) {
+                setting.applyToConfig();
+            }
             SwdClient.CONFIG.save();
             this.onClose();
         }).pos(centerX - 155, this.height - 50).width(150).build());
 
-        this.addRenderableWidget(Button.builder(Component.literal("Cancel"), b -> this.onClose())
+        this.addRenderableWidget(Button.builder(CommonComponents.GUI_CANCEL, b -> this.onClose())
                 .pos(centerX + 5, this.height - 50).width(150).build());
     }
 
@@ -94,29 +180,155 @@ public class SwdConfigScreen extends Screen {
         graphics.nextStratum();
 
         graphics.centeredText(this.font, this.title, this.width / 2, 20, 0xFFFFFFFF);
-        graphics.text(this.font, Component.literal("Save world to:"), nameLabelX, nameLabelY, 0xFFFFFFFF);
-        graphics.text(this.font, Component.literal("Automatically download:"), autoLabelX, autoLabelY, 0xFFFFFFFF);
+        graphics.pose().translate(includesHeaderX, includesHeaderY);
+        graphics.pose().scale(1.35f, 1.35f);
+        graphics.text(this.font, Component.translatable("swd.screen.config.includes_heading"), 0, 0, 0xFFAAAAAA);
+        graphics.pose().scale(0.7407407f, 0.7407407f);
+        graphics.pose().translate(-includesHeaderX, -includesHeaderY);
 
-        // hover descriptions (over label text or over input widgets)
-        boolean hoverNameLabel = isHovering(mouseX, mouseY, nameLabelX, nameLabelY, this.font.width("Save world to:"), 10);
-        boolean hoverNameField = this.nameField != null && this.nameField.isMouseOver(mouseX, mouseY);
-
-        boolean hoverAutoLabel = isHovering(mouseX, mouseY, autoLabelX, autoLabelY, this.font.width("Automatically download:"), 10);
-        boolean hoverAutoCheckbox = this.autoDownloadCheckbox != null && this.autoDownloadCheckbox.isMouseOver(mouseX, mouseY);
-
-        if (hoverNameLabel || hoverNameField) {
-            graphics.setComponentTooltipForNextFrame(this.font, NAME_DESC, mouseX, mouseY);
-        } else if (hoverAutoLabel || hoverAutoCheckbox) {
-            graphics.setComponentTooltipForNextFrame(this.font, AUTO_DESC, mouseX, mouseY);
+        for (SettingEntry setting : this.settings) {
+            setting.renderLabel(this.font, graphics);
         }
-    }
 
-    private boolean isHovering(int mouseX, int mouseY, int x, int y, int w, int h) {
-        return mouseX >= x && mouseX < x + w && mouseY >= y && mouseY < y + h;
+        for (SettingEntry setting : this.settings) {
+            if (setting.isHovered(this.font, mouseX, mouseY)) {
+                graphics.setComponentTooltipForNextFrame(this.font, setting.getTooltip(), mouseX, mouseY);
+                break;
+            }
+        }
     }
 
     @Override
     public void onClose() {
         this.minecraft.setScreen(parent);
     }
+
+    private abstract static class SettingEntry {
+        private final Component label;
+        private final List<Component> tooltip;
+        private final int labelX;
+        private final int labelY;
+
+        protected SettingEntry(Component label, List<Component> tooltip, int labelX, int labelY) {
+            this.label = label;
+            this.tooltip = tooltip;
+            this.labelX = labelX;
+            this.labelY = labelY;
+        }
+
+        public List<Component> getTooltip() {
+            return tooltip;
+        }
+
+        public void renderLabel(net.minecraft.client.gui.Font font, GuiGraphicsExtractor graphics) {
+            graphics.text(font, label, labelX, labelY, 0xFFFFFFFF);
+        }
+
+        public boolean isHovered(net.minecraft.client.gui.Font font, int mouseX, int mouseY) {
+            int labelW = font.width(label);
+            boolean hoverLabel = isHovering(mouseX, mouseY, labelX, labelY, labelW, 10);
+            return hoverLabel || isWidgetHovered(mouseX, mouseY);
+        }
+
+        protected abstract boolean isWidgetHovered(int mouseX, int mouseY);
+
+        public abstract void addWidgets(SwdConfigScreen screen);
+
+        public abstract void applyToConfig();
+
+        protected boolean isHovering(int mouseX, int mouseY, int x, int y, int w, int h) {
+            return mouseX >= x && mouseX < x + w && mouseY >= y && mouseY < y + h;
+        }
+    }
+
+    private static final class StringSettingEntry extends SettingEntry {
+        private final int fieldX;
+        private final int fieldY;
+        private final int fieldW;
+        private final int fieldH;
+        private final java.util.function.Supplier<String> getter;
+        private final java.util.function.Consumer<String> setter;
+        private EditBox editBox;
+
+        private StringSettingEntry(Component label, List<Component> tooltip, int labelX, int labelY,
+                                   int fieldX, int fieldY, int fieldW, int fieldH,
+                                   java.util.function.Supplier<String> getter,
+                                   java.util.function.Consumer<String> setter) {
+            super(label, tooltip, labelX, labelY);
+            this.fieldX = fieldX;
+            this.fieldY = fieldY;
+            this.fieldW = fieldW;
+            this.fieldH = fieldH;
+            this.getter = getter;
+            this.setter = setter;
+        }
+
+        @Override
+        public void addWidgets(SwdConfigScreen screen) {
+            this.editBox = new EditBox(screen.font, fieldX, fieldY, fieldW, fieldH,
+                    Component.translatable("swd.screen.config.placeholder.world_name"));
+            this.editBox.setMaxLength(128);
+            this.editBox.setValue(getter.get());
+            screen.addRenderableWidget(this.editBox);
+        }
+
+        @Override
+        protected boolean isWidgetHovered(int mouseX, int mouseY) {
+            return this.editBox != null && this.editBox.isMouseOver(mouseX, mouseY);
+        }
+
+        @Override
+        public void applyToConfig() {
+            if (this.editBox != null) {
+                setter.accept(this.editBox.getValue().trim());
+            }
+        }
+
+        public void setValue(String value) {
+            if (this.editBox != null) {
+                this.editBox.setValue(value);
+            }
+        }
+    }
+
+    private static final class BooleanSettingEntry extends SettingEntry {
+        private final int checkboxX;
+        private final int checkboxY;
+        private final java.util.function.BooleanSupplier getter;
+        private final java.util.function.Consumer<Boolean> setter;
+        private Checkbox checkbox;
+
+        private BooleanSettingEntry(Component label, List<Component> tooltip, int labelX, int labelY,
+                                    int checkboxX, int checkboxY,
+                                    java.util.function.BooleanSupplier getter,
+                                    java.util.function.Consumer<Boolean> setter) {
+            super(label, tooltip, labelX, labelY);
+            this.checkboxX = checkboxX;
+            this.checkboxY = checkboxY;
+            this.getter = getter;
+            this.setter = setter;
+        }
+
+        @Override
+        public void addWidgets(SwdConfigScreen screen) {
+            this.checkbox = Checkbox.builder(Component.empty(), screen.font)
+                    .pos(checkboxX, checkboxY)
+                    .selected(getter.getAsBoolean())
+                    .build();
+            screen.addRenderableWidget(this.checkbox);
+        }
+
+        @Override
+        protected boolean isWidgetHovered(int mouseX, int mouseY) {
+            return this.checkbox != null && this.checkbox.isMouseOver(mouseX, mouseY);
+        }
+
+        @Override
+        public void applyToConfig() {
+            if (this.checkbox != null) {
+                setter.accept(this.checkbox.selected());
+            }
+        }
+    }
 }
+

@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Mánoturme",
+  "swd.screen.config.label.save_world_to": "Hapa ambar síne:",
+  "swd.screen.config.label.auto_download": "Ammen lanta naltatoli:",
+  "swd.screen.config.label.include_entities": "As onnati:",
+  "swd.screen.config.label.include_player_data": "As tyaliéva nyari:",
+  "swd.screen.config.label.include_resource_packs": "As alma-parmor:",
+  "swd.screen.config.includes_heading": "Nyari i nar hapine",
+  "swd.screen.config.placeholder.world_name": "Ambar essë hapien",
+  "swd.button.reset": "En-estat",
+  "swd.button.save": "Hapa",
+  "swd.status.started_saving": "> Yestane hapie chunks...",
+  "swd.status.stopped_saving": "> Pustane hapie chunks.",
+  "swd.status.villager_trade_saved": "> Maston manwenyari hapine.",
+  "swd.status.enderchest_saved": "> Mína i ender-colca hapine.",
+  "swd.status.container_saved": "> Mína i colca hapine.",
+  "swd.status.saving_chunk": "> Hapëa chunk %s"
+}

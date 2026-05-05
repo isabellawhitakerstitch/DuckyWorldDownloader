@@ -35,6 +35,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.gui.screens.inventory.MerchantScreen;
 import net.minecraft.nbt.*;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundAwardStatsPacket;
 import net.minecraft.network.protocol.game.ClientboundUpdateAdvancementsPacket;
@@ -130,7 +131,9 @@ public class SaveManager {
         path = mc.getLevelSource().getBaseDir().resolve(name);
 
         setupWorldFolder();
-        createPlayerDataCache(path);
+        if (SwdClient.CONFIG.includePlayerData) {
+            createPlayerDataCache(path);
+        }
 
         cacheBlockInventories = new HashMap<>();
         cacheEntityInventories = new HashMap<>();
@@ -146,8 +149,8 @@ public class SaveManager {
 
         bootstrapAdvancementsFromClientCache();
 
-        printStatus("§a> Started saving chunks...");
-        saveChunksAround(12);
+        printStatus(Component.translatable("swd.status.started_saving").withStyle(ChatFormatting.GREEN));
+        saveChunksAround(mc.options.renderDistance().get());
     }
 
     public static void stop() {
@@ -155,8 +158,10 @@ public class SaveManager {
         flushPlayerMetaFiles(true);
         isSaving = false;
 
-        createPlayerDataFile();
-        printStatus("§c> Stopped saving chunks.");
+        if (SwdClient.CONFIG.includePlayerData && cacheRootTag != null && cachePlayerDatPath != null) {
+            createPlayerDataFile();
+        }
+        printStatus(Component.translatable("swd.status.stopped_saving").withStyle(ChatFormatting.RED));
 
         if (cacheBlockInventories != null) cacheBlockInventories.clear();
         if (cacheEntityInventories != null) cacheEntityInventories.clear();
@@ -284,7 +289,8 @@ public class SaveManager {
         if (!SaveManager.isSaving) return;
 
         if (screen instanceof MerchantScreen merchantScreen && lastClicked instanceof AbstractVillager villager) {
-            printStatus("§a> Villager trade data saved.");
+            if (!SwdClient.CONFIG.includeEntities) return;
+            printStatus(Component.translatable("swd.status.villager_trade_saved").withStyle(ChatFormatting.GREEN));
             cacheVillagerMerchantData(villager, merchantScreen.getMenu());
             return;
         }
@@ -292,7 +298,7 @@ public class SaveManager {
         String title = screen.getTitle().getString();
 
         if (screen instanceof AbstractContainerScreen<?> container && title.equals(Component.translatable("container.enderchest").getString())) {
-            printStatus("§a> Enderchest content saved.");
+            printStatus(Component.translatable("swd.status.enderchest_saved").withStyle(ChatFormatting.GREEN));
             cacheEnderItems(container.getMenu().getItems());
             return;
         }
@@ -305,21 +311,22 @@ public class SaveManager {
         if (lastClicked instanceof BlockPos blockPos) {
             handleBlockContainer(blockPos, items);
         } else if (lastClicked instanceof net.minecraft.world.entity.Entity entity) {
+            if (!SwdClient.CONFIG.includeEntities) return;
             handleEntityContainer(entity, items);
         }
     }
 
     private static List<ItemStack> extractContainerItems(Screen screen) {
         if (screen instanceof AbstractFurnaceScreen<?> fs) {
-            printStatus("§a> Container content saved.");
+            printStatus(Component.translatable("swd.status.container_saved").withStyle(ChatFormatting.GREEN));
             return fs.getMenu().getItems();
         }
         if (screen instanceof AbstractContainerScreen<?> cs && isSupportedContainerScreen(screen)) {
-            printStatus("§a> Container content saved.");
+            printStatus(Component.translatable("swd.status.container_saved").withStyle(ChatFormatting.GREEN));
             return cs.getMenu().getItems();
         }
         if (screen instanceof HorseInventoryScreen hs) {
-            printStatus("§a> Container content saved.");
+            printStatus(Component.translatable("swd.status.container_saved").withStyle(ChatFormatting.GREEN));
             List<ItemStack> items = hs.getMenu().getItems();
             items.removeFirst();
             items.removeFirst();
@@ -398,11 +405,13 @@ public class SaveManager {
     }
 
     private static void handleEntityContainer(net.minecraft.world.entity.Entity entity, List<ItemStack> items) {
+        if (!SwdClient.CONFIG.includeEntities) return;
         cacheEntityInventories.put(entity.getUUID(), new ArrayList<>(items));
         saveChunkNow(entity.blockPosition());
     }
 
     private static void cacheVillagerMerchantData(AbstractVillager merchant, MerchantMenu menu) {
+        if (!SwdClient.CONFIG.includeEntities) return;
         CompoundTag overlay = new CompoundTag();
 
         MerchantOffers offers = menu.getOffers();
@@ -440,18 +449,20 @@ public class SaveManager {
 
         ListTag entityList = new ListTag();
 
-        net.minecraft.world.phys.AABB box = new net.minecraft.world.phys.AABB(
-                pos.getMinBlockX(), wc.getLevel().getMinY(), pos.getMinBlockZ(),
-                pos.getMaxBlockX(), wc.getLevel().getMaxY(), pos.getMaxBlockZ()
-        );
+        if (SwdClient.CONFIG.includeEntities) {
+            net.minecraft.world.phys.AABB box = new net.minecraft.world.phys.AABB(
+                    pos.getMinBlockX(), wc.getLevel().getMinY(), pos.getMinBlockZ(),
+                    pos.getMaxBlockX(), wc.getLevel().getMaxY(), pos.getMaxBlockZ()
+            );
 
-        wc.getLevel().getEntities(null, box).forEach(entity -> {
-            if (entity instanceof net.minecraft.world.entity.player.Player) return;
+            wc.getLevel().getEntities(null, box).forEach(entity -> {
+                if (entity instanceof net.minecraft.world.entity.player.Player) return;
 
-            CompoundTag entityNbt = saveEntityToNbt(entity);
-            injectCachedEntityInventory(entity, entityNbt);
-            entityList.add(entityNbt);
-        });
+                CompoundTag entityNbt = saveEntityToNbt(entity);
+                injectCachedEntityInventory(entity, entityNbt);
+                entityList.add(entityNbt);
+            });
+        }
 
         chunk.put("Entities", entityList);
 
@@ -622,10 +633,12 @@ public class SaveManager {
             SwdClient.LOGGER.error("Can't create save directory or write icon!", e);
         }
 
-        if(Minecraft.getInstance().getCurrentServer() != null && Minecraft.getInstance().getCurrentServer().getResourcePackStatus().name().equalsIgnoreCase("ENABLED")) {
+        if (SwdClient.CONFIG.includeResourcePacks
+                && Minecraft.getInstance().getCurrentServer() != null
+                && Minecraft.getInstance().getCurrentServer().getResourcePackStatus().name().equalsIgnoreCase("ENABLED")) {
             Path packTempPath = SwdClient.resourcepack_locations;
             Path pathResourcepacks = path.resolve("resourcepacks");
-            if(!Files.exists(pathResourcepacks)) {
+            if (!Files.exists(pathResourcepacks)) {
                 try {
                     Files.createDirectory(pathResourcepacks);
                 } catch (IOException e) {
@@ -634,7 +647,7 @@ public class SaveManager {
             }
             Path packTargetPath = pathResourcepacks.resolve("resources.zip");
             try {
-                if(packTempPath != null) {
+                if (packTempPath != null) {
                     Files.copy(packTempPath, packTargetPath, StandardCopyOption.REPLACE_EXISTING);
                 }
             } catch (IOException e) {
@@ -644,20 +657,20 @@ public class SaveManager {
     }
 
     private static void determineWorldName() {
-        if(SwdClient.CONFIG.saveWorldTo.isEmpty()) {
-            if(mc.getCurrentServer() != null) name = mc.getCurrentServer().ip.replaceAll("[\\\\/:*?\"<>|]", "_");
+        if (SwdClient.CONFIG.saveWorldTo.isEmpty()) {
+            if (mc.getCurrentServer() != null) name = mc.getCurrentServer().ip.replaceAll("[\\\\/:*?\"<>|]", "_");
             else {
-                if(mc.getSingleplayerServer() == null) name = "Replay Mod";
-                else if(mc.getSingleplayerServer().getWorldData().getLevelName().equalsIgnoreCase("Replay")) name = "Flashback";
+                if (mc.getSingleplayerServer() == null) name = "Replay Mod";
+                else if (mc.getSingleplayerServer().getWorldData().getLevelName().equalsIgnoreCase("Replay")) name = "Flashback";
                 else name = mc.getSingleplayerServer().getWorldData().getLevelName().replaceAll("[\\\\/:*?\"<>|]", "_");
             }
             Path saves = Paths.get("saves");
-            if(Files.exists(saves.resolve(name))) {
+            if (Files.exists(saves.resolve(name))) {
                 int i = 1;
-                while(Files.exists(saves.resolve(name + " " + i))) i++;
+                while (Files.exists(saves.resolve(name + " " + i))) i++;
                 name += " " + i;
             }
-        }else {
+        } else {
             name = SwdClient.CONFIG.saveWorldTo;
         }
     }
@@ -670,7 +683,7 @@ public class SaveManager {
             throw new RuntimeException(e);
         }
 
-        if(mc.level == null || mc.player == null) return;
+        if (mc.level == null || mc.player == null) return;
 
         CompoundTag root = new CompoundTag();
 
@@ -815,6 +828,7 @@ public class SaveManager {
     }
 
     public static void cacheEnderItems(List<ItemStack> items) {
+        if (!SwdClient.CONFIG.includePlayerData) return;
         ListTag enderItems = new ListTag();
         int i = 0;
         for (ItemStack stack  : items) {
@@ -873,6 +887,7 @@ public class SaveManager {
     }
 
     private static void writeStatsFile(Path statsFile) throws IOException {
+        if(!SwdClient.CONFIG.includePlayerData) return;
         JsonObject existingRoot = readJsonObject(statsFile);
         JsonObject mergedStats = new JsonObject();
 
@@ -906,6 +921,7 @@ public class SaveManager {
     }
 
     private static void writeAdvancementsFile(Path advancementsFile) throws IOException {
+        if(!SwdClient.CONFIG.includePlayerData) return;
         JsonObject existingRoot = readJsonObject(advancementsFile);
         JsonObject mergedRoot = new JsonObject();
 
@@ -1070,7 +1086,9 @@ public class SaveManager {
             saveThread.start();
         }
 
-        if (showMessage) printStatus("§a> Saving chunk " + wc.getPos());
+        if (showMessage) {
+            printStatus(Component.translatable("swd.status.saving_chunk", wc.getPos()).withStyle(ChatFormatting.GREEN));
+        }
     }
 
     private static void processQueue(Path regionDir, Path entityDir, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimension) {
@@ -1407,8 +1425,8 @@ public class SaveManager {
         NbtIo.writeCompressed(root, dragonDat);
     }
 
-    public static void printStatus(String msg) {
-        mc.gui.setOverlayMessage(Component.nullToEmpty(msg), false);
+    public static void printStatus(Component msg) {
+        mc.gui.setOverlayMessage(msg, false);
     }
 
     private static void checkPathExists(Path path) {

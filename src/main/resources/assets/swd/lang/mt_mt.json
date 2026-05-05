@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfigurazzjoni tas-Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Issejvja d-dinja f':",
+  "swd.screen.config.label.auto_download": "Niżżel awtomatikament:",
+  "swd.screen.config.label.include_entities": "Inkludi l-entitajiet:",
+  "swd.screen.config.label.include_player_data": "Inkludi d-dejta tal-plejer:",
+  "swd.screen.config.label.include_resource_packs": "Inkludi l-pakketti tar-riżorsi:",
+  "swd.screen.config.includes_heading": "Dejta inkluża",
+  "swd.screen.config.placeholder.world_name": "Isem tad-dinja biex tissejvja",
+  "swd.button.reset": "Irrisettja",
+  "swd.button.save": "Issejvja",
+  "swd.status.started_saving": "> Bdiet il-ħażna taċ-chunks...",
+  "swd.status.stopped_saving": "> Waqfet il-ħażna taċ-chunks.",
+  "swd.status.villager_trade_saved": "> Id-dejta tal-kummerċ tar-raħħala ġiet issejvjata.",
+  "swd.status.enderchest_saved": "> Il-kontenut tal-enderchest ġie ssejvjat.",
+  "swd.status.container_saved": "> Il-kontenut tal-kontenitur ġie ssejvjat.",
+  "swd.status.saving_chunk": "> Qed issejvja chunk %s"
+}

@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Կարգավորումներ",
+  "swd.screen.config.label.save_world_to": "Պահպանել աշխարհը այստեղ՝",
+  "swd.screen.config.label.auto_download": "Ինքնաշխատ ներբեռնում՝",
+  "swd.screen.config.label.include_entities": "Ներառել էակները՝",
+  "swd.screen.config.label.include_player_data": "Ներառել խաղացողի տվյալները՝",
+  "swd.screen.config.label.include_resource_packs": "Ներառել ռեսուրսների փաթեթները՝",
+  "swd.screen.config.includes_heading": "Ներառված տվյալներ",
+  "swd.screen.config.placeholder.world_name": "Աշխարհի անվանումը",
+  "swd.button.reset": "Վերակայել",
+  "swd.button.save": "Պահպանել",
+  "swd.status.started_saving": "> Չանքերի պահպանումը սկսվեց...",
+  "swd.status.stopped_saving": "> Չանքերի պահպանումը կանգնեցվեց:",
+  "swd.status.villager_trade_saved": "> Գյուղացիների առևտրի տվյալները պահպանվեցին:",
+  "swd.status.enderchest_saved": "> Էնդեր-սնդուկի պարունակությունը պահպանվեց:",
+  "swd.status.container_saved": "> Պահեստարանի պարունակությունը պահպանվեց:",
+  "swd.status.saving_chunk": "> Պահպանվում է չանք %s"
+}

@@ -12,6 +12,9 @@ public class SwdConfig {
 
     public String saveWorldTo = "";
     public boolean autoDownload = false;
+    public boolean includeEntities = true;
+    public boolean includePlayerData = true;
+    public boolean includeResourcePacks = true;
 
     private static final Gson GSON =
             new GsonBuilder().setPrettyPrinting().create();

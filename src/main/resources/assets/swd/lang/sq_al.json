@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfigurimi i Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Ruaj botën në:",
+  "swd.screen.config.label.auto_download": "Shkarko automatikisht:",
+  "swd.screen.config.label.include_entities": "Përfshi entitetet:",
+  "swd.screen.config.label.include_player_data": "Përfshi të dhënat e lojtarit:",
+  "swd.screen.config.label.include_resource_packs": "Përfshi paketat e burimeve:",
+  "swd.screen.config.includes_heading": "Të dhënat e përfshira",
+  "swd.screen.config.placeholder.world_name": "Emri i botës për t'u ruajtur",
+  "swd.button.reset": "Rifillo",
+  "swd.button.save": "Ruaj",
+  "swd.status.started_saving": "> Filloi ruajtja e copave...",
+  "swd.status.stopped_saving": "> Ruajtja e copave u ndalua.",
+  "swd.status.villager_trade_saved": "> Të dhënat e tregtisë së fshatarit u ruajtën.",
+  "swd.status.enderchest_saved": "> Përmbajtja e arkës ender u ruajt.",
+  "swd.status.container_saved": "> Përmbajtja e mbajtësit u ruajt.",
+  "swd.status.saving_chunk": "> Duke ruajtur copën %s"
+}

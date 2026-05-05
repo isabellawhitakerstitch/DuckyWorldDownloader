@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Configurazzion Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Salva el mond in:",
+  "swd.screen.config.label.auto_download": "Scaria in automategh:",
+  "swd.screen.config.label.include_entities": "Includ i entità:",
+  "swd.screen.config.label.include_player_data": "Includ i dati del sgiugador:",
+  "swd.screen.config.label.include_resource_packs": "Includ i pachet de risorse:",
+  "swd.screen.config.includes_heading": "Dati includid",
+  "swd.screen.config.placeholder.world_name": "Nom del mond de salvar",
+  "swd.button.reset": "Reset",
+  "swd.button.save": "Salva",
+  "swd.status.started_saving": "> Salvatagg di chunk inviad...",
+  "swd.status.stopped_saving": "> Salvatagg di chunk fermad.",
+  "swd.status.villager_trade_saved": "> Dati di scambi di vilan salvad.",
+  "swd.status.enderchest_saved": "> Continid de la cassa de l'ender salvad.",
+  "swd.status.container_saved": "> Continid del vasi salvad.",
+  "swd.status.saving_chunk": "> Salvatagg del chunk %s"
+}

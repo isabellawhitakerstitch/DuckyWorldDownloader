@@ -1,5 +1,6 @@
 package com.j0ker2j0ker.swd.client.mixin;
 
+import com.j0ker2j0ker.swd.client.screen.SwdConfigScreen;
 import com.j0ker2j0ker.swd.client.util.SaveManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.PauseScreen;
@@ -23,6 +24,8 @@ public abstract class PauseScreenMixin extends Screen{
     private static final Identifier START = Identifier.fromNamespaceAndPath("swd", "icon/start");
     @Unique
     private static final Identifier STOP = Identifier.fromNamespaceAndPath("swd", "icon/stop");
+    @Unique
+    private static final Identifier SETTINGS = Identifier.fromNamespaceAndPath("swd", "icon/settings");
 
     @Inject(at = @At("RETURN"), method = "createPauseMenu")
     public void addSaveButton(CallbackInfo ci) {
@@ -33,21 +36,21 @@ public abstract class PauseScreenMixin extends Screen{
     }
 
     @Unique
-    private String getName() {
-        if(!SaveManager.isSaving) return "Start Downloading Chunks";
-        else return "Stop Downloading Chunks";
-    }
-    @Unique
     private void refresh() {
         Identifier icon = START;
         if(SaveManager.isSaving) icon = STOP;
-        SpriteIconButton iconButton = this.addRenderableWidget(SpriteIconButton.builder(Component.nullToEmpty(getName()), (button) -> {
+        SpriteIconButton iconButton = this.addRenderableWidget(SpriteIconButton.builder(Component.nullToEmpty(""), (button) -> {
             SaveManager.toggle();
             button.setFocused(false);
-            button.setMessage(Component.nullToEmpty(getName()));
             refresh();
         }, true).width(20).sprite(icon, 16, 16).build());
         iconButton.setPosition(4, height-24);
+
+        SpriteIconButton settingsButton = this.addRenderableWidget(SpriteIconButton.builder(Component.nullToEmpty(""), (button) -> {
+            Minecraft.getInstance().setScreen(new SwdConfigScreen(this));
+            button.setFocused(false);
+        }, true).width(20).sprite(SETTINGS, 16, 16).build());
+        settingsButton.setPosition(26, height-24);
     }
 
 }

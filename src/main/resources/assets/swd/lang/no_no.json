@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Innstillinger for Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Lagre verden i:",
+  "swd.screen.config.label.auto_download": "Last ned automatisk:",
+  "swd.screen.config.label.include_entities": "Inkluder vesener:",
+  "swd.screen.config.label.include_player_data": "Inkluder spillerdata:",
+  "swd.screen.config.label.include_resource_packs": "Inkluder ressurspakker:",
+  "swd.screen.config.includes_heading": "Inkluderte data",
+  "swd.screen.config.placeholder.world_name": "Navn på verden",
+  "swd.button.reset": "Nullstill",
+  "swd.button.save": "Lagre",
+  "swd.status.started_saving": "> Begynte å lagre chunks...",
+  "swd.status.stopped_saving": "> Lagring av chunks stoppet.",
+  "swd.status.villager_trade_saved": "> Handelsdata for landsbybeboere lagret.",
+  "swd.status.enderchest_saved": "> Innhold i enderkiste lagret.",
+  "swd.status.container_saved": "> Innhold i beholder lagret.",
+  "swd.status.saving_chunk": "> Lagrer chunk %s"
+}

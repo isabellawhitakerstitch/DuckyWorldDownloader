@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfiguracyjŏ Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Zapisz świat w:",
+  "swd.screen.config.label.auto_download": "Autōmatyczne pobiyranie:",
+  "swd.screen.config.label.include_entities": "Zastŏw bytōści:",
+  "swd.screen.config.label.include_player_data": "Zastŏw dane grŏcza:",
+  "swd.screen.config.label.include_resource_packs": "Zastŏw zestŏwy zasobōw:",
+  "swd.screen.config.includes_heading": "Zastŏwiōne dane",
+  "swd.screen.config.placeholder.world_name": "Miano świata do zapisu",
+  "swd.button.reset": "Zresetuj",
+  "swd.button.save": "Zapisz",
+  "swd.status.started_saving": "> Poczōntek zapisowaniŏ chunkōw...",
+  "swd.status.stopped_saving": "> Zapisowanie chunkōw zatrzimane.",
+  "swd.status.villager_trade_saved": "> Dane handlu wieśniakōw zapisane.",
+  "swd.status.enderchest_saved": "> Zawartość skrzini enderu zapisanŏ.",
+  "swd.status.container_saved": "> Zawartość kontynera zapisanŏ.",
+  "swd.status.saving_chunk": "> Zapisowanie chunka %s"
+}

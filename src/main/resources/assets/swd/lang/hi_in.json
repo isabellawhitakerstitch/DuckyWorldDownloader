@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader कॉन्फ़िगरेशन",
+  "swd.screen.config.label.save_world_to": "दुनिया यहाँ सहेजें:",
+  "swd.screen.config.label.auto_download": "स्वचालित रूप से डाउनलोड करें:",
+  "swd.screen.config.label.include_entities": "इकाइयां शामिल करें:",
+  "swd.screen.config.label.include_player_data": "खिलाड़ी डेटा शामिल करें:",
+  "swd.screen.config.label.include_resource_packs": "रिसोर्स पैक शामिल करें:",
+  "swd.screen.config.includes_heading": "शामिल डेटा",
+  "swd.screen.config.placeholder.world_name": "सहेजने के लिए दुनिया का नाम",
+  "swd.button.reset": "रीसेट",
+  "swd.button.save": "सहेजें",
+  "swd.status.started_saving": "> चंक्स सहेजना शुरू हुआ...",
+  "swd.status.stopped_saving": "> चंक्स सहेजना बंद हुआ।",
+  "swd.status.villager_trade_saved": "> विलेजर ट्रेड डेटा सहेजा गया।",
+  "swd.status.enderchest_saved": "> एंडर चेस्ट सामग्री सहेजी गई।",
+  "swd.status.container_saved": "> कंटेनर सामग्री सहेजी गई।",
+  "swd.status.saving_chunk": "> चंक %s सहेजा जा रहा है"
+}

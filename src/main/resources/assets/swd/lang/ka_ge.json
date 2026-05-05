@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader-ის კონფიგურაცია",
+  "swd.screen.config.label.save_world_to": "სამყაროს შენახვის ადგილი:",
+  "swd.screen.config.label.auto_download": "ავტომატური ჩამოტვირთვა:",
+  "swd.screen.config.label.include_entities": "არსებების ჩათვლით:",
+  "swd.screen.config.label.include_player_data": "მოთამაშის მონაცემების ჩათვლით:",
+  "swd.screen.config.label.include_resource_packs": "რესურს პაკეტების ჩათვლით:",
+  "swd.screen.config.includes_heading": "ჩართული მონაცემები",
+  "swd.screen.config.placeholder.world_name": "სამყაროს სახელი შესანახად",
+  "swd.button.reset": "ჩამოყრა",
+  "swd.button.save": "შენახვა",
+  "swd.status.started_saving": "> ჩანქების შენახვა დაიწყო...",
+  "swd.status.stopped_saving": "> ჩანქების შენახვა შეწყდა.",
+  "swd.status.villager_trade_saved": "> სოფლის მცხოვრებთა ვაჭრობის მონაცემები შენახულია.",
+  "swd.status.enderchest_saved": "> ენდერ-სკივრის შიგთავსი შენახულია.",
+  "swd.status.container_saved": "> კონტეინერის შიგთავსი შენახულია.",
+  "swd.status.saving_chunk": "> ინახება ჩანქი %s"
+}

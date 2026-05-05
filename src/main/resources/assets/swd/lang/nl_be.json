@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Configuratie",
+  "swd.screen.config.label.save_world_to": "Wereld opslaan in:",
+  "swd.screen.config.label.auto_download": "Automatisch downloaden:",
+  "swd.screen.config.label.include_entities": "Entiteiten inclusief:",
+  "swd.screen.config.label.include_player_data": "Spelersgegevens inclusief:",
+  "swd.screen.config.label.include_resource_packs": "Resourcepakketten inclusief:",
+  "swd.screen.config.includes_heading": "Inbegrepen gegevens",
+  "swd.screen.config.placeholder.world_name": "Naam van de wereld",
+  "swd.button.reset": "Resetten",
+  "swd.button.save": "Opslaan",
+  "swd.status.started_saving": "> Starten met opslaan van chunks...",
+  "swd.status.stopped_saving": "> Opslaan van chunks gestopt.",
+  "swd.status.villager_trade_saved": "> Handelsgegevens van dorpelingen opgeslagen.",
+  "swd.status.enderchest_saved": "> Inhoud van enderkist opgeslagen.",
+  "swd.status.container_saved": "> Inhoud van container opgeslagen.",
+  "swd.status.saving_chunk": "> Chunk %s aan het opslaan"
+}

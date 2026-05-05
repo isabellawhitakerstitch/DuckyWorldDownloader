@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Configuracion de Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Salvar lo monde dins :",
+  "swd.screen.config.label.auto_download": "Telecargament automatic :",
+  "swd.screen.config.label.include_entities": "Inclure las entitats :",
+  "swd.screen.config.label.include_player_data": "Inclure las donnadas de jogaire :",
+  "swd.screen.config.label.include_resource_packs": "Inclure los packs de ressorsas :",
+  "swd.screen.config.includes_heading": "Donnadas inclús",
+  "swd.screen.config.placeholder.world_name": "Nom del monde de salvar",
+  "swd.button.reset": "Reïnicializar",
+  "swd.button.save": "Salvar",
+  "swd.status.started_saving": "> Començament de la salvagarda dels chunks...",
+  "swd.status.stopped_saving": "> Salvagarda dels chunks arrestada.",
+  "swd.status.villager_trade_saved": "> Donnadas de comèrci de vilatges salvadas.",
+  "swd.status.enderchest_saved": "> Contengut del coffre de l'ender salvat.",
+  "swd.status.container_saved": "> Contengut del contenant salvat.",
+  "swd.status.saving_chunk": "> Salvagarda del chunk %s"
+}

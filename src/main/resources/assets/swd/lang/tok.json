@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "ante pi ilo pi pana ma",
+  "swd.screen.config.label.save_world_to": "pana e ma tawa:",
+  "swd.screen.config.label.auto_download": "kama ma lon tenpo sama:",
+  "swd.screen.config.label.include_entities": "ijo ali li lon:",
+  "swd.screen.config.label.include_player_data": "sona jan li lon:",
+  "swd.screen.config.label.include_resource_packs": "lukin ante li lon:",
+  "swd.screen.config.includes_heading": "ijo lon",
+  "swd.screen.config.placeholder.world_name": "nimi pi ma ni",
+  "swd.button.reset": "ante open",
+  "swd.button.save": "awen",
+  "swd.status.started_saving": "> mi open awen e kipisi ma...",
+  "swd.status.stopped_saving": "> mi pini awen e kipisi ma.",
+  "swd.status.villager_trade_saved": "> mi awen e sona esun pi jan ma.",
+  "swd.status.enderchest_saved": "> mi awen e ijo pi poki Ente.",
+  "swd.status.container_saved": "> mi awen e ijo lon poki.",
+  "swd.status.saving_chunk": "> mi awen e kipisi ma %s"
+}

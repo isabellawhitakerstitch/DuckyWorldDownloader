@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Kefaryans Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Gwitha an bys dhe:",
+  "swd.screen.config.label.auto_download": "Iskarga yn awtomatek:",
+  "swd.screen.config.label.include_entities": "Komprehendya beryow:",
+  "swd.screen.config.label.include_player_data": "Komprehendya data an gwarier:",
+  "swd.screen.config.label.include_resource_packs": "Komprehendya fardellow asnodh:",
+  "swd.screen.config.includes_heading": "Data komprehendys",
+  "swd.screen.config.placeholder.world_name": "Hanow an bys gwithys",
+  "swd.button.reset": "Dassetya",
+  "swd.button.save": "Gwitha",
+  "swd.status.started_saving": "> Gwitha chunks dallethys...",
+  "swd.status.stopped_saving": "> Gwitha chunks hedhys.",
+  "swd.status.villager_trade_saved": "> Data gwikoryon gwithys.",
+  "swd.status.enderchest_saved": "> Dalgh kist Ender gwithys.",
+  "swd.status.container_saved": "> Dalgh an kist gwithys.",
+  "swd.status.saving_chunk": "> Gwitha chunk %s"
+}

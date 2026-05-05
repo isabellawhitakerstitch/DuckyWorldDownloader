@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader көйләүләре",
+  "swd.screen.config.label.save_world_to": "Дөньяны саклау урыны:",
+  "swd.screen.config.label.auto_download": "Автоматик рәвештә йөкләү:",
+  "swd.screen.config.label.include_entities": "Существоларны кертеп:",
+  "swd.screen.config.label.include_player_data": "Уенчы мәгълүматларын кертеп:",
+  "swd.screen.config.label.include_resource_packs": "Ресурс пакетларын кертеп:",
+  "swd.screen.config.includes_heading": "Кертелгән мәгълүматлар",
+  "swd.screen.config.placeholder.world_name": "Сакланучы дөньяның исеме",
+  "swd.button.reset": "Ташлату",
+  "swd.button.save": "Саклау",
+  "swd.status.started_saving": "> Чанкларны саклау башланды...",
+  "swd.status.stopped_saving": "> Чанкларны саклау туктатылды.",
+  "swd.status.villager_trade_saved": "> Авыл кешеләренең сәүдә мәгълүматлары сакланды.",
+  "swd.status.enderchest_saved": "> Эндер-сандыкның эчтәлеге сакланды.",
+  "swd.status.container_saved": "> Контейнерның эчтәлеге сакланды.",
+  "swd.status.saving_chunk": "> %s чанк саклана"
+}

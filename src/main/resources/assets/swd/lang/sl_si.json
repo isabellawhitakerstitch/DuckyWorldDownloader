@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfiguracija Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Shrani svet v:",
+  "swd.screen.config.label.auto_download": "Samodejni prenos:",
+  "swd.screen.config.label.include_entities": "Vključi entitete:",
+  "swd.screen.config.label.include_player_data": "Vključi podatke igralca:",
+  "swd.screen.config.label.include_resource_packs": "Vključi pakete virov:",
+  "swd.screen.config.includes_heading": "Vključeni podatki",
+  "swd.screen.config.placeholder.world_name": "Ime sveta za shranjevanje",
+  "swd.button.reset": "Ponastavi",
+  "swd.button.save": "Shrani",
+  "swd.status.started_saving": "> Shranjevanje koščkov se je začelo...",
+  "swd.status.stopped_saving": "> Shranjevanje koščkov ustavljeno.",
+  "swd.status.villager_trade_saved": "> Podatki o trgovanju vaščanov shranjeni.",
+  "swd.status.enderchest_saved": "> Vsebina ender skrinje shranjena.",
+  "swd.status.container_saved": "> Vsebina vsebnika shranjena.",
+  "swd.status.saving_chunk": "> Shranjevanje koščka %s"
+}

@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader choHlaHghach",
+  "swd.screen.config.label.save_world_to": "qo' pol:",
+  "swd.screen.config.label.auto_download": "tlhoch lI'ghach:",
+  "swd.screen.config.label.include_entities": "ghoghvetlhmu'mey mu'tlhegh:",
+  "swd.screen.config.label.include_player_data": "QujwI' De' mu'tlhegh:",
+  "swd.screen.config.label.include_resource_packs": "Resource packs mu'tlhegh:",
+  "swd.screen.config.includes_heading": "De' mu'tlhegh",
+  "swd.screen.config.placeholder.world_name": "qo' pong",
+  "swd.button.reset": "choHqa'",
+  "swd.button.save": "pol",
+  "swd.status.started_saving": "> chunks polchoH...",
+  "swd.status.stopped_saving": "> chunks polmeH pusta'.",
+  "swd.status.villager_trade_saved": "> vIlejara' mI' pollu'ta'.",
+  "swd.status.enderchest_saved": "> ender Dalo' mI' pollu'ta'.",
+  "swd.status.container_saved": "> Dalo' mI' pollu'ta'.",
+  "swd.status.saving_chunk": "> chunk %s pollu'taH"
+}

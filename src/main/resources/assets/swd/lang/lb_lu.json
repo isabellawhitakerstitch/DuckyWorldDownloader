@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Konfiguratioun",
+  "swd.screen.config.label.save_world_to": "Welt späicheren an:",
+  "swd.screen.config.label.auto_download": "Automatesch eroflueden:",
+  "swd.screen.config.label.include_entities": "Entitéiten aschléissen:",
+  "swd.screen.config.label.include_player_data": "Spillerdate vun aschléissen:",
+  "swd.screen.config.label.include_resource_packs": "Ressourcenpäck aschléissen:",
+  "swd.screen.config.includes_heading": "Abegraff Daten",
+  "swd.screen.config.placeholder.world_name": "Numm vun der Welt",
+  "swd.button.reset": "Zerécksetzen",
+  "swd.button.save": "Späicheren",
+  "swd.status.started_saving": "> Chunks ginn elo gespäichert...",
+  "swd.status.stopped_saving": "> Späichere vun de Chunks gestoppt.",
+  "swd.status.villager_trade_saved": "> Dorfbewohner-Handelsdate gespäichert.",
+  "swd.status.enderchest_saved": "> Inhalt vun der Endertru ginn gespäichert.",
+  "swd.status.container_saved": "> Containerinhalt gespäichert.",
+  "swd.status.saving_chunk": "> Späichere Chunk %s"
+}

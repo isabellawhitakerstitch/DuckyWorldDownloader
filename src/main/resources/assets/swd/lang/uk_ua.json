@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Налаштування Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Зберігати світ у:",
+  "swd.screen.config.label.auto_download": "Автоматичне завантаження:",
+  "swd.screen.config.label.include_entities": "Включити сутностей:",
+  "swd.screen.config.label.include_player_data": "Включити дані гравця:",
+  "swd.screen.config.label.include_resource_packs": "Включити пакети ресурсів:",
+  "swd.screen.config.includes_heading": "Включені дані",
+  "swd.screen.config.placeholder.world_name": "Назва світу для збереження",
+  "swd.button.reset": "Скинути",
+  "swd.button.save": "Зберегти",
+  "swd.status.started_saving": "> Почато збереження чанків...",
+  "swd.status.stopped_saving": "> Збереження чанків зупинено.",
+  "swd.status.villager_trade_saved": "> Дані про торгівлю селян збережено.",
+  "swd.status.enderchest_saved": "> Вміст ендер-скрині збережено.",
+  "swd.status.container_saved": "> Вміст контейнера збережено.",
+  "swd.status.saving_chunk": "> Збереження чанку %s"
+}

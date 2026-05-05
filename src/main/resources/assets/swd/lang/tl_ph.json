@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Pag-aayos ng Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "I-save ang mundo sa:",
+  "swd.screen.config.label.auto_download": "Awtomatikong pag-download:",
+  "swd.screen.config.label.include_entities": "Isama ang mga nilalang:",
+  "swd.screen.config.label.include_player_data": "Isama ang data ng manlalaro:",
+  "swd.screen.config.label.include_resource_packs": "Isama ang mga resource pack:",
+  "swd.screen.config.includes_heading": "Kasama na data",
+  "swd.screen.config.placeholder.world_name": "Pangalan ng mundo na ise-save",
+  "swd.button.reset": "I-reset",
+  "swd.button.save": "I-save",
+  "swd.status.started_saving": "> Nagsimula nang i-save ang mga chunk...",
+  "swd.status.stopped_saving": "> Itinigil ang pag-save ng mga chunk.",
+  "swd.status.villager_trade_saved": "> Na-save ang data ng kalakalan ng taganayon.",
+  "swd.status.enderchest_saved": "> Na-save ang laman ng ender chest.",
+  "swd.status.container_saved": "> Na-save ang laman ng lalagyan.",
+  "swd.status.saving_chunk": "> Sine-save ang chunk %s"
+}

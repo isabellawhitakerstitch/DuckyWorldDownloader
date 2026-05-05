@@ -1,0 +1,21 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Hoʻonohonoho",
+  "swd.screen.config.label.save_world_to": "Mālama i ka honua i:",
+  "swd.screen.config.label.auto_download": "Hoʻoiho wale:",
+  "swd.screen.config.label.include_entities": "Me nā mea ola:",
+  "swd.screen.config.label.include_player_data": "Me ka ʻike mea pāʻani:",
+  "swd.screen.config.label.include_resource_packs": "Me nā pūʻolo kumu waiwai:",
+  "swd.screen.config.includes_heading": "ʻIke i loko",
+  "swd.screen.config.placeholder.world_name": "Inoa honua e mālama ai",
+  "swd.button.reset": "Hoʻihoʻi",
+  "swd.button.save": "Mālama",
+  "swd.tooltip.save_world_to.1": "E koho i ka inoa no ka honua i mālama ʻia.",
+  "swd.tooltip.save_world_to.2": "Inā loaʻa kekahi honua me kēia inoa,",
+  "swd.tooltip.save_world_to.3": "e pani ʻia nā chunks kahiko e nā mea hou.",
+  "swd.status.started_saving": "> Ke mālama nei i nā chunks...",
+  "swd.status.stopped_saving": "> Ua kū ka mālama ʻana i nā chunks.",
+  "swd.status.villager_trade_saved": "> Ua mālama ʻia ka ʻike kālepa kamaʻāina.",
+  "swd.status.enderchest_saved": "> Ua mālama ʻia ka pahu ender.",
+  "swd.status.container_saved": "> Ua mālama ʻia ka pahu waiwai.",
+  "swd.status.saving_chunk": "> Ke mālama nei i ka chunk %s"
+}

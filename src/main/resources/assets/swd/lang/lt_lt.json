@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader konfigūracija",
+  "swd.screen.config.label.save_world_to": "Išsaugoti pasaulį į:",
+  "swd.screen.config.label.auto_download": "Automatinis atsisiuntimas:",
+  "swd.screen.config.label.include_entities": "Įtraukti esybes:",
+  "swd.screen.config.label.include_player_data": "Įtraukti žaidėjo duomenis:",
+  "swd.screen.config.label.include_resource_packs": "Įtraukti resursų paketus:",
+  "swd.screen.config.includes_heading": "Įtraukti duomenys",
+  "swd.screen.config.placeholder.world_name": "Pasaulio pavadinimas",
+  "swd.button.reset": "Atstatyti",
+  "swd.button.save": "Išsaugoti",
+  "swd.status.started_saving": "> Pradėtas chunkų saugojimas...",
+  "swd.status.stopped_saving": "> Chunkų saugojimas sustabdytas.",
+  "swd.status.villager_trade_saved": "> Kaimiečių prekybos duomenys išsaugoti.",
+  "swd.status.enderchest_saved": "> Enderio skrynios turinys išsaugotas.",
+  "swd.status.container_saved": "> Konteinerio turinys išsaugotas.",
+  "swd.status.saving_chunk": "> Saugomas chunkas %s"
+}

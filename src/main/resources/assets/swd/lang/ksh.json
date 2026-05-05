@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Enstellunge",
+  "swd.screen.config.label.save_world_to": "Wält speichere en:",
+  "swd.screen.config.label.auto_download": "Automattesch erungerlaade:",
+  "swd.screen.config.label.include_entities": "Veecher metnehme:",
+  "swd.screen.config.label.include_player_data": "Spillerdate metnehme:",
+  "swd.screen.config.label.include_resource_packs": "Resource-Packs metnehme:",
+  "swd.screen.config.includes_heading": "Metgenomme Date",
+  "swd.screen.config.placeholder.world_name": "Name för de Wält",
+  "swd.button.reset": "Zeröcksetze",
+  "swd.button.save": "Speichere",
+  "swd.status.started_saving": "> Chunks wäde jespeichert...",
+  "swd.status.stopped_saving": "> Speichere opjehoot.",
+  "swd.status.villager_trade_saved": "> Date vum Dorfbewohner jespeichert.",
+  "swd.status.enderchest_saved": "> Enderkess-Inhalt jespeichert.",
+  "swd.status.container_saved": "> Kess-Inhalt jespeichert.",
+  "swd.status.saving_chunk": "> Speichere Chunk %s"
+}

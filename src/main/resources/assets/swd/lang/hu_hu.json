@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Beállítások",
+  "swd.screen.config.label.save_world_to": "Világ mentése ide:",
+  "swd.screen.config.label.auto_download": "Automatikus letöltés:",
+  "swd.screen.config.label.include_entities": "Entitások mentése:",
+  "swd.screen.config.label.include_player_data": "Játékosadatok mentése:",
+  "swd.screen.config.label.include_resource_packs": "Erőforráscsomagok mentése:",
+  "swd.screen.config.includes_heading": "Mentett adatok",
+  "swd.screen.config.placeholder.world_name": "Világ neve",
+  "swd.button.reset": "Visszaállítás",
+  "swd.button.save": "Mentés",
+  "swd.status.started_saving": "> Chunkok mentése elindítva...",
+  "swd.status.stopped_saving": "> Chunkok mentése leállítva.",
+  "swd.status.villager_trade_saved": "> Falusi kereskedelmi adatok mentve.",
+  "swd.status.enderchest_saved": "> Ender-láda tartalma mentve.",
+  "swd.status.container_saved": "> Tároló tartalma mentve.",
+  "swd.status.saving_chunk": "> %s chunk mentése"
+}

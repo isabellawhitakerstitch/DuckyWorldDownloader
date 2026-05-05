@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Konfiguro",
+  "swd.screen.config.label.save_world_to": "Salvar mondo a:",
+  "swd.screen.config.label.auto_download": "Automate deskargar:",
+  "swd.screen.config.label.include_entities": "Inkluzar enti:",
+  "swd.screen.config.label.include_player_data": "Inkluzar ludisto-donaji:",
+  "swd.screen.config.label.include_resource_packs": "Inkluzar resurs-paki:",
+  "swd.screen.config.includes_heading": "Inkluzita donaji",
+  "swd.screen.config.placeholder.world_name": "Mondo-nomo por salvar",
+  "swd.button.reset": "Rinigisar",
+  "swd.button.save": "Salvar",
+  "swd.status.started_saving": "> Komencis salvar paki...",
+  "swd.status.stopped_saving": "> Sesasis salvar paki.",
+  "swd.status.villager_trade_saved": "> Vilajano-komerco donaji salvita.",
+  "swd.status.enderchest_saved": "> Ender-kesto kontenajo salvita.",
+  "swd.status.container_saved": "> Kontenilo kontenajo salvita.",
+  "swd.status.saving_chunk": "> Salvas pako %s"
+}

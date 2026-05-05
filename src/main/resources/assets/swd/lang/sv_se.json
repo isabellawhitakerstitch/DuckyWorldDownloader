@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Inställningar för Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Spara värld till:",
+  "swd.screen.config.label.auto_download": "Ladda ner automatiskt:",
+  "swd.screen.config.label.include_entities": "Inkludera varelser:",
+  "swd.screen.config.label.include_player_data": "Inkludera spelardata:",
+  "swd.screen.config.label.include_resource_packs": "Inkludera resurspaket:",
+  "swd.screen.config.includes_heading": "Inkluderad data",
+  "swd.screen.config.placeholder.world_name": "Namn på sparad värld",
+  "swd.button.reset": "Återställ",
+  "swd.button.save": "Spara",
+  "swd.status.started_saving": "> Började spara chunks...",
+  "swd.status.stopped_saving": "> Sparande av chunks stoppades.",
+  "swd.status.villager_trade_saved": "> Handelsdata för bybor sparades.",
+  "swd.status.enderchest_saved": "> Innehåll i enderkista sparades.",
+  "swd.status.container_saved": "> Innehåll i behållare sparades.",
+  "swd.status.saving_chunk": "> Sparar chunk %s"
+}

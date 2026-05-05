@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "le sampu terdi kancu stika",
+  "swd.screen.config.label.save_world_to": "re'u vreji le terdi vi:",
+  "swd.screen.config.label.auto_download": "zi'e kancu:",
+  "swd.screen.config.label.include_entities": "kansa loi dacti:",
+  "swd.screen.config.label.include_player_data": "kansa loi kelci datni:",
+  "swd.screen.config.label.include_resource_packs": "kansa loi selru'u bakfu:",
+  "swd.screen.config.includes_heading": "loi datni",
+  "swd.screen.config.placeholder.world_name": "le cmene be le vreji terdi",
+  "swd.button.reset": "krasi",
+  "swd.button.save": "vreji",
+  "swd.status.started_saving": "> cfari lo nu vreji loi caxna...",
+  "swd.status.stopped_saving": "> fanmo lo nu vreji loi caxna.",
+  "swd.status.villager_trade_saved": "> loi canja datni be lo kulnu cu vreji.",
+  "swd.status.enderchest_saved": "> loi vasru be le ender-tanxe cu vreji.",
+  "swd.status.container_saved": "> loi vasru be le dacti tanxe cu vreji.",
+  "swd.status.saving_chunk": "> vreji le caxna be li %s"
+}

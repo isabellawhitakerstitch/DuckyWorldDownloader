@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader баптауы",
+  "swd.screen.config.label.save_world_to": "Әлемді сақтау орны:",
+  "swd.screen.config.label.auto_download": "Автоматты түрде жүктеу:",
+  "swd.screen.config.label.include_entities": "Мәншіктерді қосу:",
+  "swd.screen.config.label.include_player_data": "Ойыншы деректерін қосу:",
+  "swd.screen.config.label.include_resource_packs": "Ресурс пакеттерін қосу:",
+  "swd.screen.config.includes_heading": "Қосылған деректер",
+  "swd.screen.config.placeholder.world_name": "Сақталатын әлемнің аты",
+  "swd.button.reset": "Қалпына келтіру",
+  "swd.button.save": "Сақтау",
+  "swd.status.started_saving": "> Чанктарды сақтау басталды...",
+  "swd.status.stopped_saving": "> Чанктарды сақтау тоқтатылды.",
+  "swd.status.villager_trade_saved": "> Ауыл тұрғындарының сауда деректері сақталды.",
+  "swd.status.enderchest_saved": "> Эндер-сандықтың ішіндегісі сақталды.",
+  "swd.status.container_saved": "> Контейнердің ішіндегісі сақталды.",
+  "swd.status.saving_chunk": "> %s чанк сақталуда"
+}

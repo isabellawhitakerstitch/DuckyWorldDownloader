@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Postavke Simple World Downloader-a",
+  "swd.screen.config.label.save_world_to": "Spremi svijet u:",
+  "swd.screen.config.label.auto_download": "Automatsko preuzimanje:",
+  "swd.screen.config.label.include_entities": "Uključi entitete:",
+  "swd.screen.config.label.include_player_data": "Uključi podatke igrača:",
+  "swd.screen.config.label.include_resource_packs": "Uključi pakete resursa:",
+  "swd.screen.config.includes_heading": "Uključeni podaci",
+  "swd.screen.config.placeholder.world_name": "Ime svijeta za spremanje",
+  "swd.button.reset": "Resetiraj",
+  "swd.button.save": "Spremi",
+  "swd.status.started_saving": "> Započeto spremanje chunka...",
+  "swd.status.stopped_saving": "> Zaustavljeno spremanje chunka.",
+  "swd.status.villager_trade_saved": "> Podaci o trgovini seljaka spremljeni.",
+  "swd.status.enderchest_saved": "> Sadržaj ender škrinje spremljen.",
+  "swd.status.container_saved": "> Sadržaj spremnika spremljen.",
+  "swd.status.saving_chunk": "> Spremanje chunka %s"
+}

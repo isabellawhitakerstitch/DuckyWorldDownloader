@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Stillingar",
+  "swd.screen.config.label.save_world_to": "Vista heim í:",
+  "swd.screen.config.label.auto_download": "Sækja sjálfvirkt:",
+  "swd.screen.config.label.include_entities": "Láta verur fylgja:",
+  "swd.screen.config.label.include_player_data": "Láta spilaragögn fylgja:",
+  "swd.screen.config.label.include_resource_packs": "Láta auðlindapakka fylgja:",
+  "swd.screen.config.includes_heading": "Innifalin gögn",
+  "swd.screen.config.placeholder.world_name": "Heiti á vistuðum heimi",
+  "swd.button.reset": "Endurstilla",
+  "swd.button.save": "Vista",
+  "swd.status.started_saving": "> Byrjaði að vista búta...",
+  "swd.status.stopped_saving": "> Hætti að vista búta.",
+  "swd.status.villager_trade_saved": "> Verslunargögn þorpsbúa vistuð.",
+  "swd.status.enderchest_saved": "> Innihald ender-kistu vistað.",
+  "swd.status.container_saved": "> Innihald geymslu vistað.",
+  "swd.status.saving_chunk": "> Vistar bút %s"
+}

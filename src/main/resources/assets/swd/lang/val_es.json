@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Configuració de Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Guardar món en:",
+  "swd.screen.config.label.auto_download": "Descàrrega automàtica:",
+  "swd.screen.config.label.include_entities": "Incloure entitats:",
+  "swd.screen.config.label.include_player_data": "Incloure dades del jugador:",
+  "swd.screen.config.label.include_resource_packs": "Incloure paquets de recursos:",
+  "swd.screen.config.includes_heading": "Dades incloses",
+  "swd.screen.config.placeholder.world_name": "Nom del món per a guardar",
+  "swd.button.reset": "Restablir",
+  "swd.button.save": "Guardar",
+  "swd.status.started_saving": "> Ha començat la guarda de chunks...",
+  "swd.status.stopped_saving": "> S'ha detingut la guarda de chunks.",
+  "swd.status.villager_trade_saved": "> Dades de comerç d'aldeans guardades.",
+  "swd.status.enderchest_saved": "> Contingut del cofre d'ender guardat.",
+  "swd.status.container_saved": "> Contingut del contenidor guardat.",
+  "swd.status.saving_chunk": "> Guardant chunk %s"
+}

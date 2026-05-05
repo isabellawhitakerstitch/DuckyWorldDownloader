@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfigurácia Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Uložiť svet do:",
+  "swd.screen.config.label.auto_download": "Automatické sťahovanie:",
+  "swd.screen.config.label.include_entities": "Zahrnúť entity:",
+  "swd.screen.config.label.include_player_data": "Zahrnúť údaje hráča:",
+  "swd.screen.config.label.include_resource_packs": "Zahrnúť balíky zdrojov:",
+  "swd.screen.config.includes_heading": "Zahrnuté údaje",
+  "swd.screen.config.placeholder.world_name": "Názov sveta pre uloženie",
+  "swd.button.reset": "Resetovať",
+  "swd.button.save": "Uložiť",
+  "swd.status.started_saving": "> Začalo sa ukladanie chunkov...",
+  "swd.status.stopped_saving": "> Ukladanie chunkov zastavené.",
+  "swd.status.villager_trade_saved": "> Údaje o obchode dedinčanov uložené.",
+  "swd.status.enderchest_saved": "> Obsah ender truhlice uložený.",
+  "swd.status.container_saved": "> Obsah kontajnera uložený.",
+  "swd.status.saving_chunk": "> Ukladá sa chunk %s"
+}

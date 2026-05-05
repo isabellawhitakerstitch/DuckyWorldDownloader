@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "การตั้งค่า Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "บันทึกโลกลงใน:",
+  "swd.screen.config.label.auto_download": "ดาวน์โหลดอัตโนมัติ:",
+  "swd.screen.config.label.include_entities": "รวมสิ่งมีชีวิต:",
+  "swd.screen.config.label.include_player_data": "รวมข้อมูลผู้เล่น:",
+  "swd.screen.config.label.include_resource_packs": "รวมรีซอร์สแพ็ก:",
+  "swd.screen.config.includes_heading": "ข้อมูลที่รวมอยู่",
+  "swd.screen.config.placeholder.world_name": "ชื่อโลกที่จะบันทึก",
+  "swd.button.reset": "รีเซ็ต",
+  "swd.button.save": "บันทึก",
+  "swd.status.started_saving": "> เริ่มบันทึกชิ้นส่วนโลก (chunks)...",
+  "swd.status.stopped_saving": "> หยุดการบันทึกชิ้นส่วนโลก",
+  "swd.status.villager_trade_saved": "> บันทึกข้อมูลการค้าของชาวบ้านแล้ว",
+  "swd.status.enderchest_saved": "> บันทึกสิ่งของในกล่องเอนเดอร์แล้ว",
+  "swd.status.container_saved": "> บันทึกสิ่งของในหีบแล้ว",
+  "swd.status.saving_chunk": "> กำลังบันทึกชิ้นส่วนโลก %s"
+}

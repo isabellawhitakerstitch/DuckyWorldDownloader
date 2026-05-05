@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Конфигурација на Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Зачувај го светот во:",
+  "swd.screen.config.label.auto_download": "Автоматско преземање:",
+  "swd.screen.config.label.include_entities": "Вклучи суштества:",
+  "swd.screen.config.label.include_player_data": "Вклучи податоци за играчот:",
+  "swd.screen.config.label.include_resource_packs": "Вклучи пакети со ресурси:",
+  "swd.screen.config.includes_heading": "Вклучени податоци",
+  "swd.screen.config.placeholder.world_name": "Име на светот за зачувување",
+  "swd.button.reset": "Ресетирај",
+  "swd.button.save": "Зачувај",
+  "swd.status.started_saving": "> Започна зачувувањето на парчињата...",
+  "swd.status.stopped_saving": "> Запрено зачувувањето на парчињата.",
+  "swd.status.villager_trade_saved": "> Податоците за трговија со селаните се зачувани.",
+  "swd.status.enderchest_saved": "> Содржината на ендер-ковчегот е зачувана.",
+  "swd.status.container_saved": "> Содржината на контејнерот е зачувана.",
+  "swd.status.saving_chunk": "> Се зачувува парче %s"
+}

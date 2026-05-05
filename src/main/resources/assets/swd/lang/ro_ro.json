@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Configurare Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Salvare lume în:",
+  "swd.screen.config.label.auto_download": "Descărcare automată:",
+  "swd.screen.config.label.include_entities": "Include entități:",
+  "swd.screen.config.label.include_player_data": "Include date jucător:",
+  "swd.screen.config.label.include_resource_packs": "Include pachete de resurse:",
+  "swd.screen.config.includes_heading": "Date incluse",
+  "swd.screen.config.placeholder.world_name": "Numele lumii pentru salvare",
+  "swd.button.reset": "Resetare",
+  "swd.button.save": "Salvare",
+  "swd.status.started_saving": "> A început salvarea chunk-urilor...",
+  "swd.status.stopped_saving": "> Salvarea chunk-urilor s-a oprit.",
+  "swd.status.villager_trade_saved": "> Datele de tranzacție ale săteanului salvate.",
+  "swd.status.enderchest_saved": "> Conținutul cufărului ender salvat.",
+  "swd.status.container_saved": "> Conținutul containerului salvat.",
+  "swd.status.saving_chunk": "> Se salvează chunk-ul %s"
+}

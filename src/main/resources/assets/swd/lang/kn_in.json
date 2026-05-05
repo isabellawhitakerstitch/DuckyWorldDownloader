@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader ಸಂರಚನೆ",
+  "swd.screen.config.label.save_world_to": "ಪ್ರಪಂಚವನ್ನು ಇಲ್ಲಿ ಉಳಿಸಿ:",
+  "swd.screen.config.label.auto_download": "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ:",
+  "swd.screen.config.label.include_entities": "ಜೀವಿಗಳನ್ನು ಸೇರಿಸಿ:",
+  "swd.screen.config.label.include_player_data": "ಆಟಗಾರನ ಡೇಟಾವನ್ನು ಸೇರಿಸಿ:",
+  "swd.screen.config.label.include_resource_packs": "ಸಂಪನ್ಮೂಲ ಪ್ಯಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ:",
+  "swd.screen.config.includes_heading": "ಸೇರಿಸಲಾದ ಡೇಟಾ",
+  "swd.screen.config.placeholder.world_name": "ಉಳಿಸಬೇಕಾದ ಪ್ರಪಂಚದ ಹೆಸರು",
+  "swd.button.reset": "ಮರುಹೊಂದಿಸಿ",
+  "swd.button.save": "ಉಳಿಸಿ",
+  "swd.status.started_saving": "> ಚಂಕ್‌ಗಳನ್ನು ಉಳಿಸಲು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ...",
+  "swd.status.stopped_saving": "> ಚಂಕ್‌ಗಳನ್ನು ಉಳಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಲಾಗಿದೆ.",
+  "swd.status.villager_trade_saved": "> ಗ್ರಾಮಸ್ಥರ ವ್ಯಾಪಾರ ಡೇಟಾವನ್ನು ಉಳಿಸಲಾಗಿದೆ.",
+  "swd.status.enderchest_saved": "> ಎಂಡರ್ ಚೆಸ್ಟ್ ವಿಷಯವನ್ನು ಉಳಿಸಲಾಗಿದೆ.",
+  "swd.status.container_saved": "> ಕಂಟೇನರ್ ವಿಷಯವನ್ನು ಉಳಿಸಲಾಗಿದೆ.",
+  "swd.status.saving_chunk": "> ಚಂಕ್ %s ಉಳಿಸಲಾಗುತ್ತಿದೆ"
+}

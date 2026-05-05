@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader-Instellunge",
+  "swd.screen.config.label.save_world_to": "Welt speichern in:",
+  "swd.screen.config.label.auto_download": "Auddomaddisch runnerloodn:",
+  "swd.screen.config.label.include_entities": "Viecher mitnehm:",
+  "swd.screen.config.label.include_player_data": "Schbielerdadn mitnehm:",
+  "swd.screen.config.label.include_resource_packs": "Resurssnbagge mitnehm:",
+  "swd.screen.config.includes_heading": "Mitgenommene Dadn",
+  "swd.screen.config.placeholder.world_name": "Name vonne Welt",
+  "swd.button.reset": "Zurigggesetzd",
+  "swd.button.save": "Speichern",
+  "swd.status.started_saving": "> Chunks wern jetze gespeichert...",
+  "swd.status.stopped_saving": "> Speichern vonne Chunks offjeheert.",
+  "swd.status.villager_trade_saved": "> Dorfbewohner-Handelsdadn gespeichert.",
+  "swd.status.enderchest_saved": "> Enderkistn-Inhalt gespeichert.",
+  "swd.status.container_saved": "> Kistn-Inhalt gespeichert.",
+  "swd.status.saving_chunk": "> Speichre Chunk %s"
+}

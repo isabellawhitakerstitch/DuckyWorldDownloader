@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Innstillingar for Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Lagra verda i:",
+  "swd.screen.config.label.auto_download": "Last ned automatisk:",
+  "swd.screen.config.label.include_entities": "Inkluder vesen:",
+  "swd.screen.config.label.include_player_data": "Inkluder spelardata:",
+  "swd.screen.config.label.include_resource_packs": "Inkluder ressurspakkar:",
+  "swd.screen.config.includes_heading": "Inkluderte data",
+  "swd.screen.config.placeholder.world_name": "Namn på verda",
+  "swd.button.reset": "Nullstill",
+  "swd.button.save": "Lagra",
+  "swd.status.started_saving": "> Byrja å lagra chunks...",
+  "swd.status.stopped_saving": "> Lagring av chunks stansa.",
+  "swd.status.villager_trade_saved": "> Handelsdata for landsbybuarar lagra.",
+  "swd.status.enderchest_saved": "> Innhald i enderkiste lagra.",
+  "swd.status.container_saved": "> Innhald i behaldar lagra.",
+  "swd.status.saving_chunk": "> Lagrar chunk %s"
+}

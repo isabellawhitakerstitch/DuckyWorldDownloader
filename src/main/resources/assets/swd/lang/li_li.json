@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Configuratie",
+  "swd.screen.config.label.save_world_to": "Waereld opsloon in:",
+  "swd.screen.config.label.auto_download": "Automatisch downloade:",
+  "swd.screen.config.label.include_entities": "Entiteite mitnumme:",
+  "swd.screen.config.label.include_player_data": "Sjpelergegaeves mitnumme:",
+  "swd.screen.config.label.include_resource_packs": "Bronpakkètte mitnumme:",
+  "swd.screen.config.includes_heading": "Mitgenomme gegaeves",
+  "swd.screen.config.placeholder.world_name": "Waereldnaam",
+  "swd.button.reset": "Resetten",
+  "swd.button.save": "Opsloon",
+  "swd.status.started_saving": "> Chunks opsloon gesjtart...",
+  "swd.status.stopped_saving": "> Chunks opsloon gesjtopt.",
+  "swd.status.villager_trade_saved": "> Dörpsbewoner-handelgegaeves opgeslage.",
+  "swd.status.enderchest_saved": "> Enderkist-inhoud opgeslage.",
+  "swd.status.container_saved": "> Container-inhoud opgeslage.",
+  "swd.status.saving_chunk": "> Chunk %s opsloon"
+}

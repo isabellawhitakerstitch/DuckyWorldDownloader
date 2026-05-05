@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader heiveheamit",
+  "swd.screen.config.label.save_world_to": "Vurke máilmmi deike:",
+  "swd.screen.config.label.auto_download": "Viečča automáhtalaččat:",
+  "swd.screen.config.label.include_entities": "Fátmmas ealibiid:",
+  "swd.screen.config.label.include_player_data": "Fátmmas speallidieđuid:",
+  "swd.screen.config.label.include_resource_packs": "Fátmmas resursabáhkaid:",
+  "swd.screen.config.includes_heading": "Fátmmastuvvon dieđut",
+  "swd.screen.config.placeholder.world_name": "Máilmmi namma",
+  "swd.button.reset": "Alitmahtu",
+  "swd.button.save": "Vurke",
+  "swd.status.started_saving": "> Vurkegođii chunkkaid...",
+  "swd.status.stopped_saving": "> Chunkkaid vurken bissehuvvun.",
+  "swd.status.villager_trade_saved": "> Gilliolbmuid gávpedieđut vurkejuvvon.",
+  "swd.status.enderchest_saved": "> Ender-giisá sisdoallu vurkejuvvon.",
+  "swd.status.container_saved": "> Lihti sisdoallu vurkejuvvon.",
+  "swd.status.saving_chunk": "> Vurkemin chunkka %s"
+}

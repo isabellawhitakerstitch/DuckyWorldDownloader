@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Тохиргоо",
+  "swd.screen.config.label.save_world_to": "Ертөнцийг хадгалах газар:",
+  "swd.screen.config.label.auto_download": "Автоматаар татах:",
+  "swd.screen.config.label.include_entities": "Амьд биетүүдийг багтаах:",
+  "swd.screen.config.label.include_player_data": "Тоглогчийн өгөгдлийг багтаах:",
+  "swd.screen.config.label.include_resource_packs": "Ресурс багцуудыг багтаах:",
+  "swd.screen.config.includes_heading": "Багтсан өгөгдлүүд",
+  "swd.screen.config.placeholder.world_name": "Хадгалах ертөнцийн нэр",
+  "swd.button.reset": "Шинэчлэх",
+  "swd.button.save": "Хадгалах",
+  "swd.status.started_saving": "> Чанкуудыг хадгалж эхэллээ...",
+  "swd.status.stopped_saving": "> Чанкуудыг хадгалахыг зогсоолоо.",
+  "swd.status.villager_trade_saved": "> Тосгоны иргэдийн арилжааны өгөгдлийг хадгаллаа.",
+  "swd.status.enderchest_saved": "> Эндер авдарны агуулгыг хадгаллаа.",
+  "swd.status.container_saved": "> Савны агуулгыг хадгаллаа.",
+  "swd.status.saving_chunk": "> %s чанкыг хадгалж байна"
+}

@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "寰宇下載器之配置",
+  "swd.screen.config.label.save_world_to": "存世於：",
+  "swd.screen.config.label.auto_download": "自動下載：",
+  "swd.screen.config.label.include_entities": "兼收萬類：",
+  "swd.screen.config.label.include_player_data": "兼收遊者案跡：",
+  "swd.screen.config.label.include_resource_packs": "兼收資材包：",
+  "swd.screen.config.includes_heading": "所載之物",
+  "swd.screen.config.placeholder.world_name": "所存之世名",
+  "swd.button.reset": "重置",
+  "swd.button.save": "存錄",
+  "swd.status.started_saving": "> 始錄世塊...",
+  "swd.status.stopped_saving": "> 錄塊既止。",
+  "swd.status.villager_trade_saved": "> 村夫易貨卷既存。",
+  "swd.status.enderchest_saved": "> 末影匣內物既存。",
+  "swd.status.container_saved": "> 容器內物既存。",
+  "swd.status.saving_chunk": "> 正存世塊 %s"
+}

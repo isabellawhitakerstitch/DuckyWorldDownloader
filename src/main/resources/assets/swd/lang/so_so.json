@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader Habaynta",
+  "swd.screen.config.label.save_world_to": "Ku kaydi adduunka:",
+  "swd.screen.config.label.auto_download": "Toos u soo dejiso:",
+  "swd.screen.config.label.include_entities": "Ku dar makhluuqaad:",
+  "swd.screen.config.label.include_player_data": "Ku dar xogta ciyaaryahanka:",
+  "swd.screen.config.label.include_resource_packs": "Ku dar xirmooyinka khayraadka:",
+  "swd.screen.config.includes_heading": "Xogta lagu daray",
+  "swd.screen.config.placeholder.world_name": "Magaca adduunka la kaydinayo",
+  "swd.button.reset": "Dib u habeyn",
+  "swd.button.save": "Kaydi",
+  "swd.status.started_saving": "> Waxaa bilaabatay kaydinta qaybaha...",
+  "swd.status.stopped_saving": "> Waxaa joogsatay kaydinta qaybaha.",
+  "swd.status.villager_trade_saved": "> Xogta ganacsiga tuulada waa la kaydiyay.",
+  "swd.status.enderchest_saved": "> Waxyaabaha ku jira sanduuqa ender waa la kaydiyay.",
+  "swd.status.container_saved": "> Waxyaabaha ku jira weelka waa la kaydiyay.",
+  "swd.status.saving_chunk": "> Waxaa la kaydinayaa qaybta %s"
+}

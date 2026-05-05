@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Simple World Downloader-instiller",
+  "swd.screen.config.label.save_world_to": "Spar werdą i:",
+  "swd.screen.config.label.auto_download": "Ladda ner automatisk:",
+  "swd.screen.config.label.include_entities": "Ta minner viesen:",
+  "swd.screen.config.label.include_player_data": "Ta minner spelardata:",
+  "swd.screen.config.label.include_resource_packs": "Ta minner resurspakker:",
+  "swd.screen.config.includes_heading": "Data so e minner",
+  "swd.screen.config.placeholder.world_name": "Namą å werdą",
+  "swd.button.reset": "Nollstilla",
+  "swd.button.save": "Spar",
+  "swd.status.started_saving": "> Bard på spars chunks...",
+  "swd.status.stopped_saving": "> Sparing av chunks stopped.",
+  "swd.status.villager_trade_saved": "> Handelsdata firi landsbybuär spard.",
+  "swd.status.enderchest_saved": "> Innyld i enderkistą spard.",
+  "swd.status.container_saved": "> Innyld i behållarn spard.",
+  "swd.status.saving_chunk": "> Sparar chunk %s"
+}

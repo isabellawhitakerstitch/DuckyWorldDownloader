@@ -1,0 +1,18 @@
+{
+  "swd.screen.config.title": "Konfigurasi Simple World Downloader",
+  "swd.screen.config.label.save_world_to": "Simpan dunia ke:",
+  "swd.screen.config.label.auto_download": "Unduh otomatis:",
+  "swd.screen.config.label.include_entities": "Sertakan entitas:",
+  "swd.screen.config.label.include_player_data": "Sertakan data pemain:",
+  "swd.screen.config.label.include_resource_packs": "Sertakan paket sumber daya:",
+  "swd.screen.config.includes_heading": "Data yang disertakan",
+  "swd.screen.config.placeholder.world_name": "Nama dunia untuk disimpan",
+  "swd.button.reset": "Atur Ulang",
+  "swd.button.save": "Simpan",
+  "swd.status.started_saving": "> Mulai menyimpan chunk...",
+  "swd.status.stopped_saving": "> Berhenti menyimpan chunk.",
+  "swd.status.villager_trade_saved": "> Data perdagangan penduduk desa disimpan.",
+  "swd.status.enderchest_saved": "> Isi peti ender disimpan.",
+  "swd.status.container_saved": "> Isi kontainer disimpan.",
+  "swd.status.saving_chunk": "> Menyimpan chunk %s"
+}
