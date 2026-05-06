@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Na-save ang datos ng kalakalan ng villager.",
   "swd.status.enderchest_saved": "> Na-save ang laman ng ender chest.",
   "swd.status.container_saved": "> Na-save ang laman ng container.",
-  "swd.status.saving_chunk": "> Sini-save ang chunk %s"
+  "swd.status.saving_chunk": "> Sini-save ang chunk %s",
+  "swd.status.resume_saving": "> Ipinagpapatuloy ang pag-save ng mga chunk...",
+  "swd.status.queue_full": "> Puno na ang save queue! Hindi na-save ang &s",
+  "swd.status.itemframe_saved": "> Na-save ang nilalaman ng item frame.",
+  "swd.tooltip.resume_downloads.1": "Itakda kung dapat ipagpatuloy ang pag-save",
+  "swd.tooltip.resume_downloads.2": "kung may nahanap na ibang save para sa mundo.",
+  "swd.screen.config.label.resume_downloads": "Ipagpatuloy ang pag-save:"
 }
 

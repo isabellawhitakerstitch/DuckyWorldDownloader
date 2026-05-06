@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> विलेजर ट्रेड डेटा सहेजा गया।",
   "swd.status.enderchest_saved": "> एंडर चेस्ट सामग्री सहेजी गई।",
   "swd.status.container_saved": "> कंटेनर सामग्री सहेजी गई।",
-  "swd.status.saving_chunk": "> चंक %s सहेजा जा रहा है"
+  "swd.status.saving_chunk": "> चंक %s सहेजा जा रहा है",
+  "swd.status.resume_saving": "> चंक सहेजना फिर से शुरू किया जा रहा है...",
+  "swd.status.queue_full": "> सहेजने की कतार भर गई है! &s सहेजा नहीं गया",
+  "swd.status.itemframe_saved": "> आइटम फ़्रेम सामग्री सहेजी गई।",
+  "swd.tooltip.resume_downloads.1": "सेट करें कि क्या सहेजना फिर से शुरू किया जाना चाहिए",
+  "swd.tooltip.resume_downloads.2": "यदि इस दुनिया के लिए एक और सेव मिलता है।",
+  "swd.screen.config.label.resume_downloads": "सहेजना फिर से शुरू करें:",
+  "swd.tooltip.save_world_to.1": "सहेजे गए विश्व का नाम निर्धारित करें।",
+  "swd.tooltip.save_world_to.2": "यदि इस नाम का विश्व पहले से मौजूद है,",
+  "swd.tooltip.save_world_to.3": "नए चंक उस विश्व के भागों को ओवरराइट करेंगे।",
+  "swd.tooltip.auto_download.1": "निर्धारित करें कि सर्वर से जुड़ने पर",
+  "swd.tooltip.auto_download.2": "विश्व स्वचालित रूप से डाउनलोड होने चाहिए या नहीं।",
+  "swd.tooltip.include_entities.1": "निर्धारित करें कि डाउनलोड किए गए विश्व के साथ",
+  "swd.tooltip.include_entities.2": "इकाइयाँ भी सहेजी जानी चाहिए या नहीं।",
+  "swd.tooltip.include_player_data.1": "निर्धारित करें कि डाउनलोड किए गए विश्व के साथ",
+  "swd.tooltip.include_player_data.2": "खिलाड़ी डेटा भी सहेजा जाना चाहिए या नहीं।",
+  "swd.tooltip.include_resource_packs.1": "निर्धारित करें कि सर्वर रिसोर्स पैक",
+  "swd.tooltip.include_resource_packs.2": "डाउनलोड किए गए विश्व के साथ सहेजे जाने चाहिए या नहीं।"
 }

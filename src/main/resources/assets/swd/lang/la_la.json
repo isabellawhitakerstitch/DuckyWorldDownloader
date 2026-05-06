@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Commercia vicanorum servata sunt.",
   "swd.status.enderchest_saved": "> Res in cista finis servatae sunt.",
   "swd.status.container_saved": "> Res in vase servatae sunt.",
-  "swd.status.saving_chunk": "> Fragmentum %s servatur"
+  "swd.status.saving_chunk": "> Partem %s servans",
+  "swd.status.resume_saving": "> Servatio partium redintegratur...",
+  "swd.status.queue_full": "> Series servandi plena est! &s non servatum est",
+  "swd.status.itemframe_saved": "> Contentum fimbriae servatum est.",
+  "swd.tooltip.resume_downloads.1": "Constitue an servatio redintegranda sit",
+  "swd.tooltip.resume_downloads.2": "si alia servatio mundi inventa erit.",
+  "swd.screen.config.label.resume_downloads": "Redintegra servationem:"
 }

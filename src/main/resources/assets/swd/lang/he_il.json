@@ -17,5 +17,19 @@
   "swd.status.villager_trade_saved": "> נתוני סחר כפריים נשמרו.",
   "swd.status.enderchest_saved": "> תוכן תיבת האנדר נשמר.",
   "swd.status.container_saved": "> תוכן המיכל נשמר.",
-  "swd.status.saving_chunk": "> שומר צ'אנק %s"
+  "swd.status.saving_chunk": "> שומר צ'אנק %s",
+  "swd.status.resume_saving": "> מחדש שמירת צ'אנקים...",
+  "swd.status.queue_full": "> תור השמירה מלא! לא שמר את &s",
+  "swd.status.itemframe_saved": "> תוכן מסגרת הפריט נשמר.",
+  "swd.tooltip.resume_downloads.1": "הגדר אם יש לחדש את השמירה",
+  "swd.tooltip.resume_downloads.2": "אם נמצאה שמירה אחרת לעולם.",
+  "swd.screen.config.label.resume_downloads": "חדש שמירה:",
+  "swd.tooltip.auto_download.1": "הגדר האם עולמות יורדו",
+  "swd.tooltip.auto_download.2": "באופן אוטומטי בעת הצטרפות לשרת.",
+  "swd.tooltip.include_entities.1": "הגדר האם ישויות ישמרו",
+  "swd.tooltip.include_entities.2": "יחד עם העולם שהורד.",
+  "swd.tooltip.include_player_data.1": "הגדר האם נתוני שחקן ישמרו",
+  "swd.tooltip.include_player_data.2": "יחד עם העולם שהורד.",
+  "swd.tooltip.include_resource_packs.1": "הגדר האם חבילות משאבים של השרת יישמרו",
+  "swd.tooltip.include_resource_packs.2": "יחד עם העולם שהורד."
 }

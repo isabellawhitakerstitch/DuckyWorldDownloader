@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Sonraí trádála sráidbhaile sábháilte.",
   "swd.status.enderchest_saved": "> Ábhar Ender chest sábháilte.",
   "swd.status.container_saved": "> Ábhar coimeádáin sábháilte.",
-  "swd.status.saving_chunk": "> Smután á shábháil: %s"
+  "swd.status.saving_chunk": "> Ag sábháil smután %s",
+  "swd.status.resume_saving": "> Ag atosú ag sábháil smután...",
+  "swd.status.queue_full": "> Tá an scuaine sábhála lán! Níor sábháladh &s",
+  "swd.status.itemframe_saved": "> Sábháladh ábhar an fhráma míre.",
+  "swd.tooltip.resume_downloads.1": "Socraigh ar cheart leanúint den tsábháil",
+  "swd.tooltip.resume_downloads.2": "má aimsítear sábháil eile don domhan.",
+  "swd.screen.config.label.resume_downloads": "Atosaigh an tsábháil:"
 }
 

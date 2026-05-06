@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Händlerdaten gespeichert.",
   "swd.status.enderchest_saved": "> Endertruh-Inhalt gespeichert.",
   "swd.status.container_saved": "> Behälterinhalt gespeichert.",
-  "swd.status.saving_chunk": "> Chunk wird gespeichert: %s"
+  "swd.status.saving_chunk": "> Speichere Chunk %s",
+  "swd.status.resume_saving": "> Setze das Speichern der Chunks fort...",
+  "swd.status.queue_full": "> Speicherwarteschlange ist voll! &s wurde nicht gespeichert",
+  "swd.status.itemframe_saved": "> Inhalt des Rahmens gespeichert.",
+  "swd.tooltip.resume_downloads.1": "Legt fest, ob das Speichern fortgesetzt werden soll,",
+  "swd.tooltip.resume_downloads.2": "wenn ein weiterer Speicherstand für diese Welt gefunden wird.",
+  "swd.screen.config.label.resume_downloads": "Speichern fortsetzen:"
 }

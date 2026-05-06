@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> داده ڤرداڬڠن villager دسيمڤن.",
   "swd.status.enderchest_saved": "> isi Ender Chest دسيمڤن.",
   "swd.status.container_saved": "> isi container دسيمڤن.",
-  "swd.status.saving_chunk": "> سداڠ سمڤن chunk %s"
+  "swd.status.saving_chunk": "> منيمڤن چونک %s",
+  "swd.status.resume_saving": "> منيمبوق سمبولي منيمڤن چونک...",
+  "swd.status.queue_full": "> انتريان سيمڤن ڤنوه! تيدق مپيمڤن &s",
+  "swd.status.itemframe_saved": "> كاندوڠن بيڠكاي ايتم دسيمڤن.",
+  "swd.tooltip.resume_downloads.1": "تتڤكن سام اد ڤپيمڤنن ڤرلو دشبوڠكن",
+  "swd.tooltip.resume_downloads.2": "جک ڤپيمڤنن لاءين اونتوق دنيا اين دتموءي.",
+  "swd.screen.config.label.resume_downloads": "سامبوڠ مپيمڤن:"
 }

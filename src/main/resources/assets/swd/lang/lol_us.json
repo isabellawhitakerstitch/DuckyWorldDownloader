@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Villagr tradz iz saeved.",
   "swd.status.enderchest_saved": "> Endr chezt noms saeved.",
   "swd.status.container_saved": "> Boxey noms saeved.",
-  "swd.status.saving_chunk": "> Saevin chunk %s"
+  "swd.status.saving_chunk": "> SAVIN TEH CHUNK %s",
+  "swd.status.resume_saving": "> MOAR SAVIN TIEM...",
+  "swd.status.queue_full": "> WAITIN LINE IZ FULL! NO SAVE &s",
+  "swd.status.itemframe_saved": "> PIKTUR FRAME IZ SAFED.",
+  "swd.tooltip.resume_downloads.1": "Cheezburger or save again",
+  "swd.tooltip.resume_downloads.2": "if we findz ur old save.",
+  "swd.screen.config.label.resume_downloads": "KEEP SAVIN:"
 }

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> บันทึกข้อมูลการค้าของชาวบ้านแล้ว",
   "swd.status.enderchest_saved": "> บันทึกสิ่งของในกล่องเอนเดอร์แล้ว",
   "swd.status.container_saved": "> บันทึกสิ่งของในหีบแล้ว",
-  "swd.status.saving_chunk": "> กำลังบันทึกชิ้นส่วนโลก %s"
+  "swd.status.saving_chunk": "> กำลังบันทึกชิ้นส่วน %s",
+  "swd.status.resume_saving": "> กำลังดำเนินบันทึกชิ้นส่วนต่อ...",
+  "swd.status.queue_full": "> คิวการบันทึกเต็ม! ไม่ได้บันทึก &s",
+  "swd.status.itemframe_saved": "> บันทึกเนื้อหาในกรอบไอเทมแล้ว",
+  "swd.tooltip.resume_downloads.1": "ตั้งค่าว่าจะให้บันทึกต่อหรือไม่",
+  "swd.tooltip.resume_downloads.2": "หากพบไฟล์บันทึกอื่นของโลกนี้",
+  "swd.screen.config.label.resume_downloads": "บันทึกต่อ:",
+  "swd.tooltip.save_world_to.1": "ตั้งชื่อโลกที่บันทึก",
+  "swd.tooltip.save_world_to.2": "หากมีโลกที่ใช้ชื่อนี้อยู่แล้ว",
+  "swd.tooltip.save_world_to.3": "ชันก์ใหม่จะเขียนทับบางส่วนของโลกนั้น",
+  "swd.tooltip.auto_download.1": "ตั้งว่าจะให้ดาวน์โหลดโลก",
+  "swd.tooltip.auto_download.2": "โดยอัตโนมัติเมื่อเข้าร่วมเซิร์ฟเวอร์หรือไม่",
+  "swd.tooltip.include_entities.1": "ตั้งว่าจะบันทึกเอนทิตี",
+  "swd.tooltip.include_entities.2": "พร้อมกับโลกที่ดาวน์โหลดหรือไม่",
+  "swd.tooltip.include_player_data.1": "ตั้งว่าจะบันทึกข้อมูลผู้เล่น",
+  "swd.tooltip.include_player_data.2": "พร้อมกับโลกที่ดาวน์โหลดหรือไม่",
+  "swd.tooltip.include_resource_packs.1": "ตั้งว่าจะบันทึกรีซอร์สแพ็กของเซิร์ฟเวอร์",
+  "swd.tooltip.include_resource_packs.2": "พร้อมกับโลกที่ดาวน์โหลดหรือไม่"
 }

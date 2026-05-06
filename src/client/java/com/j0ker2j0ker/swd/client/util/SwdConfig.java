@@ -12,6 +12,7 @@ public class SwdConfig {
 
     public String saveWorldTo = "";
     public boolean autoDownload = false;
+    public boolean resumeDownloads = true;
     public boolean includeEntities = true;
     public boolean includePlayerData = true;
     public boolean includeResourcePacks = true;

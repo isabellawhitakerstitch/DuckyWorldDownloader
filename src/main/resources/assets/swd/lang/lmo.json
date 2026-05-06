@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dati di scambi di vilan salvad.",
   "swd.status.enderchest_saved": "> Continid de la cassa de l'ender salvad.",
   "swd.status.container_saved": "> Continid del vasi salvad.",
-  "swd.status.saving_chunk": "> Salvatagg del chunk %s"
+  "swd.status.saving_chunk": "> Salvà el tòch %s",
+  "swd.status.resume_saving": "> Dré a riprend el salvatagg di tòch...",
+  "swd.status.queue_full": "> La coda de salvatagg l'è piena! S'è minga salvà &s",
+  "swd.status.itemframe_saved": "> El contegnù de la cornis l'è stait salvà.",
+  "swd.tooltip.resume_downloads.1": "Imposta se el salvatagg el gh'ha de riprend,",
+  "swd.tooltip.resume_downloads.2": "se se troeuva on alter salvatagg per el mond.",
+  "swd.screen.config.label.resume_downloads": "Riprend el salvatagg:",
+  "swd.tooltip.save_world_to.1": "Imposta el nòm del mond salvaa.",
+  "swd.tooltip.save_world_to.2": "Se gh'è già un mond cunt chèst nòm,",
+  "swd.tooltip.save_world_to.3": "i nöf chunks scriven sora ai pèzz de chèl mond.",
+  "swd.tooltip.auto_download.1": "Imposta se i mond i dev èss scaricaa",
+  "swd.tooltip.auto_download.2": "automaticament quand se entra in del server.",
+  "swd.tooltip.include_entities.1": "Imposta se le entitàa i dev èss salvade",
+  "swd.tooltip.include_entities.2": "insema al mond scaricaa.",
+  "swd.tooltip.include_player_data.1": "Imposta se i daa del zogadòr i dev èss salvaa",
+  "swd.tooltip.include_player_data.2": "insema al mond scaricaa.",
+  "swd.tooltip.include_resource_packs.1": "Imposta se i pachet de risorse del server",
+  "swd.tooltip.include_resource_packs.2": "i dev èss salvaa cunt el mond scaricaa."
 }

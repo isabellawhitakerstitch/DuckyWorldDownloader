@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Handelsdata for landsbybuarar lagra.",
   "swd.status.enderchest_saved": "> Innhald i enderkiste lagra.",
   "swd.status.container_saved": "> Innhald i behaldar lagra.",
-  "swd.status.saving_chunk": "> Lagrar chunk %s"
+  "swd.status.saving_chunk": "> Lagrar chunk %s",
+  "swd.status.resume_saving": "> Gjenopptek lagring av chunks...",
+  "swd.status.queue_full": "> Lagringskøen er full! Lagra ikkje &s",
+  "swd.status.itemframe_saved": "> Innhaldet i gjenstandsramma er lagra.",
+  "swd.tooltip.resume_downloads.1": "Vel om lagring skal gjenopptakast",
+  "swd.tooltip.resume_downloads.2": "om ei anna lagring for verda vert funnen.",
+  "swd.screen.config.label.resume_downloads": "Gjenoppta lagring:",
+  "swd.tooltip.save_world_to.1": "Sett namnet på den lagra verda.",
+  "swd.tooltip.save_world_to.2": "Viss ei verd med dette namnet allereie finst,",
+  "swd.tooltip.save_world_to.3": "vil nye bitar overskrive delar av den verda.",
+  "swd.tooltip.auto_download.1": "Sett om verder skal lastast ned",
+  "swd.tooltip.auto_download.2": "automatisk ved tilkopling til tenar.",
+  "swd.tooltip.include_entities.1": "Sett om einingar skal lagrast",
+  "swd.tooltip.include_entities.2": "saman med den nedlasta verda.",
+  "swd.tooltip.include_player_data.1": "Sett om spelardata skal lagrast",
+  "swd.tooltip.include_player_data.2": "saman med den nedlasta verda.",
+  "swd.tooltip.include_resource_packs.1": "Sett om ressurspakkar frå tenaren skal",
+  "swd.tooltip.include_resource_packs.2": "lagrast med den nedlasta verda."
 }

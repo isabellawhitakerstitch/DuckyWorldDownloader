@@ -73,7 +73,7 @@ public class SaveManager {
 
     private static final int DATA_VERSION = 4790;
     private static final String VERSION_NAME = "26.1.2";
-    private static final byte IS_SNAPSHOT = (byte)0;
+    private static final byte IS_SNAPSHOT = (byte) 0;
 
     private static final int PLAYER_INVENTORY_SLOTS = 36;
     private static final int DOUBLE_CHEST_SLOTS = 54;
@@ -85,15 +85,22 @@ public class SaveManager {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private static final Queue<ChunkSaveTask> saveQueue = new ConcurrentLinkedQueue<>();
+    private static final java.util.Set<String> queuedChunks = java.util.concurrent.ConcurrentHashMap.newKeySet();
+    private static final java.util.Set<String> touchedChunks = java.util.concurrent.ConcurrentHashMap.newKeySet();
+    private static final int MAX_QUEUE_SIZE = 4096;
     public static Thread saveThread = null;
 
     public static volatile boolean isSaving = false;
+    private static volatile net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> lastSavedDimension = null;
+    private static boolean isResumingExistingWorld = false;
     public static String name;
     public static Path path;
 
     private static HashMap<BlockPos, List<ItemStack>> cacheBlockInventories;
     private static HashMap<UUID, List<ItemStack>> cacheEntityInventories;
     private static HashMap<UUID, CompoundTag> cacheEntityOverrides;
+    private static HashMap<BlockPos, CompoundTag> blockEntitySnapshots;
+    private static java.util.Set<UUID> interactedEntities;
     private static UUID cachePlayerUuid;
     private static JsonObject cachedStatsByType;
     private static JsonObject cachedAdvancements;
@@ -109,12 +116,12 @@ public class SaveManager {
     private static DynamicOps<Tag> ops;
 
     public static void toggle() {
-        if(isSaving) stop();
+        if (isSaving) stop();
         else start();
     }
 
     public static void start() {
-        if(isSaving || mc.player == null) return;
+        if (isSaving || mc.player == null) return;
 
         ops = Objects.requireNonNull(mc.level).registryAccess().createSerializationContext(NbtOps.INSTANCE);
         isSaving = true;
@@ -130,6 +137,8 @@ public class SaveManager {
         cacheBlockInventories = new HashMap<>();
         cacheEntityInventories = new HashMap<>();
         cacheEntityOverrides = new HashMap<>();
+        blockEntitySnapshots = new HashMap<>();
+        interactedEntities = new HashSet<>();
         cachePlayerUuid = mc.player.getUUID();
         cachedStatsByType = new JsonObject();
         cachedAdvancements = new JsonObject();
@@ -138,11 +147,17 @@ public class SaveManager {
         statsDirty = false;
         advancementsDirty = false;
         lastMetaFlushTimeMs = 0L;
+        lastSavedDimension = mc.level != null ? mc.level.dimension() : null;
 
         bootstrapAdvancementsFromClientCache();
 
-        printStatus(Component.translatable("swd.status.started_saving").withStyle(ChatFormatting.GREEN));
-        saveChunksAround(mc.options.renderDistance().get());
+        if (isResumingExistingWorld) {
+            printStatus(Component.translatable("swd.status.resume_saving").withStyle(ChatFormatting.GREEN));
+            saveChunksAround(mc.options.renderDistance().get(), true);
+        } else {
+            printStatus(Component.translatable("swd.status.started_saving").withStyle(ChatFormatting.GREEN));
+            saveChunksAround(mc.options.renderDistance().get());
+        }
     }
 
     public static void stop() {
@@ -155,9 +170,14 @@ public class SaveManager {
         }
         printStatus(Component.translatable("swd.status.stopped_saving").withStyle(ChatFormatting.RED));
 
+        queuedChunks.clear();
+        touchedChunks.clear();
+
         if (cacheBlockInventories != null) cacheBlockInventories.clear();
         if (cacheEntityInventories != null) cacheEntityInventories.clear();
         if (cacheEntityOverrides != null) cacheEntityOverrides.clear();
+        if (blockEntitySnapshots != null) blockEntitySnapshots.clear();
+        if (interactedEntities != null) interactedEntities.clear();
         cachePlayerUuid = null;
         cachedStatsByType = null;
         cachedAdvancements = null;
@@ -166,10 +186,13 @@ public class SaveManager {
         statsDirty = false;
         advancementsDirty = false;
         lastMetaFlushTimeMs = 0L;
+        lastSavedDimension = null;
+        isResumingExistingWorld = false;
     }
 
     public static void cacheAwardStatsPacket(ClientboundAwardStatsPacket packet) {
-        if (!isSaving || path == null || mc.player == null || mc.isLocalServer() || mc.getCurrentServer() == null) return;
+        if (!isSaving || path == null || mc.player == null || mc.isLocalServer() || mc.getCurrentServer() == null)
+            return;
         if (cachedStatsByType == null) cachedStatsByType = new JsonObject();
         if (cachePlayerUuid == null) cachePlayerUuid = mc.player.getUUID();
 
@@ -196,7 +219,8 @@ public class SaveManager {
     }
 
     public static void cacheAdvancementPacket(ClientboundUpdateAdvancementsPacket packet) {
-        if (!isSaving || path == null || mc.player == null || mc.isLocalServer() || mc.getCurrentServer() == null) return;
+        if (!isSaving || path == null || mc.player == null || mc.isLocalServer() || mc.getCurrentServer() == null)
+            return;
         if (cachedAdvancements == null) cachedAdvancements = new JsonObject();
         if (removedAdvancements == null) removedAdvancements = new HashSet<>();
         if (cachePlayerUuid == null) cachePlayerUuid = mc.player.getUUID();
@@ -308,7 +332,7 @@ public class SaveManager {
         trimPlayerInventory(items);
 
         if (lastClicked instanceof BlockPos blockPos) {
-            handleBlockContainer(blockPos, items);
+            handleBlockContainer(blockPos, items, screen);
         } else if (lastClicked instanceof net.minecraft.world.entity.Entity entity) {
             if (!SwdClient.CONFIG.includeEntities) return;
             handleEntityContainer(entity, items);
@@ -354,13 +378,39 @@ public class SaveManager {
         }
     }
 
-    private static void handleBlockContainer(BlockPos pos, List<ItemStack> items) {
+    private static void handleBlockContainer(BlockPos pos, List<ItemStack> items, Screen screen) {
         if (cachePairedChestInventories(pos, items)) {
             return;
         }
 
         cacheBlockInventories.put(pos, new ArrayList<>(items)); // defensive copy
+
+        // Snapshot the full BlockEntity NBT for Crafter/Dropper/Dispenser.
+        // The server only sends inventory data during active GUI interaction;
+        // non-inventory fields (Crafter disabled/triggered, etc.) must come from
+        // the client-side BE at the moment the player closes the screen.
+        if (mc.level != null && isPrecisionBlockEntityScreen(screen)) {
+            var be = mc.level.getBlockEntity(pos);
+            if (be != null) {
+                CompoundTag snapshot = be.saveWithFullMetadata(mc.level.registryAccess());
+                // Remove the Items key from the snapshot — we'll inject from cache later.
+                snapshot.remove("Items");
+                blockEntitySnapshots.put(pos, snapshot);
+            }
+        }
+
         saveChunkNow(pos);
+    }
+
+    /**
+     * Returns true for containers whose BE carries critical non-inventory state.
+     */
+    private static boolean isPrecisionBlockEntityScreen(Screen screen) {
+        if (screen == null) return false;
+        return switch (screen.getClass().getSimpleName()) {
+            case "CrafterScreen", "DispenserScreen", "DropperScreen" -> true;
+            default -> false;
+        };
     }
 
     private static boolean cachePairedChestInventories(BlockPos pos, List<ItemStack> items) {
@@ -405,11 +455,16 @@ public class SaveManager {
 
     private static void handleEntityContainer(net.minecraft.world.entity.Entity entity, List<ItemStack> items) {
         if (!SwdClient.CONFIG.includeEntities) return;
-        cacheEntityInventories.put(entity.getUUID(), new ArrayList<>(items));
+        UUID uuid = entity.getUUID();
+        if (!interactedEntities.contains(uuid)) return;
+        cacheEntityInventories.put(uuid, new ArrayList<>(items));
+        interactedEntities.add(uuid);
         saveChunkNow(entity.blockPosition());
     }
 
     private static void cacheVillagerMerchantData(AbstractVillager merchant, MerchantMenu menu) {
+        if (!interactedEntities.contains(merchant.getUUID())) return;
+
         if (!SwdClient.CONFIG.includeEntities) return;
         CompoundTag overlay = new CompoundTag();
 
@@ -428,14 +483,54 @@ public class SaveManager {
         }
 
         cacheEntityOverrides.put(merchant.getUUID(), overlay);
+        interactedEntities.add(merchant.getUUID());
         saveChunkNow(merchant.blockPosition());
     }
 
+    /**
+     * Called when the player interacts with any entity (right-click).
+     * Caches entity-specific data (item frame contents, etc.) and
+     * marks the entity for persistence so it is included in future chunk saves.
+     */
+    public static void onEntityInteract(net.minecraft.world.entity.Entity entity) {
+        if (!isSaving || mc.level == null) return;
+
+        UUID uuid = entity.getUUID();
+        interactedEntities.add(uuid);
+
+        // ItemFrame / GlowItemFrame: cache the displayed item
+        if (entity instanceof net.minecraft.world.entity.decoration.ItemFrame frame) {
+            ItemStack displayed = frame.getItem();
+            if (!displayed.isEmpty()) {
+                List<ItemStack> items = new ArrayList<>();
+                items.add(displayed.copy());
+                cacheEntityInventories.put(uuid, items);
+                printStatus(Component.translatable("swd.status.itemframe_saved").withStyle(ChatFormatting.GREEN));
+            }
+        }
+
+        saveChunkNow(entity.blockPosition());
+    }
+
+
     private static void saveChunkNow(BlockPos pos) {
+        if (mc.level == null) return;
         LevelChunk wc = mc.level.getChunkSource().getChunkNow(pos.getX() >> 4, pos.getZ() >> 4);
         if (wc != null) {
+            touchChunk(wc.getPos(), mc.level.dimension());
+            // Clear dedup so that subsequent saveChunkNow calls with fresh
+            // cache data (from onScreenClosed → cacheVillagerMerchantData,
+            // handleBlockContainer, etc.) are not silently dropped.
+            queuedChunks.remove(packChunkDimKey(wc.getPos(), mc.level.dimension()));
             saveChunkToRegion(path, wc, false, mc.level.dimension());
         }
+    }
+
+    /**
+     * Mark a chunk as "touched" so that even on resume it will be saved.
+     */
+    private static void touchChunk(ChunkPos pos, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dim) {
+        touchedChunks.add(packChunkDimKey(pos, dim));
     }
 
     public static CompoundTag buildEntityChunkNbt(LevelChunk wc) {
@@ -458,7 +553,13 @@ public class SaveManager {
                 if (entity instanceof net.minecraft.world.entity.player.Player) return;
 
                 CompoundTag entityNbt = saveEntityToNbt(entity);
+
+                // Entity persistence: merge cached inventory/override data for interacted entities.
+                // The server sends complete data for basic entities (cows, sheep, zombies, etc.)
+                // but only sends inventory/trade data during active player interaction.
+                // The cache preserves this interaction data across chunk re-saves.
                 injectCachedEntityInventory(entity, entityNbt);
+
                 entityList.add(entityNbt);
             });
         }
@@ -473,6 +574,9 @@ public class SaveManager {
 
         ListTag blockEntities = new ListTag();
         wc.getBlockEntities().forEach((bePos, be) -> {
+            if (wc.getBlockState(bePos).isAir() || !wc.getBlockState(bePos).hasBlockEntity()) {
+                return;
+            }
             CompoundTag beTag = be.saveWithFullMetadata(wc.getLevel().registryAccess());
             injectCachedBlockInventory(bePos, beTag);
             blockEntities.add(beTag);
@@ -547,6 +651,172 @@ public class SaveManager {
         }
     }
 
+    /**
+     * Merge old (disk) and new (server + cache) entity chunk NBTs.
+     * Matches entities by type + block position; old entities with cached
+     * inventory/trade data are preserved unless the new data has fresh cache.
+     */
+    private static CompoundTag mergeEntityChunkNbt(CompoundTag oldChunk, CompoundTag newChunk) {
+        ListTag oldList = oldChunk.getList("Entities").orElse(new ListTag());
+        ListTag newList = newChunk.getList("Entities").orElse(new ListTag());
+
+        java.util.Map<String, CompoundTag> oldByKey = new java.util.HashMap<>();
+        for (int i = 0; i < oldList.size(); i++) {
+            CompoundTag nbt = oldList.getCompound(i).orElseThrow();
+            String key = entityMatchKey(nbt);
+            if (!key.isEmpty()) oldByKey.put(key, nbt);
+        }
+
+        java.util.Set<String> matchedNewKeys = new java.util.HashSet<>();
+        ListTag merged = new ListTag();
+
+        // Process new entities
+        for (int i = 0; i < newList.size(); i++) {
+            CompoundTag newNbt = newList.getCompound(i).orElseThrow();
+            String key = entityMatchKey(newNbt);
+            CompoundTag oldNbt = key.isEmpty() ? null : oldByKey.get(key);
+
+            if (oldNbt != null) {
+                // Entity matched by stable key → keep the current server packet as the base,
+                // and only restore interaction-only fields when the server packet is empty.
+                CompoundTag mergedEntity = newNbt.copy();
+
+                Tag oldItems = copyTag(oldNbt, "Items");
+                if (!hasNonEmptyList(newNbt, "Items") && oldItems != null) {
+                    mergedEntity.put("Items", oldItems);
+                }
+
+                Tag oldOffers = copyTag(oldNbt, "Offers");
+                if (!newNbt.contains("Offers") && oldOffers != null) {
+                    mergedEntity.put("Offers", oldOffers);
+                }
+
+                Tag oldVillagerData = copyTag(oldNbt, "VillagerData");
+                if (!newNbt.contains("VillagerData") && oldVillagerData != null) {
+                    mergedEntity.put("VillagerData", oldVillagerData);
+                }
+
+                merged.add(mergedEntity);
+                matchedNewKeys.add(key);
+            } else {
+                // No old match → new entity, keep as-is
+                merged.add(newNbt);
+            }
+        }
+
+        // Add old entities that weren't matched by any new entity
+        for (var entry : oldByKey.entrySet()) {
+            if (!matchedNewKeys.contains(entry.getKey())) {
+                merged.add(entry.getValue());
+            }
+        }
+
+        CompoundTag result = oldChunk.copy();
+        result.put("Entities", merged);
+        return result;
+    }
+
+    /**
+     * Build a stable match key from entity NBT: use UUID, fall back to type@blockPos.
+     */
+    private static String entityMatchKey(CompoundTag nbt) {
+        try {
+            if (nbt.contains("UUID")) {
+                var uuidTag = nbt.get("UUID");
+                if (uuidTag instanceof IntArrayTag arr && arr.size() >= 4) {
+                    int[] uuid = arr.getAsIntArray();
+                    return new UUID(
+                            ((long) uuid[0] << 32) | (uuid[1] & 0xFFFFFFFFL),
+                            ((long) uuid[2] << 32) | (uuid[3] & 0xFFFFFFFFL)
+                    ).toString();
+                }
+            }
+            // Fallback for entities without UUID
+            String id = nbt.getString("id").orElse("");
+            if (id.isEmpty()) return "";
+            ListTag pos = nbt.getList("Pos").orElse(new ListTag());
+            if (pos.isEmpty()) return "";
+            int bx = (int) Math.floor(pos.getDouble(0).orElse(0.0));
+            int by = (int) Math.floor(pos.getDouble(1).orElse(0.0));
+            int bz = (int) Math.floor(pos.getDouble(2).orElse(0.0));
+            return id + "@" + bx + "," + by + "," + bz;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Merge old (disk) and new (server + live BE) block chunk NBTs.
+     * Matches block entities by id + x/y/z; old cached fields (Items,
+     * Disabled, Triggered) are preserved unless the new data carries fresh values.
+     */
+    private static CompoundTag mergeBlockChunkNbt(CompoundTag oldChunk, CompoundTag newChunk) {
+        ListTag oldList = oldChunk.getList("block_entities").orElse(new ListTag());
+        ListTag newList = newChunk.getList("block_entities").orElse(new ListTag());
+
+        java.util.Map<String, CompoundTag> oldByKey = new java.util.HashMap<>();
+        for (int i = 0; i < oldList.size(); i++) {
+            CompoundTag nbt = oldList.getCompound(i).orElseThrow();
+            String key = beMatchKey(nbt);
+            if (!key.isEmpty()) oldByKey.put(key, nbt);
+        }
+
+        java.util.Set<String> matchedNewKeys = new java.util.HashSet<>();
+        ListTag merged = new ListTag();
+
+        for (int i = 0; i < newList.size(); i++) {
+            CompoundTag newNbt = newList.getCompound(i).orElseThrow();
+            String key = beMatchKey(newNbt);
+            CompoundTag oldNbt = key.isEmpty() ? null : oldByKey.get(key);
+
+            if (oldNbt != null) {
+                boolean newHasInv = newNbt.contains("Items") && !newNbt.getList("Items").orElse(new ListTag()).isEmpty();
+                // Keep the current server packet as the base so empty packets do not
+                // roll the block entity back to an older snapshot.
+                CompoundTag mergedBe = newNbt.copy();
+
+                Tag oldItems = copyTag(oldNbt, "Items");
+                Tag oldDisabled = copyTag(oldNbt, "Disabled");
+                Tag oldTriggered = copyTag(oldNbt, "Triggered");
+                Tag oldCrafting = copyTag(oldNbt, "crafting_ticks_remaining");
+
+                if (!newHasInv && oldItems != null) mergedBe.put("Items", oldItems);
+                if (!newNbt.contains("Disabled") && oldDisabled != null) mergedBe.put("Disabled", oldDisabled);
+                if (!newNbt.contains("Triggered") && oldTriggered != null) mergedBe.put("Triggered", oldTriggered);
+                if (!newNbt.contains("crafting_ticks_remaining") && oldCrafting != null)
+                    mergedBe.put("crafting_ticks_remaining", oldCrafting);
+
+                merged.add(mergedBe);
+                matchedNewKeys.add(key);
+            } else {
+                merged.add(newNbt);
+            }
+        }
+
+        // Do not keep unmatched old block entities; they may point to air now.
+        CompoundTag result = oldChunk.copy();
+        result.put("block_entities", merged);
+        return result;
+    }
+
+    /**
+     * Match key for block entities: "id@x,y,z".
+     */
+    private static String beMatchKey(CompoundTag nbt) {
+        try {
+            String id = nbt.getString("id").orElse("");
+            if (id.isEmpty()) return "";
+            int bx = nbt.getInt("x").orElse(Integer.MIN_VALUE);
+            int by = nbt.getInt("y").orElse(Integer.MIN_VALUE);
+            int bz = nbt.getInt("z").orElse(Integer.MIN_VALUE);
+            if (bx == Integer.MIN_VALUE) return "";
+            return id + "@" + bx + "," + by + "," + bz;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+
     private static void injectCachedBlockInventory(BlockPos pos, CompoundTag beTag) {
         if (cacheBlockInventories.containsKey(pos)) {
             beTag.put("Items", buildItemsListTag(cacheBlockInventories.get(pos)));
@@ -554,6 +824,8 @@ public class SaveManager {
     }
 
     private static void injectCachedEntityInventory(net.minecraft.world.entity.Entity entity, CompoundTag entityNbt) {
+        if (!interactedEntities.contains(entity.getUUID())) return;
+
         if (cacheEntityInventories.containsKey(entity.getUUID())) {
             entityNbt.put("Items", buildItemsListTag(cacheEntityInventories.get(entity.getUUID())));
         }
@@ -656,20 +928,33 @@ public class SaveManager {
     }
 
     private static void determineWorldName() {
+        isResumingExistingWorld = false;
+        boolean allowResume = SwdClient.CONFIG.resumeDownloads;
         if (SwdClient.CONFIG.saveWorldTo.isEmpty()) {
             if (mc.getCurrentServer() != null) name = mc.getCurrentServer().ip.replaceAll("[\\\\/:*?\"<>|]", "_");
             else {
                 if (mc.getSingleplayerServer() == null) name = "Replay Mod";
-                else if (mc.getSingleplayerServer().getWorldData().getLevelName().equalsIgnoreCase("Replay")) name = "Flashback";
+                else if (mc.getSingleplayerServer().getWorldData().getLevelName().equalsIgnoreCase("Replay"))
+                    name = "Flashback";
                 else name = mc.getSingleplayerServer().getWorldData().getLevelName().replaceAll("[\\\\/:*?\"<>|]", "_");
             }
             Path saves = Paths.get("saves");
+            // Reuse existing SWD world: if a directory with the base name was already
+            // saved by this mod, continue writing into it instead of creating a new one.
+            if (allowResume && SwdWorldMarker.isMarked(saves.resolve(name))) {
+                isResumingExistingWorld = true;
+                return;
+            }
             if (Files.exists(saves.resolve(name))) {
                 int i = 1;
                 while (Files.exists(saves.resolve(name + " " + i))) i++;
                 name += " " + i;
             }
         } else {
+            Path saves = Paths.get("saves");
+            if (allowResume && SwdWorldMarker.isMarked(saves.resolve(SwdClient.CONFIG.saveWorldTo))) {
+                isResumingExistingWorld = true;
+            }
             name = SwdClient.CONFIG.saveWorldTo;
         }
     }
@@ -845,6 +1130,16 @@ public class SaveManager {
         return value != null && value.isJsonObject() ? value.getAsJsonObject() : null;
     }
 
+    private static Tag copyTag(CompoundTag object, String key) {
+        if (object == null || !object.contains(key)) return null;
+        Tag tag = object.get(key);
+        return tag == null ? null : tag.copy();
+    }
+
+    private static boolean hasNonEmptyList(CompoundTag object, String key) {
+        return object != null && object.getList(key).orElse(new ListTag()).size() > 0;
+    }
+
     private static int getInt(JsonObject object, String key, int fallback) {
         if (object == null) return fallback;
         JsonElement value = object.get(key);
@@ -879,6 +1174,10 @@ public class SaveManager {
     }
 
     public static void saveChunksAround(int radius) {
+        saveChunksAround(radius, false);
+    }
+
+    private static void saveChunksAround(int radius, boolean touchOnResume) {
         ClientLevel world = mc.level;
 
         if (world == null || mc.player == null) return;
@@ -893,6 +1192,9 @@ public class SaveManager {
 
                 LevelChunk chunk = world.getChunkSource().getChunkNow(chunkX, chunkZ);
                 if (chunk != null) {
+                    if (!isResumingExistingWorld || touchOnResume) {
+                        touchChunk(chunk.getPos(), world.dimension());
+                    }
                     saveChunkToRegion(path, chunk, false, world.dimension());
                 }
             }
@@ -900,20 +1202,35 @@ public class SaveManager {
     }
 
     public static void saveChunkToRegion(Path worldFolder, LevelChunk wc, boolean showMessage, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimension) {
+        String dedupKey = packChunkDimKey(wc.getPos(), dimension);
+
+        // Dedup: skip if this exact chunk+dimension is already queued
+        if (!queuedChunks.add(dedupKey)) {
+            return; // already queued, skip
+        }
+        if (saveQueue.size() >= MAX_QUEUE_SIZE) {
+            queuedChunks.remove(dedupKey);
+            if (showMessage)
+                printStatus(Component.translatable("swd.status.queue_full", wc.getPos()).withStyle(ChatFormatting.RED));
+            return;
+        }
+
         CompoundTag blockNbt = buildChunkNbt(wc);
         CompoundTag entityNbt = buildEntityChunkNbt(wc);
 
-        saveQueue.add(new ChunkSaveTask(wc.getPos(), blockNbt, entityNbt));
+        saveQueue.add(new ChunkSaveTask(wc.getPos(), blockNbt, entityNbt, dimension));
+
+        // Detect dimension change: when player enters a new dimension, trigger a batch save.
+        // Update lastSavedDimension BEFORE saveChunksAround to prevent re-entrant triggering.
+        var previousDim = lastSavedDimension;
+        lastSavedDimension = dimension;
+
+        if (previousDim != null && dimension != null && previousDim != dimension) {
+            saveChunksAround(6);
+        }
 
         if (saveThread == null || !saveThread.isAlive()) {
-            String dim = "overworld";
-            if(dimension != null && dimension == ClientLevel.NETHER) dim = "the_nether";
-            if(dimension != null && dimension == ClientLevel.END) dim = "the_end";
-            Path regionDir = worldFolder.resolve("dimensions").resolve("minecraft").resolve(dim).resolve("region");
-            Path entityDir = worldFolder.resolve("dimensions").resolve("minecraft").resolve(dim).resolve("entities");
-            checkPathExists(regionDir);
-            checkPathExists(entityDir);
-            saveThread = new Thread(() -> processQueue(regionDir, entityDir, dimension));
+            saveThread = new Thread(() -> processQueue(worldFolder));
             saveThread.start();
         }
 
@@ -922,9 +1239,10 @@ public class SaveManager {
         }
     }
 
-    private static void processQueue(Path regionDir, Path entityDir, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimension) {
-        try (RegionStorage blockStorage = new RegionStorage(regionDir);
-             RegionStorage entityStorage = new RegionStorage(entityDir)) {
+    private static void processQueue(Path worldFolder) {
+        java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>, RegionStorage> blockStorages = new java.util.HashMap<>();
+        java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>, RegionStorage> entityStorages = new java.util.HashMap<>();
+        try {
 
             while (true) {
                 ChunkSaveTask task = saveQueue.poll();
@@ -941,17 +1259,91 @@ public class SaveManager {
                     continue;
                 }
 
-                blockStorage.write(task.pos, task.blockNbt, dimension);
-                entityStorage.write(task.pos, task.entityNbt, dimension);
+                var dimKey = task.dimension != null ? task.dimension : net.minecraft.world.level.Level.OVERWORLD;
+
+                RegionStorage blockStorage = blockStorages.computeIfAbsent(dimKey, dk -> {
+                    String ns = dk.identifier().getNamespace();
+                    String p = dk.identifier().getPath();
+                    Path dir = worldFolder.resolve("dimensions").resolve(ns).resolve(p).resolve("region");
+                    checkPathExists(dir);
+                    return new RegionStorage(dir);
+                });
+                RegionStorage entityStorage = entityStorages.computeIfAbsent(dimKey, dk -> {
+                    String ns = dk.identifier().getNamespace();
+                    String p = dk.identifier().getPath();
+                    Path dir = worldFolder.resolve("dimensions").resolve(ns).resolve(p).resolve("entities");
+                    checkPathExists(dir);
+                    return new RegionStorage(dir);
+                });
+
+                String dedupKey = packChunkDimKey(task.pos, task.dimension);
+                boolean touched = touchedChunks.contains(dedupKey);
+                boolean skipBlockWrite = false;
+                boolean skipEntityWrite = false;
+                CompoundTag oldBlockNbt = null;
+
+                if (isResumingExistingWorld && !touched) {
+                    try {
+                        oldBlockNbt = blockStorage.read(task.pos, task.dimension);
+                        boolean hasRealChunk = oldBlockNbt != null && !isEmptyChunkNbt(oldBlockNbt);
+                        skipBlockWrite = hasRealChunk;
+                        skipEntityWrite = hasRealChunk;
+                    } catch (IOException ignored) {
+                    }
+                }
+
+                if (!skipBlockWrite) {
+                    CompoundTag finalBlockNbt = task.blockNbt;
+                    if (isResumingExistingWorld && touched && task.blockNbt != null) {
+                        try {
+                            CompoundTag mergeSource = oldBlockNbt != null ? oldBlockNbt : blockStorage.read(task.pos, task.dimension);
+                            if (mergeSource != null) {
+                                finalBlockNbt = mergeBlockChunkNbt(mergeSource, task.blockNbt);
+                            }
+                        } catch (IOException ignored) {
+                        }
+                    }
+                    blockStorage.write(task.pos, finalBlockNbt, task.dimension);
+                }
+
+                if (!skipEntityWrite) {
+                    CompoundTag finalEntityNbt = task.entityNbt;
+                    if (isResumingExistingWorld && touched && task.entityNbt != null) {
+                        try {
+                            CompoundTag oldEntityNbt = entityStorage.read(task.pos, task.dimension);
+                            if (oldEntityNbt != null) {
+                                finalEntityNbt = mergeEntityChunkNbt(oldEntityNbt, task.entityNbt);
+                            }
+                        } catch (IOException ignored) {
+                        }
+                    }
+                    entityStorage.write(task.pos, finalEntityNbt, task.dimension);
+                }
+
+                // Remove from dedup set after successful write/skip
+                queuedChunks.remove(packChunkDimKey(task.pos, task.dimension));
             }
         } catch (IOException e) {
             SwdClient.LOGGER.error("Failed to process chunk save queue!", e);
+        } finally {
+            for (RegionStorage rs : blockStorages.values()) {
+                try {
+                    rs.close();
+                } catch (Exception ignored) {
+                }
+            }
+            for (RegionStorage rs : entityStorages.values()) {
+                try {
+                    rs.close();
+                } catch (Exception ignored) {
+                }
+            }
         }
     }
 
     private static void createPlayerDataFile() {
-        try {
-            LevelStorageSource.LevelStorageAccess access = LevelStorageSource.createDefault(mc.getLevelSource().getBaseDir()).createAccess(name);
+        try (LevelStorageSource.LevelStorageAccess access =
+                     LevelStorageSource.createDefault(mc.getLevelSource().getBaseDir()).createAccess(name)) {
             PlayerDataStorage playerStorage = access.createPlayerStorage();
             playerStorage.save(mc.player);
         } catch (IOException e) {
@@ -968,13 +1360,13 @@ public class SaveManager {
         data.putLong("LastPlayed", System.currentTimeMillis());
         data.putInt("version", 19133);
         data.putInt("GameType", 1);
-        data.putByte("initialized", (byte)1);
-        data.putByte("allowCommands", (byte)1);
+        data.putByte("initialized", (byte) 1);
+        data.putByte("allowCommands", (byte) 1);
 
         CompoundTag difficulty_settings = new CompoundTag();
         difficulty_settings.putString("difficulty", "normal");
-        difficulty_settings.putByte("hardcore", (byte)0);
-        difficulty_settings.putByte("locked", (byte)0);
+        difficulty_settings.putByte("hardcore", (byte) 0);
+        difficulty_settings.putByte("locked", (byte) 0);
         data.put("difficulty_settings", difficulty_settings);
 
         data.putLong("Time", 0);
@@ -983,7 +1375,7 @@ public class SaveManager {
         spawn.putFloat("pitch", 0);
         spawn.putFloat("yaw", 0);
         spawn.putString("dimension", "minecraft:overworld");
-        spawn.putIntArray("pos", new int[] {p.getBlockX(), p.getBlockY(), p.getBlockZ()});
+        spawn.putIntArray("pos", new int[]{p.getBlockX(), p.getBlockY(), p.getBlockZ()});
         data.put("spawn", spawn);
 
         CompoundTag version = new CompoundTag();
@@ -1033,64 +1425,64 @@ public class SaveManager {
 
         // game_rules.dat
         CompoundTag data = new CompoundTag();
-        data.putByte("minecraft:spawn_wandering_traders",  (byte) 1);
-        data.putByte("minecraft:block_drops",  (byte) 1);
-        data.putByte("minecraft:reduced_debug_info",  (byte) 0);
-        data.putByte("minecraft:show_death_messages",  (byte) 1);
-        data.putByte("minecraft:spawn_monsters",  (byte) 1);
-        data.putByte("minecraft:spawner_blocks_work",  (byte) 1);
-        data.putByte("minecraft:tnt_explodes",  (byte) 1);
-        data.putByte("minecraft:immediate_respawn",  (byte) 0);
-        data.putByte("minecraft:player_movement_check",  (byte) 1);
-        data.putByte("minecraft:spread_vines",  (byte) 1);
-        data.putByte("minecraft:block_explosion_drop_decay",  (byte) 1);
-        data.putInt("minecraft:max_entity_cramming",  24);
-        data.putByte("minecraft:forgive_dead_players",  (byte) 1);
-        data.putByte("minecraft:fall_damage",  (byte) 1);
-        data.putByte("minecraft:send_command_feedback",  (byte) 1);
-        data.putByte("minecraft:global_sound_events",  (byte) 1);
-        data.putByte("minecraft:elytra_movement_check",  (byte) 1);
-        data.putInt("minecraft:fire_spread_radius_around_player",  128);
-        data.putByte("minecraft:freeze_damage",  (byte) 1);
-        data.putByte("minecraft:natural_health_regeneration",  (byte) 1);
-        data.putByte("minecraft:mob_explosion_drop_decay",  (byte) 1);
-        data.putInt("minecraft:players_nether_portal_default_delay",  80);
-        data.putByte("minecraft:mob_drops",  (byte) 1);
-        data.putByte("minecraft:log_admin_commands",  (byte) 1);
-        data.putByte("minecraft:mob_griefing",  (byte) 1);
-        data.putByte("minecraft:spawn_mobs",  (byte) 1);
-        data.putByte("minecraft:pvp",  (byte) 1);
-        data.putByte("minecraft:spectators_generate_chunks",  (byte) 1);
-        data.putInt("minecraft:max_command_sequence_length",  65536);
-        data.putByte("minecraft:players_nether_portal_creative_delay",  (byte) 0);
-        data.putInt("minecraft:players_sleeping_percentage",  100);
-        data.putByte("minecraft:advance_weather",  (byte) 1);
-        data.putInt("minecraft:max_block_modifications",  32768);
-        data.putInt("minecraft:max_command_forks",  65536);
-        data.putByte("minecraft:drowning_damage",  (byte) 1);
-        data.putByte("minecraft:show_advancement_messages",  (byte) 1);
-        data.putByte("minecraft:command_block_output",  (byte) 1);
-        data.putByte("minecraft:locator_bar",  (byte) 1);
-        data.putInt("minecraft:respawn_radius",  10);
-        data.putByte("minecraft:raids",  (byte) 1);
-        data.putByte("minecraft:spawn_phantoms",  (byte) 1);
-        data.putByte("minecraft:max_snow_accumulation_height",  (byte) 1);
-        data.putByte("minecraft:limited_crafting",  (byte) 0);
-        data.putByte("minecraft:allow_entering_nether_using_portals",  (byte) 1);
-        data.putByte("minecraft:lava_source_conversion",  (byte) 0);
-        data.putByte("minecraft:tnt_explosion_drop_decay",  (byte) 0);
-        data.putByte("minecraft:universal_anger",  (byte) 0);
-        data.putByte("minecraft:keep_inventory",  (byte) 0);
-        data.putByte("minecraft:spawn_patrols",  (byte) 1);
-        data.putInt("minecraft:random_tick_speed",  3);
-        data.putByte("minecraft:fire_damage",  (byte) 1);
-        data.putByte("minecraft:entity_drops",  (byte) 1);
-        data.putByte("minecraft:advance_time",  (byte) 1);
-        data.putByte("minecraft:command_blocks_work",  (byte) 1);
-        data.putByte("minecraft:spawn_wardens",  (byte) 1);
-        data.putByte("minecraft:water_source_conversion",  (byte) 1);
-        data.putByte("minecraft:projectiles_can_break_blocks",  (byte) 1);
-        data.putByte("minecraft:ender_pearls_vanish_on_death",  (byte) 1);
+        data.putByte("minecraft:spawn_wandering_traders", (byte) 1);
+        data.putByte("minecraft:block_drops", (byte) 1);
+        data.putByte("minecraft:reduced_debug_info", (byte) 0);
+        data.putByte("minecraft:show_death_messages", (byte) 1);
+        data.putByte("minecraft:spawn_monsters", (byte) 1);
+        data.putByte("minecraft:spawner_blocks_work", (byte) 1);
+        data.putByte("minecraft:tnt_explodes", (byte) 1);
+        data.putByte("minecraft:immediate_respawn", (byte) 0);
+        data.putByte("minecraft:player_movement_check", (byte) 1);
+        data.putByte("minecraft:spread_vines", (byte) 1);
+        data.putByte("minecraft:block_explosion_drop_decay", (byte) 1);
+        data.putInt("minecraft:max_entity_cramming", 24);
+        data.putByte("minecraft:forgive_dead_players", (byte) 1);
+        data.putByte("minecraft:fall_damage", (byte) 1);
+        data.putByte("minecraft:send_command_feedback", (byte) 1);
+        data.putByte("minecraft:global_sound_events", (byte) 1);
+        data.putByte("minecraft:elytra_movement_check", (byte) 1);
+        data.putInt("minecraft:fire_spread_radius_around_player", 128);
+        data.putByte("minecraft:freeze_damage", (byte) 1);
+        data.putByte("minecraft:natural_health_regeneration", (byte) 1);
+        data.putByte("minecraft:mob_explosion_drop_decay", (byte) 1);
+        data.putInt("minecraft:players_nether_portal_default_delay", 80);
+        data.putByte("minecraft:mob_drops", (byte) 1);
+        data.putByte("minecraft:log_admin_commands", (byte) 1);
+        data.putByte("minecraft:mob_griefing", (byte) 1);
+        data.putByte("minecraft:spawn_mobs", (byte) 1);
+        data.putByte("minecraft:pvp", (byte) 1);
+        data.putByte("minecraft:spectators_generate_chunks", (byte) 1);
+        data.putInt("minecraft:max_command_sequence_length", 65536);
+        data.putByte("minecraft:players_nether_portal_creative_delay", (byte) 0);
+        data.putInt("minecraft:players_sleeping_percentage", 100);
+        data.putByte("minecraft:advance_weather", (byte) 1);
+        data.putInt("minecraft:max_block_modifications", 32768);
+        data.putInt("minecraft:max_command_forks", 65536);
+        data.putByte("minecraft:drowning_damage", (byte) 1);
+        data.putByte("minecraft:show_advancement_messages", (byte) 1);
+        data.putByte("minecraft:command_block_output", (byte) 1);
+        data.putByte("minecraft:locator_bar", (byte) 1);
+        data.putInt("minecraft:respawn_radius", 10);
+        data.putByte("minecraft:raids", (byte) 1);
+        data.putByte("minecraft:spawn_phantoms", (byte) 1);
+        data.putByte("minecraft:max_snow_accumulation_height", (byte) 1);
+        data.putByte("minecraft:limited_crafting", (byte) 0);
+        data.putByte("minecraft:allow_entering_nether_using_portals", (byte) 1);
+        data.putByte("minecraft:lava_source_conversion", (byte) 0);
+        data.putByte("minecraft:tnt_explosion_drop_decay", (byte) 0);
+        data.putByte("minecraft:universal_anger", (byte) 0);
+        data.putByte("minecraft:keep_inventory", (byte) 0);
+        data.putByte("minecraft:spawn_patrols", (byte) 1);
+        data.putInt("minecraft:random_tick_speed", 3);
+        data.putByte("minecraft:fire_damage", (byte) 1);
+        data.putByte("minecraft:entity_drops", (byte) 1);
+        data.putByte("minecraft:advance_time", (byte) 1);
+        data.putByte("minecraft:command_blocks_work", (byte) 1);
+        data.putByte("minecraft:spawn_wardens", (byte) 1);
+        data.putByte("minecraft:water_source_conversion", (byte) 1);
+        data.putByte("minecraft:projectiles_can_break_blocks", (byte) 1);
+        data.putByte("minecraft:ender_pearls_vanish_on_death", (byte) 1);
 
         root = new CompoundTag();
         root.put("data", data);
@@ -1102,7 +1494,7 @@ public class SaveManager {
         // random_sequences.dat
         data = new CompoundTag();
         data.putByte("salt", (byte) 0);
-        CompoundTag sequences = new  CompoundTag();
+        CompoundTag sequences = new CompoundTag();
         CompoundTag snow = new CompoundTag();
         snow.putLongArray("source", new long[]{0, 0});
         sequences.put("Minecraft:blocks/snow", snow);
@@ -1128,7 +1520,7 @@ public class SaveManager {
 
         // scoreboard.dat
         root = new CompoundTag();
-        root.put("data", new  ListTag());
+        root.put("data", new ListTag());
         root.putInt("DataVersion", DATA_VERSION);
 
         Path scoreboardDat = datFolder.resolve("scoreboard.dat");
@@ -1147,11 +1539,11 @@ public class SaveManager {
 
         // weather.dat
         data = new CompoundTag();
-        data.putByte("raining",  (byte) 0);
-        data.putByte("thundering",  (byte) 0);
-        data.putByte("clear_weather_time",  (byte) 0);
-        data.putInt("rain_time",  0);
-        data.putInt("thundering_time",  0);
+        data.putByte("raining", (byte) 0);
+        data.putByte("thundering", (byte) 0);
+        data.putByte("clear_weather_time", (byte) 0);
+        data.putInt("rain_time", 0);
+        data.putInt("thundering_time", 0);
 
         root = new CompoundTag();
         root.put("data", data);
@@ -1162,10 +1554,10 @@ public class SaveManager {
 
         // world_clocks.dat
         data = new CompoundTag();
-        CompoundTag overworld = new  CompoundTag();
+        CompoundTag overworld = new CompoundTag();
         overworld.putLong("total_ticks", 30);
         data.put("minecraft:overworld", overworld);
-        CompoundTag the_end = new  CompoundTag();
+        CompoundTag the_end = new CompoundTag();
         the_end.putLong("total_ticks", 30);
         data.put("minecraft:the_end", the_end);
 
@@ -1181,13 +1573,13 @@ public class SaveManager {
         data.putByte("bonus_chest", (byte) 0);
         data.putByte("generate_structures", (byte) 0);
         data.putLong("seed", 0);
-        CompoundTag dimensions = new  CompoundTag();
+        CompoundTag dimensions = new CompoundTag();
 
         overworld = new CompoundTag();
         overworld.putString("type", "minecraft:overworld");
-        CompoundTag generator  = new  CompoundTag();
+        CompoundTag generator = new CompoundTag();
         generator.putString("type", "minecraft:flat");
-        CompoundTag settings  = new  CompoundTag();
+        CompoundTag settings = new CompoundTag();
         settings.putByte("features", (byte) 0);
         settings.putString("biome", "minecraft:plains");
         settings.put("layers", new ListTag());
@@ -1202,9 +1594,9 @@ public class SaveManager {
 
         CompoundTag the_nether = new CompoundTag();
         the_nether.putString("type", "minecraft:the_nether");
-        generator  = new  CompoundTag();
+        generator = new CompoundTag();
         generator.putString("type", "minecraft:flat");
-        settings = new  CompoundTag();
+        settings = new CompoundTag();
         settings.putString("biome", "minecraft:the_nether");
         settings.put("layers", new ListTag());
         settings.putByte("features", (byte) 0);
@@ -1215,7 +1607,7 @@ public class SaveManager {
 
         the_end = new CompoundTag();
         the_end.putString("type", "minecraft:the_end");
-        generator  = new  CompoundTag();
+        generator = new CompoundTag();
         generator.putString("type", "minecraft:flat");
         settings = new CompoundTag();
         settings.putString("biome", "minecraft:the_end");
@@ -1241,14 +1633,14 @@ public class SaveManager {
 
         // ender_dragon_fight.dat
         Path endData = path.resolve("dimensions").resolve("minecraft").resolve("the_end").resolve("data").resolve("minecraft");
-        if(!Files.exists(endData)) Files.createDirectories(endData);
+        if (!Files.exists(endData)) Files.createDirectories(endData);
 
         data = new CompoundTag();
-        data.putByte("dragon_killed",  (byte) 1);
-        data.putByte("needs_state_scanning",  (byte) 0);
-        data.putInt("respawn_time",  0);
-        data.putByte("previously_killed",  (byte) 1);
-        data.put("gateways",  new  ListTag());
+        data.putByte("dragon_killed", (byte) 1);
+        data.putByte("needs_state_scanning", (byte) 0);
+        data.putInt("respawn_time", 0);
+        data.putByte("previously_killed", (byte) 1);
+        data.put("gateways", new ListTag());
 
         root = new CompoundTag();
         root.put("data", data);
@@ -1263,7 +1655,7 @@ public class SaveManager {
     }
 
     private static void checkPathExists(Path path) {
-        if(!Files.exists(path)) {
+        if (!Files.exists(path)) {
             try {
                 Files.createDirectories(path);
             } catch (IOException e) {
@@ -1272,6 +1664,71 @@ public class SaveManager {
         }
     }
 
-    private record ChunkSaveTask(ChunkPos pos, CompoundTag blockNbt, CompoundTag entityNbt) { }
+    /**
+     * Pack a ChunkPos + dimension into a stable string key for dedup/lookups.
+     * This avoids any cross-dimension collision when chunk coordinates match.
+     */
+    private static String packChunkDimKey(ChunkPos pos, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dim) {
+        String dimId = dim != null ? dim.identifier().toString() : "minecraft:overworld";
+        return dimId + "|" + pos.x() + "," + pos.z();
+    }
+
+    /**
+     * Convert a UUID into the 4-int NBT array format Minecraft expects.
+     */
+    private static int[] uuidToIntArray(UUID uuid) {
+        long most = uuid.getMostSignificantBits();
+        long least = uuid.getLeastSignificantBits();
+        return new int[]{(int) (most >> 32), (int) most, (int) (least >> 32), (int) least};
+    }
+
+    private record ChunkSaveTask(ChunkPos pos, CompoundTag blockNbt, CompoundTag entityNbt,
+                                 net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimension) {
+    }
+
+    private static boolean isEmptyChunkNbt(CompoundTag nbt) {
+        if (nbt == null) return true;
+        String status = nbt.getString("Status").orElse("");
+        if ("empty".equals(status)) return true;
+        ListTag sections = nbt.getList("sections").orElse(new ListTag());
+        if (sections.isEmpty()) return true;
+        return isAllAirSections(sections);
+    }
+
+    private static boolean isAllAirSections(ListTag sections) {
+        for (int i = 0; i < sections.size(); i++) {
+            CompoundTag sec = sections.getCompound(i).orElseThrow();
+            Tag blockStatesTag = sec.get("block_states");
+            if (!(blockStatesTag instanceof CompoundTag blockStates)) {
+                return false;
+            }
+            ListTag palette = blockStates.getList("palette").orElse(new ListTag());
+            if (palette.isEmpty()) {
+                return false;
+            }
+            if (!isSingleAirPalette(palette)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isSingleAirPalette(ListTag palette) {
+        if (palette.size() != 1) return false;
+        Tag entry = palette.get(0);
+        if (entry instanceof CompoundTag compound) {
+            String name = compound.getString("Name").orElse("");
+            return "minecraft:air".equals(name);
+        }
+        if (entry instanceof StringTag str) {
+            String value = str.toString();
+            if (value.length() >= 2 && value.startsWith("\"") && value.endsWith("\"")) {
+                value = value.substring(1, value.length() - 1);
+            }
+            return "minecraft:air".equals(value);
+        }
+        return false;
+    }
 
 }
+

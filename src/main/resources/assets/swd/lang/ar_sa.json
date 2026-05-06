@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> تم حفظ بيانات تجارة القروي.",
   "swd.status.enderchest_saved": "> تم حفظ محتوى صندوق الإندر.",
   "swd.status.container_saved": "> تم حفظ محتوى الحاوية.",
-  "swd.status.saving_chunk": "> جاري حفظ القطعة %s"
+  "swd.status.saving_chunk": "> جاري حفظ القطعة %s",
+  "swd.status.resume_saving": "> استئناف حفظ القطع...",
+  "swd.status.queue_full": "> قائمة الحفظ ممتلئة! لم يتم حفظ &s",
+  "swd.status.itemframe_saved": "> تم حفظ محتوى إطار العنصر.",
+  "swd.tooltip.resume_downloads.1": "تعيين ما إذا كان يجب استئناف الحفظ",
+  "swd.tooltip.resume_downloads.2": "إذا تم العثور على حفظ آخر للعالم.",
+  "swd.screen.config.label.resume_downloads": "استئناف الحفظ:"
 }
 

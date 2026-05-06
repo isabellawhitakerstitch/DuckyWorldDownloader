@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Të dhënat e tregtisë së fshatarit u ruajtën.",
   "swd.status.enderchest_saved": "> Përmbajtja e arkës ender u ruajt.",
   "swd.status.container_saved": "> Përmbajtja e mbajtësit u ruajt.",
-  "swd.status.saving_chunk": "> Duke ruajtur copën %s"
+  "swd.status.saving_chunk": "> Duke ruajtur pjesën %s",
+  "swd.status.resume_saving": "> Duke rifilluar ruajtjen e pjesëve...",
+  "swd.status.queue_full": "> Radha e ruajtjes është plot! Nuk u ruajt &s",
+  "swd.status.itemframe_saved": "> Përmbajtja e kornizës së artikullit u ruajt.",
+  "swd.tooltip.resume_downloads.1": "Caktoni nëse ruajtja duhet të rifillojë",
+  "swd.tooltip.resume_downloads.2": "nëse gjendet një ruajtje tjetër për botën.",
+  "swd.screen.config.label.resume_downloads": "Rifillo ruajtjen:",
+  "swd.tooltip.save_world_to.1": "Vendosni emrin e botës së ruajtur.",
+  "swd.tooltip.save_world_to.2": "Nëse ekziston tashmë një botë me këtë emër,",
+  "swd.tooltip.save_world_to.3": "pjesët e reja do të mbishkruajnë pjesë të asaj bote.",
+  "swd.tooltip.auto_download.1": "Vendosni nëse botët duhet të shkarkohen",
+  "swd.tooltip.auto_download.2": "automatikisht kur bashkoheni me serverin.",
+  "swd.tooltip.include_entities.1": "Vendosni nëse entitetet duhet të ruhen",
+  "swd.tooltip.include_entities.2": "bashkë me botën e shkarkuar.",
+  "swd.tooltip.include_player_data.1": "Vendosni nëse të dhënat e lojëtarit duhet të ruhen",
+  "swd.tooltip.include_player_data.2": "bashkë me botën e shkarkuar.",
+  "swd.tooltip.include_resource_packs.1": "Vendosni nëse paketat e burimeve të serverit duhet",
+  "swd.tooltip.include_resource_packs.2": "të ruhen me botën e shkarkuar."
 }

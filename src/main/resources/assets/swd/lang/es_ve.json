@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Datos de comercio de aldeano guardados.",
   "swd.status.enderchest_saved": "> Contenido del cofre del end guardado.",
   "swd.status.container_saved": "> Contenido del contenedor guardado.",
-  "swd.status.saving_chunk": "> Guardando chunk %s"
+  "swd.status.saving_chunk": "> Guardando chunk %s",
+  "swd.status.resume_saving": "> Reanudando el guardado de chunks...",
+  "swd.status.queue_full": "> ¡La cola de guardado está llena! No se guardó &s",
+  "swd.status.itemframe_saved": "> Contenido del marco de objetos guardado.",
+  "swd.tooltip.resume_downloads.1": "Establece si el guardado debe reanudarse",
+  "swd.tooltip.resume_downloads.2": "si se encuentra otro guardado para el mundo.",
+  "swd.screen.config.label.resume_downloads": "Reanudar guardado:"
 }

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Dàta malairt baile air a shàbhaladh.",
   "swd.status.enderchest_saved": "> Susbaint Ender chest air a shàbhaladh.",
   "swd.status.container_saved": "> Susbaint soithich air a shàbhaladh.",
-  "swd.status.saving_chunk": "> A' sàbhaladh pìos: %s"
+  "swd.status.saving_chunk": "> A' sàbhaladh cuibhreann %s",
+  "swd.status.resume_saving": "> Ag ath-thòiseachadh sàbhaladh chuibhreannan...",
+  "swd.status.queue_full": "> Tha an ciudha sàbhalaidh làn! Cha deach &s a shàbhaladh",
+  "swd.status.itemframe_saved": "> Susbaint a' fhrèam-nì air a shàbhaladh.",
+  "swd.tooltip.resume_downloads.1": "Suidhich an bu chòir dhuinn cumail oirnn a' sàbhaladh",
+  "swd.tooltip.resume_downloads.2": "ma lorgar sàbhaladh eile airson an t-saoghail.",
+  "swd.screen.config.label.resume_downloads": "Lean air sàbhaladh:"
 }
 

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Δεδομένα εμπορίου χωρικού αποθηκεύτηκαν.",
   "swd.status.enderchest_saved": "> Περιεχόμενο Ender Chest αποθηκεύτηκε.",
   "swd.status.container_saved": "> Περιεχόμενο δοχείου αποθηκεύτηκε.",
-  "swd.status.saving_chunk": "> Αποθήκευση κομματιού %s"
+  "swd.status.saving_chunk": "> Αποθήκευση chunk %s",
+  "swd.status.resume_saving": "> Συνέχιση αποθήκευσης chunks...",
+  "swd.status.queue_full": "> Η ουρά αποθήκευσης είναι γεμάτη! Δεν αποθηκεύτηκε το &s",
+  "swd.status.itemframe_saved": "> Το περιεχόμενο της κορνίζας αντικειμένου αποθηκεύτηκε.",
+  "swd.tooltip.resume_downloads.1": "Ορίστε εάν η αποθήκευση θα πρέπει να συνεχιστεί",
+  "swd.tooltip.resume_downloads.2": "εάν βρεθεί άλλη αποθήκευση για τον κόσμο.",
+  "swd.screen.config.label.resume_downloads": "Συνέχιση αποθήκευσης:"
 }
 

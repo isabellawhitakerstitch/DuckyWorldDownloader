@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> mi awen e sona esun pi jan ma.",
   "swd.status.enderchest_saved": "> mi awen e ijo pi poki Ente.",
   "swd.status.container_saved": "> mi awen e ijo lon poki.",
-  "swd.status.saving_chunk": "> mi awen e kipisi ma %s"
+  "swd.status.saving_chunk": "> mi pana e ma lili %s lon ilo",
+  "swd.status.resume_saving": "> mi pana sin e ma lon ilo...",
+  "swd.status.queue_full": "> tomo awen li pini! mi ken ala pana e &s",
+  "swd.status.itemframe_saved": "> ijo pi poki sitelen li lon ilo.",
+  "swd.tooltip.resume_downloads.1": "sina wile pana sin la ni li ken",
+  "swd.tooltip.resume_downloads.2": "lon tenpo pi lukin pi pana ante.",
+  "swd.screen.config.label.resume_downloads": "pana sin:",
+  "swd.tooltip.save_world_to.1": "o pana nimi tawa ma awen.",
+  "swd.tooltip.save_world_to.2": "ni la ma sama li lon la,",
+  "swd.tooltip.save_world_to.3": "ma sin li ante e ma ni.",
+  "swd.tooltip.auto_download.1": "o pana seme tawa ni: ma li kama lon",
+  "swd.tooltip.auto_download.2": "kepeken ilo sona li kama.",
+  "swd.tooltip.include_entities.1": "o pana seme tawa ni: ijo li awen",
+  "swd.tooltip.include_entities.2": "lon poka ma ni.",
+  "swd.tooltip.include_player_data.1": "o pana seme tawa ni: sona pi jan musi li awen",
+  "swd.tooltip.include_player_data.2": "lon poka ma ni.",
+  "swd.tooltip.include_resource_packs.1": "o pana seme tawa ni: ilo pi ilo sona li awen",
+  "swd.tooltip.include_resource_packs.2": "lon poka ma ni."
 }

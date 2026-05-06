@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Ciematnieku tirdzniecības dati saglabāti.",
   "swd.status.enderchest_saved": "> Ender lādes saturs saglabāts.",
   "swd.status.container_saved": "> Konteinera saturs saglabāts.",
-  "swd.status.saving_chunk": "> Saglabā gabalu %s"
+  "swd.status.saving_chunk": "> Saglabā gabalu %s",
+  "swd.status.resume_saving": "> Turpina gabalu saglabāšanu...",
+  "swd.status.queue_full": "> Saglabāšanas rinda ir pilna! Nesaglabāja &s",
+  "swd.status.itemframe_saved": "> Priekšmeta rāmja saturs saglabāts.",
+  "swd.tooltip.resume_downloads.1": "Iestatiet, vai saglabāšana ir jāturpina,",
+  "swd.tooltip.resume_downloads.2": "ja pasaulei tiek atrasts cits saglabātais fails.",
+  "swd.screen.config.label.resume_downloads": "Turpināt saglabāšanu:",
+  "swd.tooltip.save_world_to.1": "Iestatiet saglabātās pasaules nosaukumu.",
+  "swd.tooltip.save_world_to.2": "Ja pasaule ar šādu nosaukumu jau pastāv,",
+  "swd.tooltip.save_world_to.3": "jaunie fragmenti pārrakstīs daļas no tās pasaules.",
+  "swd.tooltip.auto_download.1": "Iestatiet, vai pasaules jālejupielādē",
+  "swd.tooltip.auto_download.2": "automātiski, pievienojoties serverim.",
+  "swd.tooltip.include_entities.1": "Iestatiet, vai entītijas jāsaglabā",
+  "swd.tooltip.include_entities.2": "kopā ar lejupielādēto pasauli.",
+  "swd.tooltip.include_player_data.1": "Iestatiet, vai spēlētāja dati jāsaglabā",
+  "swd.tooltip.include_player_data.2": "kopā ar lejupielādēto pasauli.",
+  "swd.tooltip.include_resource_packs.1": "Iestatiet, vai servera resursu pakotnes jāsaglabā",
+  "swd.tooltip.include_resource_packs.2": "kopā ar lejupielādēto pasauli."
 }

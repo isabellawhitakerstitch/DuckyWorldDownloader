@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> vIlejara' mI' pollu'ta'.",
   "swd.status.enderchest_saved": "> ender Dalo' mI' pollu'ta'.",
   "swd.status.container_saved": "> Dalo' mI' pollu'ta'.",
-  "swd.status.saving_chunk": "> chunk %s pollu'taH"
+  "swd.status.saving_chunk": "> chunk %s pollu'",
+  "swd.status.resume_saving": "> polta' choHqa'...",
+  "swd.status.queue_full": "> 'uqvul naQ! &s polbe'",
+  "swd.status.itemframe_saved": "> lulI' Doch mI' polta'.",
+  "swd.tooltip.resume_downloads.1": "yIlo' polqa'meH",
+  "swd.tooltip.resume_downloads.2": "Vev qo' pol luvatlhvipchugh.",
+  "swd.screen.config.label.resume_downloads": "polqa':",
+  "swd.tooltip.save_world_to.1": "DIvI' pong mIch tIchup.",
+  "swd.tooltip.save_world_to.2": "DIvI' pong DaHjaj tu'lu'chugh,",
+  "swd.tooltip.save_world_to.3": "chu' chunks DIvI' Hoch lIngmoH.",
+  "swd.tooltip.auto_download.1": "DIvI'mey ngeH 'Iv tu'lu' yIngu'",
+  "swd.tooltip.auto_download.2": "server vISoppu'DI' qaSmoHlu'.",
+  "swd.tooltip.include_entities.1": "DIvI' jeSwI'pu' polHa'lu' 'Iv tu'lu' yIngu'",
+  "swd.tooltip.include_entities.2": "ngeHbogh DIvI'Daq.",
+  "swd.tooltip.include_player_data.1": "DIvI' vItlhpu' De' polHa'lu' 'Iv tu'lu' yIngu'",
+  "swd.tooltip.include_player_data.2": "ngeHbogh DIvI'Daq.",
+  "swd.tooltip.include_resource_packs.1": "server ngeH paqmey polHa'lu' 'Iv tu'lu' yIngu'",
+  "swd.tooltip.include_resource_packs.2": "ngeHbogh DIvI'Daq."
 }

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Ауыл кешеһе сауҙа мәғлүмәте һаҡланды.",
   "swd.status.enderchest_saved": "> Эндер сандығы эстәлеге һаҡланды.",
   "swd.status.container_saved": "> Контейнер эстәлеге һаҡланды.",
-  "swd.status.saving_chunk": "> Өлөш һаҡлана %s"
+  "swd.status.saving_chunk": "> Чанкты һаҡлау %s",
+  "swd.status.resume_saving": "> Чанктарҙы һаҡлауҙы дауам итеү...",
+  "swd.status.queue_full": "> Һаҡлау сираты тулы! &s һаҡланманы",
+  "swd.status.itemframe_saved": "> Әйбер ҡыҫмаһының эстәлеге һаҡланды.",
+  "swd.tooltip.resume_downloads.1": "Һаҡлауҙы дауам итергә кәрәклеген көйләү",
+  "swd.tooltip.resume_downloads.2": "донья өсөн башҡа һаҡлау табылһа.",
+  "swd.screen.config.label.resume_downloads": "Һаҡлауҙы дауам итергә:"
 }
 

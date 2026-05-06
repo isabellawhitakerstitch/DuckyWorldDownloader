@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Торги жителей сохранены.",
   "swd.status.enderchest_saved": "> Содержимое эндер-сундука сохранено.",
   "swd.status.container_saved": "> Содержимое контейнера сохранено.",
-  "swd.status.saving_chunk": "> Сохранение чанка %s"
+  "swd.status.saving_chunk": "> Сохранение чанка %s",
+  "swd.status.resume_saving": "> Возобновление сохранения чанков...",
+  "swd.status.queue_full": "> Очередь сохранения заполнена! Не сохранено: &s",
+  "swd.status.itemframe_saved": "> Содержимое рамки сохранено.",
+  "swd.tooltip.resume_downloads.1": "Укажите, следует ли возобновить сохранение,",
+  "swd.tooltip.resume_downloads.2": "если найдено другое сохранение для этого мира.",
+  "swd.screen.config.label.resume_downloads": "Возобновить сохранение:"
 }

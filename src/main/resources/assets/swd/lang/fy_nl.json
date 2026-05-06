@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Hannelgegevens fan doarpsbewenner bewarre.",
   "swd.status.enderchest_saved": "> Ynhâld fan Ender chest bewarre.",
   "swd.status.container_saved": "> Ynhâld fan kontener bewarre.",
-  "swd.status.saving_chunk": "> Chunk bewarje: %s"
+  "swd.status.saving_chunk": "> Chunk %s wurdt opslein",
+  "swd.status.resume_saving": "> Trochgean mei opslaan fan chunks...",
+  "swd.status.queue_full": "> Opslachrij is fol! &s is net opslein",
+  "swd.status.itemframe_saved": "> Ynhâld fan itemlist is opslein.",
+  "swd.tooltip.resume_downloads.1": "Stel yn oft it opslaan trochgean moat",
+  "swd.tooltip.resume_downloads.2": "as der in oare opslach foar de wrâld fûn wurdt.",
+  "swd.screen.config.label.resume_downloads": "Trochgean mei opslaan:"
 }
 

@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> A ti fipamọ́ ìṣòwò villager.",
   "swd.status.enderchest_saved": "> A ti fipamọ́ Ender Chest.",
   "swd.status.container_saved": "> A ti fipamọ́ container.",
-  "swd.status.saving_chunk": "> N ń fipamọ́ chunk %s"
+  "swd.status.saving_chunk": "> Nfi chunk %s pamọ",
+  "swd.status.resume_saving": "> Ntẹsiwaju lati fi awọn chunk pamọ...",
+  "swd.status.queue_full": "> Ila ipamọ ti kun! Ko fi &s pamọ",
+  "swd.status.itemframe_saved": "> Ohun inu firemu nkan ti wa ni fipamọ.",
+  "swd.tooltip.resume_downloads.1": "Ṣeto boya o yẹ ki ipamọ tẹsiwaju",
+  "swd.tooltip.resume_downloads.2": "ti a ba rii ipamọ miiran fun agbaye.",
+  "swd.screen.config.label.resume_downloads": "Tẹsiwaju ipamọ:"
 }

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Подаци о трговини сељака сачувани.",
   "swd.status.enderchest_saved": "> Садржај ендер ковчега сачуван.",
   "swd.status.container_saved": "> Садржај контејнера сачуван.",
-  "swd.status.saving_chunk": "> Чување дела %s"
+  "swd.status.saving_chunk": "> Чување парчета %s",
+  "swd.status.resume_saving": "> Наставак чувања парчића...",
+  "swd.status.queue_full": "> Ред за чување је пун! Није сачувано &s",
+  "swd.status.itemframe_saved": "> Садржај оквира за предмете је сачуван.",
+  "swd.tooltip.resume_downloads.1": "Подесите да ли чување треба да се настави",
+  "swd.tooltip.resume_downloads.2": "ако се пронађе други снимак овог света.",
+  "swd.screen.config.label.resume_downloads": "Настави чување:",
+  "swd.tooltip.save_world_to.1": "Поставите назив сачуваног света.",
+  "swd.tooltip.save_world_to.2": "Ако свет са овим именом већ постоји,",
+  "swd.tooltip.save_world_to.3": "нови чанкови ће преписати делове тог света.",
+  "swd.tooltip.auto_download.1": "Поставите да ли светови треба да се преузимају",
+  "swd.tooltip.auto_download.2": "аутоматски при повезивању са сервером.",
+  "swd.tooltip.include_entities.1": "Поставите да ли ентитети треба да се сачувају",
+  "swd.tooltip.include_entities.2": "заједно са преузетим светом.",
+  "swd.tooltip.include_player_data.1": "Поставите да ли подаци о играчу треба да се сачувају",
+  "swd.tooltip.include_player_data.2": "заједно са преузетим светом.",
+  "swd.tooltip.include_resource_packs.1": "Поставите да ли пакети ресурса сервера треба",
+  "swd.tooltip.include_resource_packs.2": "да се сачувају са преузетим светом."
 }

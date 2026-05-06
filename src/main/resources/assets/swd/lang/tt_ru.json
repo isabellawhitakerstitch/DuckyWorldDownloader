@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Авыл кешеләренең сәүдә мәгълүматлары сакланды.",
   "swd.status.enderchest_saved": "> Эндер-сандыкның эчтәлеге сакланды.",
   "swd.status.container_saved": "> Контейнерның эчтәлеге сакланды.",
-  "swd.status.saving_chunk": "> %s чанк саклана"
+  "swd.status.saving_chunk": "> Чанкны саклау %s",
+  "swd.status.resume_saving": "> Чанкларны саклауны дәвам итү...",
+  "swd.status.queue_full": "> Саклау чираты тулы! &s сакланмады",
+  "swd.status.itemframe_saved": "> Предмет рамкасының эчтәлеге сакланды.",
+  "swd.tooltip.resume_downloads.1": "Саклауны дәвам итәргә кирәклеген көйләү",
+  "swd.tooltip.resume_downloads.2": "дөнья өчен башка саклау табылса.",
+  "swd.screen.config.label.resume_downloads": "Саклауны дәвам итү:",
+  "swd.tooltip.save_world_to.1": "Саклаган дөнья исемен билгеләгез.",
+  "swd.tooltip.save_world_to.2": "Бу исемдәге дөнья инде булса,",
+  "swd.tooltip.save_world_to.3": "яңа чанклар ул дөнья өлешләрен алыштырачак.",
+  "swd.tooltip.auto_download.1": "Серверга кергәндә дөньялар",
+  "swd.tooltip.auto_download.2": "автоматик йөкләнергәме икәнен билгеләгез.",
+  "swd.tooltip.include_entities.1": "Йөкләнгән дөнья белән бергә",
+  "swd.tooltip.include_entities.2": "объектлар саклансынмы икәнен билгеләгез.",
+  "swd.tooltip.include_player_data.1": "Йөкләнгән дөнья белән бергә",
+  "swd.tooltip.include_player_data.2": "уенчы мәгълүматлары саклансынмы икәнен билгеләгез.",
+  "swd.tooltip.include_resource_packs.1": "Сервер ресурс пакетлары йөкләнгән дөнья белән",
+  "swd.tooltip.include_resource_packs.2": "бергә саклансынмы икәнен билгеләгез."
 }

@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Merchant ledgers plundered.",
   "swd.status.enderchest_saved": "> Magic chest booty secured.",
   "swd.status.container_saved": "> Cargo holds emptied and saved.",
-  "swd.status.saving_chunk": "> Stashin' map piece %s"
+  "swd.status.saving_chunk": "> Stashin' map piece %s",
+  "swd.status.resume_saving": "> Resumin' savin' chunks...",
+  "swd.status.queue_full": "> Save queue be full! Did not save &s",
+  "swd.status.itemframe_saved": "> Item frame loot saved.",
+  "swd.tooltip.resume_downloads.1": "Set whether savin' should be resumed",
+  "swd.tooltip.resume_downloads.2": "if another save fer th' world be found.",
+  "swd.screen.config.label.resume_downloads": "Resume savin':"
 }

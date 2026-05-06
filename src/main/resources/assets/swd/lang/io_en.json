@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Vilajano-komerco donaji salvita.",
   "swd.status.enderchest_saved": "> Ender-kesto kontenajo salvita.",
   "swd.status.container_saved": "> Kontenilo kontenajo salvita.",
-  "swd.status.saving_chunk": "> Salvas pako %s"
+  "swd.status.saving_chunk": "> Salvas peco %s",
+  "swd.status.resume_saving": "> Rekomencas salvar peci...",
+  "swd.status.queue_full": "> Salvo-lineo es plena! Ne salvis &s",
+  "swd.status.itemframe_saved": "> Kontenajo di kdro-objeto salvita.",
+  "swd.tooltip.resume_downloads.1": "Definar kad salvo devas durigar",
+  "swd.tooltip.resume_downloads.2": "se altra salvo por la mondo es trovata.",
+  "swd.screen.config.label.resume_downloads": "Durigar salvo:",
+  "swd.tooltip.save_world_to.1": "Determinez la nomo di la savata mondo.",
+  "swd.tooltip.save_world_to.2": "Se mondo kun ica nomo ja existas,",
+  "swd.tooltip.save_world_to.3": "la nova chunks superskrivas parto di ita mondo.",
+  "swd.tooltip.auto_download.1": "Determinez kad mondos devas downloadesar",
+  "swd.tooltip.auto_download.2": "automatale ye joino al servilo.",
+  "swd.tooltip.include_entities.1": "Determinez kad entaji devas savesar",
+  "swd.tooltip.include_entities.2": "kun la downloadita mondo.",
+  "swd.tooltip.include_player_data.1": "Determinez kad datumi dil ludanto devas savesar",
+  "swd.tooltip.include_player_data.2": "kun la downloadita mondo.",
+  "swd.tooltip.include_resource_packs.1": "Determinez kad resurso-pakaji dil servilo devas",
+  "swd.tooltip.include_resource_packs.2": "savesar kun la downloadita mondo."
 }

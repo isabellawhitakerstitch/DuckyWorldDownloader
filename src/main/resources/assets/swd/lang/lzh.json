@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> 村夫易貨卷既存。",
   "swd.status.enderchest_saved": "> 末影匣內物既存。",
   "swd.status.container_saved": "> 容器內物既存。",
-  "swd.status.saving_chunk": "> 正存世塊 %s"
+  "swd.status.saving_chunk": "> 正在儲存區塊 %s",
+  "swd.status.resume_saving": "> 正在恢復儲存區塊...",
+  "swd.status.queue_full": "> 儲存佇列已滿！未能儲存 &s",
+  "swd.status.itemframe_saved": "> 物品展示框內容已儲存。",
+  "swd.tooltip.resume_downloads.1": "設定如果找到該世界的其他存檔時，",
+  "swd.tooltip.resume_downloads.2": "是否應恢復儲存過程。",
+  "swd.screen.config.label.resume_downloads": "恢復儲存：",
+  "swd.tooltip.save_world_to.1": "設所存世界之名。",
+  "swd.tooltip.save_world_to.2": "若此名之世界已存，",
+  "swd.tooltip.save_world_to.3": "新塊將覆其世界之部分。",
+  "swd.tooltip.auto_download.1": "設連伺服器時，",
+  "swd.tooltip.auto_download.2": "世界是否自動下載。",
+  "swd.tooltip.include_entities.1": "設實體是否與",
+  "swd.tooltip.include_entities.2": "所下載之世界同存。",
+  "swd.tooltip.include_player_data.1": "設玩者資料是否與",
+  "swd.tooltip.include_player_data.2": "所下載之世界同存。",
+  "swd.tooltip.include_resource_packs.1": "設伺服器資源包是否",
+  "swd.tooltip.include_resource_packs.2": "與所下載之世界同存。"
 }

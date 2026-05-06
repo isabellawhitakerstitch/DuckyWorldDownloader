@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Գյուղացիների առևտրի տվյալները պահպանվեցին:",
   "swd.status.enderchest_saved": "> Էնդեր-սնդուկի պարունակությունը պահպանվեց:",
   "swd.status.container_saved": "> Պահեստարանի պարունակությունը պահպանվեց:",
-  "swd.status.saving_chunk": "> Պահպանվում է չանք %s"
+  "swd.status.saving_chunk": "> Պահպանվում է %s չանկը",
+  "swd.status.resume_saving": "> Չանկերի պահպանման վերսկսում...",
+  "swd.status.queue_full": "> Պահպանման հերթը լիքն է: &s չի պահպանվել",
+  "swd.status.itemframe_saved": "> Շրջանակի պարունակությունը պահպանված է:",
+  "swd.tooltip.resume_downloads.1": "Սահմանեք՝ արդյոք պահպանումը պետք է վերսկսվի,",
+  "swd.tooltip.resume_downloads.2": "եթե աշխարհի համար այլ պահպանում գտնվի:",
+  "swd.screen.config.label.resume_downloads": "Վերսկսել պահպանումը՝",
+  "swd.tooltip.save_world_to.1": "Սահմանեք պահպանված աշխարհի անունը։",
+  "swd.tooltip.save_world_to.2": "Եթե այս անունով աշխարհ արդեն գոյություն ունի,",
+  "swd.tooltip.save_world_to.3": "նոր հատվածները կվերագրեն այն աշխարհի մասերը։",
+  "swd.tooltip.auto_download.1": "Սահմանեք, արդյոք աշխարհները պետք է ներբեռնվեն",
+  "swd.tooltip.auto_download.2": "ավտոմատ կերպով սերվերին միանալիս։",
+  "swd.tooltip.include_entities.1": "Սահմանեք, արդյոք կերպարները պետք է պահպանվեն",
+  "swd.tooltip.include_entities.2": "ներբեռնված աշխարհի հետ միասին։",
+  "swd.tooltip.include_player_data.1": "Սահմանեք, արդյոք խաղացողի տվյալները պետք է պահպանվեն",
+  "swd.tooltip.include_player_data.2": "ներբեռնված աշխարհի հետ միասին։",
+  "swd.tooltip.include_resource_packs.1": "Սահմանեք, արդյոք սերվերի ռեսուրս փաթեթները",
+  "swd.tooltip.include_resource_packs.2": "պետք է պահպանվեն ներբեռնված աշխարհի հետ։"
 }

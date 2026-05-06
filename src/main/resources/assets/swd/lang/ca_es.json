@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Dades de comerç del pagès desades.",
   "swd.status.enderchest_saved": "> Contingut del cofre de l'End desat.",
   "swd.status.container_saved": "> Contingut del contenidor desat.",
-  "swd.status.saving_chunk": "> Desant chunk %s"
+  "swd.status.saving_chunk": "> Desant el fragment %s",
+  "swd.status.resume_saving": "> Reprenent el desament de fragments...",
+  "swd.status.queue_full": "> La cua de desament està plena! No s'ha desat &s",
+  "swd.status.itemframe_saved": "> S'ha desat el contingut del marc d'objectes.",
+  "swd.tooltip.resume_downloads.1": "Estableix si el desament s'ha de reprendre",
+  "swd.tooltip.resume_downloads.2": "si es troba una altra partida desada per al món.",
+  "swd.screen.config.label.resume_downloads": "Reprendre desament:"
 }
 

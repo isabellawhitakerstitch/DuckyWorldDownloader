@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Maston manwenyari hapine.",
   "swd.status.enderchest_saved": "> Mína i ender-colca hapine.",
   "swd.status.container_saved": "> Mína i colca hapine.",
-  "swd.status.saving_chunk": "> Hapëa chunk %s"
+  "swd.status.saving_chunk": "> Muina runda %s",
+  "swd.status.resume_saving": "> En-muina rundaron...",
+  "swd.status.queue_full": "> Tië lumbë! Lá muina &s",
+  "swd.status.itemframe_saved": "> Imma randa-mína muina.",
+  "swd.tooltip.resume_downloads.1": "Capa qui en-muina caruva",
+  "swd.tooltip.resume_downloads.2": "qui hira hyana muina ambaro.",
+  "swd.screen.config.label.resume_downloads": "En-muina:",
+  "swd.tooltip.save_world_to.1": "Pé i nórë coivinarwa essa.",
+  "swd.tooltip.save_world_to.2": "Cé nórë i essanen ná,",
+  "swd.tooltip.save_world_to.3": "vinya cumbor tecaruvar ó i nórëo.",
+  "swd.tooltip.auto_download.1": "Pé cé nóri hauyuvar ohtataina",
+  "swd.tooltip.auto_download.2": "telpenta serviello.",
+  "swd.tooltip.include_entities.1": "Pé cé cundir coivinaruvat",
+  "swd.tooltip.include_entities.2": "as i ohtataina nóre.",
+  "swd.tooltip.include_player_data.1": "Pé cé quettar tyalieron coivinaruvat",
+  "swd.tooltip.include_player_data.2": "as i ohtataina nóre.",
+  "swd.tooltip.include_resource_packs.1": "Pé cé serviello mathornor coivinaruvat",
+  "swd.tooltip.include_resource_packs.2": "as i ohtataina nóre."
 }

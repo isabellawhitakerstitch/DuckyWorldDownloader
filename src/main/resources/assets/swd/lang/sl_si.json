@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Podatki o trgovanju vaščanov shranjeni.",
   "swd.status.enderchest_saved": "> Vsebina ender skrinje shranjena.",
   "swd.status.container_saved": "> Vsebina vsebnika shranjena.",
-  "swd.status.saving_chunk": "> Shranjevanje koščka %s"
+  "swd.status.saving_chunk": "> Shranjevanje koščka %s",
+  "swd.status.resume_saving": "> Nadaljevanje shranjevanja koščkov...",
+  "swd.status.queue_full": "> Vrsta za shranjevanje je polna! Ni shranjeno &s",
+  "swd.status.itemframe_saved": "> Vsebina okvirja predmeta je shranjena.",
+  "swd.tooltip.resume_downloads.1": "Nastavite, ali naj se shranjevanje nadaljuje,",
+  "swd.tooltip.resume_downloads.2": "če je najden drug shranek za ta svet.",
+  "swd.screen.config.label.resume_downloads": "Nadaljuj shranjevanje:",
+  "swd.tooltip.save_world_to.1": "Nastavite ime shranjenega sveta.",
+  "swd.tooltip.save_world_to.2": "Če svet s tem imenom že obstaja,",
+  "swd.tooltip.save_world_to.3": "novi kosci bodo prepisali dele tega sveta.",
+  "swd.tooltip.auto_download.1": "Nastavite, ali se naj svetovi prenesejo",
+  "swd.tooltip.auto_download.2": "samodejno ob priključitvi strežniku.",
+  "swd.tooltip.include_entities.1": "Nastavite, ali se naj entitete shranijo",
+  "swd.tooltip.include_entities.2": "skupaj s prenesenem svetom.",
+  "swd.tooltip.include_player_data.1": "Nastavite, ali se naj podatki o igralcu shranijo",
+  "swd.tooltip.include_player_data.2": "skupaj s prenesenem svetom.",
+  "swd.tooltip.include_resource_packs.1": "Nastavite, ali se naj paketi virov strežnika",
+  "swd.tooltip.include_resource_packs.2": "shranijo s prenesenem svetom."
 }

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Podaci o trgovini seljaka spremljeni.",
   "swd.status.enderchest_saved": "> Sadržaj ender škrinje spremljen.",
   "swd.status.container_saved": "> Sadržaj spremnika spremljen.",
-  "swd.status.saving_chunk": "> Spremanje chunka %s"
+  "swd.status.saving_chunk": "> Spremanje chunka %s",
+  "swd.status.resume_saving": "> Nastavljanje spremanja chunkova...",
+  "swd.status.queue_full": "> Red za spremanje je pun! Nije spremljeno &s",
+  "swd.status.itemframe_saved": "> Sadržaj okvira za predmete je spremljen.",
+  "swd.tooltip.resume_downloads.1": "Postavite treba li se spremanje nastaviti",
+  "swd.tooltip.resume_downloads.2": "ako je pronađeno drugo spremanje za ovaj svijet.",
+  "swd.screen.config.label.resume_downloads": "Nastavi spremanje:",
+  "swd.tooltip.save_world_to.1": "Postavite naziv spremljenog svijeta.",
+  "swd.tooltip.save_world_to.2": "Ako već postoji svijet s ovim imenom,",
+  "swd.tooltip.save_world_to.3": "novi chunkovci prepisuju dijelove tog svijeta.",
+  "swd.tooltip.auto_download.1": "Postavite hoće li se svjetovi preuzimati",
+  "swd.tooltip.auto_download.2": "automatski pri pridruživanju serveru.",
+  "swd.tooltip.include_entities.1": "Postavite hoće li entiteti biti spremljeni",
+  "swd.tooltip.include_entities.2": "zajedno s preuzetim svijetom.",
+  "swd.tooltip.include_player_data.1": "Postavite hoće li podaci o igraču biti spremljeni",
+  "swd.tooltip.include_player_data.2": "zajedno s preuzetim svijetom.",
+  "swd.tooltip.include_resource_packs.1": "Postavite hoće li paketi resursa servera biti",
+  "swd.tooltip.include_resource_packs.2": "spremljeni s preuzetim svijetom."
 }

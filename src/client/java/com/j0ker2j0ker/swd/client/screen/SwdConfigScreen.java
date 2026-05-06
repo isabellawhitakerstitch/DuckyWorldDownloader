@@ -8,6 +8,7 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.CommonComponents;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 
@@ -31,6 +32,11 @@ public class SwdConfigScreen extends Screen {
     private static final List<Component> AUTO_DESC = List.of(
             Component.translatable("swd.tooltip.auto_download.1"),
             Component.translatable("swd.tooltip.auto_download.2")
+    );
+
+    private static final List<Component> RESUME_DESC = List.of(
+            Component.translatable("swd.tooltip.resume_downloads.1"),
+            Component.translatable("swd.tooltip.resume_downloads.2")
     );
 
     private static final List<Component> ENTITIES_DESC = List.of(
@@ -63,14 +69,16 @@ public class SwdConfigScreen extends Screen {
         int nameLabelY = 75;
         int autoLabelX = centerX - 180;
         int autoLabelY = 100;
+        int resumeLabelX = centerX - 180;
+        int resumeLabelY = 120;
         this.includesHeaderX = centerX - 180;
-        this.includesHeaderY = 120;
+        this.includesHeaderY = 145;
         int entitiesLabelX = centerX - 180;
-        int entitiesLabelY = 145;
+        int entitiesLabelY = 170;
         int playerDataLabelX = centerX - 180;
-        int playerDataLabelY = 165;
+        int playerDataLabelY = 190;
         int resourcePacksLabelX = centerX - 180;
-        int resourcePacksLabelY = 185;
+        int resourcePacksLabelY = 210;
 
         // move inputs right + smaller text box
         int nameFieldX = centerX - 20;
@@ -83,12 +91,14 @@ public class SwdConfigScreen extends Screen {
 
         int autoCheckboxX = centerX - 20;
         int autoCheckboxY = 95;
+        int resumeCheckboxX = centerX - 20;
+        int resumeCheckboxY = 115;
         int entitiesCheckboxX = centerX - 20;
-        int entitiesCheckboxY = 140;
+        int entitiesCheckboxY = 165;
         int playerDataCheckboxX = centerX - 20;
-        int playerDataCheckboxY = 160;
+        int playerDataCheckboxY = 185;
         int resourcePacksCheckboxX = centerX - 20;
-        int resourcePacksCheckboxY = 180;
+        int resourcePacksCheckboxY = 205;
 
         // dynamic settings list
         this.settings.add(new StringSettingEntry(
@@ -113,6 +123,17 @@ public class SwdConfigScreen extends Screen {
                 autoCheckboxY,
                 () -> SwdClient.CONFIG.autoDownload,
                 value -> SwdClient.CONFIG.autoDownload = value
+        ));
+
+        this.settings.add(new BooleanSettingEntry(
+                Component.translatable("swd.screen.config.label.resume_downloads"),
+                RESUME_DESC,
+                resumeLabelX,
+                resumeLabelY,
+                resumeCheckboxX,
+                resumeCheckboxY,
+                () -> SwdClient.CONFIG.resumeDownloads,
+                value -> SwdClient.CONFIG.resumeDownloads = value
         ));
 
         this.settings.add(new BooleanSettingEntry(
@@ -174,7 +195,7 @@ public class SwdConfigScreen extends Screen {
     }
 
     @Override
-    public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a) {
+    public void extractRenderState(@NonNull GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a) {
         super.extractRenderState(graphics, mouseX, mouseY, a);
 
         graphics.nextStratum();

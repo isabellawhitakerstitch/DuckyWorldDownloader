@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Handelsdata för bybor sparades.",
   "swd.status.enderchest_saved": "> Innehåll i enderkista sparades.",
   "swd.status.container_saved": "> Innehåll i behållare sparades.",
-  "swd.status.saving_chunk": "> Sparar chunk %s"
+  "swd.status.saving_chunk": "> Sparar chunk %s",
+  "swd.status.resume_saving": "> Återupptar sparandet av chunks...",
+  "swd.status.queue_full": "> Sparkön är full! Sparade inte &s",
+  "swd.status.itemframe_saved": "> Föremålsramens innehåll har sparats.",
+  "swd.tooltip.resume_downloads.1": "Ställ in om sparandet ska återupptas",
+  "swd.tooltip.resume_downloads.2": "om en annan sparfil för världen hittas.",
+  "swd.screen.config.label.resume_downloads": "Återuppta sparandet:",
+  "swd.tooltip.save_world_to.1": "Ange namnet på den sparade världen.",
+  "swd.tooltip.save_world_to.2": "Om en värld med detta namn redan finns,",
+  "swd.tooltip.save_world_to.3": "kommer nya chunk att skriva över delar av den världen.",
+  "swd.tooltip.auto_download.1": "Ange om världar ska laddas ner",
+  "swd.tooltip.auto_download.2": "automatiskt vid anslutning till server.",
+  "swd.tooltip.include_entities.1": "Ange om entiteter ska sparas",
+  "swd.tooltip.include_entities.2": "tillsammans med den nedladdade världen.",
+  "swd.tooltip.include_player_data.1": "Ange om spelardata ska sparas",
+  "swd.tooltip.include_player_data.2": "tillsammans med den nedladdade världen.",
+  "swd.tooltip.include_resource_packs.1": "Ange om serverns resurspaket ska",
+  "swd.tooltip.include_resource_packs.2": "sparas med den nedladdade världen."
 }

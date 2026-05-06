@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Đã lưu giao dịch dân làng.",
   "swd.status.enderchest_saved": "> Đã lưu nội dung Ender Chest.",
   "swd.status.container_saved": "> Đã lưu nội dung container.",
-  "swd.status.saving_chunk": "> Đang lưu chunk %s"
+  "swd.status.saving_chunk": "> Đang lưu mảnh %s",
+  "swd.status.resume_saving": "> Đang tiếp tục lưu các mảnh...",
+  "swd.status.queue_full": "> Hàng chờ lưu đã đầy! Không thể lưu &s",
+  "swd.status.itemframe_saved": "> Đã lưu vật phẩm trong khung.",
+  "swd.tooltip.resume_downloads.1": "Thiết lập xem có nên tiếp tục lưu hay không",
+  "swd.tooltip.resume_downloads.2": "nếu tìm thấy bản lưu khác của thế giới này.",
+  "swd.screen.config.label.resume_downloads": "Tiếp tục lưu:"
 }

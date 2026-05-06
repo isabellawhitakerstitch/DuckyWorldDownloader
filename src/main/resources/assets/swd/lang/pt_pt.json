@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dados de trocas de aldeões guardados.",
   "swd.status.enderchest_saved": "> Conteúdo do baú do ender guardado.",
   "swd.status.container_saved": "> Conteúdo do contentor guardado.",
-  "swd.status.saving_chunk": "> A guardar chunk %s"
+  "swd.status.saving_chunk": "> Salvando chunk %s",
+  "swd.status.resume_saving": "> Retomando o salvamento de chunks...",
+  "swd.status.queue_full": "> A fila de salvamento está cheia! Não foi possível salvar &s",
+  "swd.status.itemframe_saved": "> Conteúdo da moldura salvo.",
+  "swd.tooltip.resume_downloads.1": "Define se o salvamento deve ser retomado",
+  "swd.tooltip.resume_downloads.2": "se outro salvamento para o mundo for encontrado.",
+  "swd.screen.config.label.resume_downloads": "Retomar salvamento:",
+  "swd.tooltip.save_world_to.1": "Define o nome do mundo guardado.",
+  "swd.tooltip.save_world_to.2": "Se já existir um mundo com este nome,",
+  "swd.tooltip.save_world_to.3": "os novos chunks sobrescrevem partes desse mundo.",
+  "swd.tooltip.auto_download.1": "Define se os mundos devem ser descarregados",
+  "swd.tooltip.auto_download.2": "automaticamente ao entrar num servidor.",
+  "swd.tooltip.include_entities.1": "Define se as entidades devem ser guardadas",
+  "swd.tooltip.include_entities.2": "juntamente com o mundo descarregado.",
+  "swd.tooltip.include_player_data.1": "Define se os dados do jogador devem ser guardados",
+  "swd.tooltip.include_player_data.2": "juntamente com o mundo descarregado.",
+  "swd.tooltip.include_resource_packs.1": "Define se os pacotes de recursos do servidor devem",
+  "swd.tooltip.include_resource_packs.2": "ser guardados com o mundo descarregado."
 }

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Dorpelingshandeldata gestoor.",
   "swd.status.enderchest_saved": "> Enderkasinhoud gestoor.",
   "swd.status.container_saved": "> Houerinhoud gestoor.",
-  "swd.status.saving_chunk": "> Stoor stuk %s"
+  "swd.status.saving_chunk": "> Stoor chunk %s",
+  "swd.status.resume_saving": "> Hervat die stoor van chunks...",
+  "swd.status.queue_full": "> Stoor-tou is vol! Het nie &s gestoor nie",
+  "swd.status.itemframe_saved": "> Itemraam-inhoud gestoor.",
+  "swd.tooltip.resume_downloads.1": "Stel in of die stoor hervat moet word",
+  "swd.tooltip.resume_downloads.2": "as nog 'n stoor vir die wêreld gevind word.",
+  "swd.screen.config.label.resume_downloads": "Hervat stoor:"
 }
 

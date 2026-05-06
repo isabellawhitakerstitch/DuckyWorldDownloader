@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Na-save ang data ng kalakalan ng taganayon.",
   "swd.status.enderchest_saved": "> Na-save ang laman ng ender chest.",
   "swd.status.container_saved": "> Na-save ang laman ng lalagyan.",
-  "swd.status.saving_chunk": "> Sine-save ang chunk %s"
+  "swd.status.saving_chunk": "> Sini-save ang chunk %s",
+  "swd.status.resume_saving": "> Ipinagpapatuloy ang pag-save ng mga chunk...",
+  "swd.status.queue_full": "> Puno na ang save queue! Hindi na-save ang &s",
+  "swd.status.itemframe_saved": "> Na-save na ang laman ng item frame.",
+  "swd.tooltip.resume_downloads.1": "Itakda kung dapat ipagpatuloy ang pag-save",
+  "swd.tooltip.resume_downloads.2": "kung may nahanap na ibang save para sa mundo.",
+  "swd.screen.config.label.resume_downloads": "Ipagpatuloy ang pag-save:",
+  "swd.tooltip.save_world_to.1": "Itakda ang pangalan ng na-save na mundo.",
+  "swd.tooltip.save_world_to.2": "Kung may mundo nang may ganitong pangalan,",
+  "swd.tooltip.save_world_to.3": "ang mga bagong chunk ay mag-o-overwrite ng mga bahagi ng mundong iyon.",
+  "swd.tooltip.auto_download.1": "Itakda kung ang mga mundo ay dapat i-download",
+  "swd.tooltip.auto_download.2": "nang awtomatiko kapag sumali sa server.",
+  "swd.tooltip.include_entities.1": "Itakda kung ang mga entity ay dapat i-save",
+  "swd.tooltip.include_entities.2": "kasama ang na-download na mundo.",
+  "swd.tooltip.include_player_data.1": "Itakda kung ang data ng manlalaro ay dapat i-save",
+  "swd.tooltip.include_player_data.2": "kasama ang na-download na mundo.",
+  "swd.tooltip.include_resource_packs.1": "Itakda kung ang mga resource pack ng server ay dapat",
+  "swd.tooltip.include_resource_packs.2": "i-save kasama ang na-download na mundo."
 }

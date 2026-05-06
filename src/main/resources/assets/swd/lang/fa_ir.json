@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> داده‌های تجارت روستایی ذخیره شد.",
   "swd.status.enderchest_saved": "> محتوای صندوق اندر ذخیره شد.",
   "swd.status.container_saved": "> محتوای کانتینر ذخیره شد.",
-  "swd.status.saving_chunk": "> در حال ذخیره‌سازی تکه %s"
+  "swd.status.saving_chunk": "> در حال ذخیره چانک %s",
+  "swd.status.resume_saving": "> از سرگیری ذخیره چانک‌ها...",
+  "swd.status.queue_full": "> صف ذخیره پر است! &s ذخیره نشد",
+  "swd.status.itemframe_saved": "> محتوای قاب آیتم ذخیره شد.",
+  "swd.tooltip.resume_downloads.1": "تنظیم کنید که آیا در صورت یافتن ذخیره دیگری برای این جهان،",
+  "swd.tooltip.resume_downloads.2": "ذخیره‌سازی باید از سر گرفته شود یا خیر.",
+  "swd.screen.config.label.resume_downloads": "از سرگیری ذخیره‌سازی:"
 }
 

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dades de comerç d'aldeans guardades.",
   "swd.status.enderchest_saved": "> Contingut del cofre d'ender guardat.",
   "swd.status.container_saved": "> Contingut del contenidor guardat.",
-  "swd.status.saving_chunk": "> Guardant chunk %s"
+  "swd.status.saving_chunk": "> Guardant el fragment %s",
+  "swd.status.resume_saving": "> Reprenent el guardat de fragments...",
+  "swd.status.queue_full": "> La cua de guardat està plena! No s'ha guardat &s",
+  "swd.status.itemframe_saved": "> Contingut del marc d'objectes guardat.",
+  "swd.tooltip.resume_downloads.1": "Establix si el guardat s'ha de reprendre",
+  "swd.tooltip.resume_downloads.2": "si es troba un altre guardat per al món.",
+  "swd.screen.config.label.resume_downloads": "Reprendre guardat:",
+  "swd.tooltip.save_world_to.1": "Establix el nom del món desat.",
+  "swd.tooltip.save_world_to.2": "Si ja existix un món amb este nom,",
+  "swd.tooltip.save_world_to.3": "els nous fragments sobreescriuran parts d'eixe món.",
+  "swd.tooltip.auto_download.1": "Establix si els mons s'han de descarregar",
+  "swd.tooltip.auto_download.2": "automàticament en connectar-se a un servidor.",
+  "swd.tooltip.include_entities.1": "Establix si les entitats s'han de desar",
+  "swd.tooltip.include_entities.2": "junt amb el món descarregat.",
+  "swd.tooltip.include_player_data.1": "Establix si les dades del jugador s'han de desar",
+  "swd.tooltip.include_player_data.2": "junt amb el món descarregat.",
+  "swd.tooltip.include_resource_packs.1": "Establix si els paquets de recursos del servidor",
+  "swd.tooltip.include_resource_packs.2": "s'han de desar amb el món descarregat."
 }

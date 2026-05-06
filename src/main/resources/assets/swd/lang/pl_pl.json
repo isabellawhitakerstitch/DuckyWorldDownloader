@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Zapisano dane handlu osadników.",
   "swd.status.enderchest_saved": "> Zapisano zawartość skrzyni kresu.",
   "swd.status.container_saved": "> Zapisano zawartość pojemników.",
-  "swd.status.saving_chunk": "> Zapisywanie chunku %s"
+  "swd.status.saving_chunk": "> Zapisywanie chunka %s",
+  "swd.status.resume_saving": "> Wznawianie zapisywania chunków...",
+  "swd.status.queue_full": "> Kolejka zapisu jest pełna! Nie zapisano &s",
+  "swd.status.itemframe_saved": "> Zawartość ramki na przedmiot została zapisana.",
+  "swd.tooltip.resume_downloads.1": "Ustaw, czy zapisywanie powinno zostać wznowione,",
+  "swd.tooltip.resume_downloads.2": "jeśli znaleziono inny zapis tego świata.",
+  "swd.screen.config.label.resume_downloads": "Wznów zapisywanie:"
 }

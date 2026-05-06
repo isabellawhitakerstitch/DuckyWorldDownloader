@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Kəndli ticarət məlumatları yadda saxlanıldı.",
   "swd.status.enderchest_saved": "> Ender sandığının məzmunu yadda saxlanıldı.",
   "swd.status.container_saved": "> Konteynerin məzmunu yadda saxlanıldı.",
-  "swd.status.saving_chunk": "> Hissə yadda saxlanılır %s"
+  "swd.status.saving_chunk": "> Çank %s saxlanılır",
+  "swd.status.resume_saving": "> Çankların saxlanılması davam etdirilir...",
+  "swd.status.queue_full": "> Saxlama növbəsi doludur! &s saxlanılmadı",
+  "swd.status.itemframe_saved": "> Əşya çərçivəsi məzmunu saxlanıldı.",
+  "swd.tooltip.resume_downloads.1": "Saxlama prosesinin davam etdirilib-edilməyəcəyini təyin edin",
+  "swd.tooltip.resume_downloads.2": "dünya üçün başqa bir qeyd tapılarsa.",
+  "swd.screen.config.label.resume_downloads": "Saxlamağa davam et:"
 }
 

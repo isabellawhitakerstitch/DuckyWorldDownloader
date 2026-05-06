@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Külaelaniku kaubandusandmed salvestatud.",
   "swd.status.enderchest_saved": "> Ender-kirstu sisu salvestatud.",
   "swd.status.container_saved": "> Konteineri sisu salvestatud.",
-  "swd.status.saving_chunk": "> Salvestan tükki %s"
+  "swd.status.saving_chunk": "> Tšunki %s salvestamine",
+  "swd.status.resume_saving": "> Tšunkide salvestamise jätkamine...",
+  "swd.status.queue_full": "> Salvestusjärjekord on täis! Ei salvestanud &s",
+  "swd.status.itemframe_saved": "> Esemoraami sisu on salvestatud.",
+  "swd.tooltip.resume_downloads.1": "Määra, kas salvestamist tuleks jätkata,",
+  "swd.tooltip.resume_downloads.2": "kui maailma jaoks leitakse teine salvestus.",
+  "swd.screen.config.label.resume_downloads": "Jätka salvestamist:"
 }
 

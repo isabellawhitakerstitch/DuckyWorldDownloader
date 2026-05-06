@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Данныя о торговлѣ жителей сохранены.",
   "swd.status.enderchest_saved": "> Содержимое эндеръ-сундука сохранено.",
   "swd.status.container_saved": "> Содержимое контейнера сохранено.",
-  "swd.status.saving_chunk": "> Сохраненіе чанка %s"
+  "swd.status.saving_chunk": "> Guardando el pedacito %s",
+  "swd.status.resume_saving": "> Siguiendo con el guardado de los pedacitos...",
+  "swd.status.queue_full": "> ¡La cola está re llena, che! No se guardó &s",
+  "swd.status.itemframe_saved": "> Guardamos lo que había en el marco.",
+  "swd.tooltip.resume_downloads.1": "Elegí si querés que siga guardando",
+  "swd.tooltip.resume_downloads.2": "si llegamos a encontrar otro guardado del mundo.",
+  "swd.screen.config.label.resume_downloads": "Seguir guardando:",
+  "swd.tooltip.save_world_to.1": "Установите имя сохранённаго міра.",
+  "swd.tooltip.save_world_to.2": "Если міръ съ этимъ именемъ уже существуетъ,",
+  "swd.tooltip.save_world_to.3": "новые чанки перезапишутъ части этого міра.",
+  "swd.tooltip.auto_download.1": "Установите, должны ли міры загружаться",
+  "swd.tooltip.auto_download.2": "автоматически при входѣ на серверъ.",
+  "swd.tooltip.include_entities.1": "Установите, должны ли существа сохраняться",
+  "swd.tooltip.include_entities.2": "вмѣстѣ съ загруженнымъ міромъ.",
+  "swd.tooltip.include_player_data.1": "Установите, должны ли данныя игрока сохраняться",
+  "swd.tooltip.include_player_data.2": "вмѣстѣ съ загруженнымъ міромъ.",
+  "swd.tooltip.include_resource_packs.1": "Установите, должны ли пакеты ресурсовъ сервера",
+  "swd.tooltip.include_resource_packs.2": "сохраняться съ загруженнымъ міромъ."
 }

@@ -23,5 +23,13 @@
   "swd.status.villager_trade_saved": "> Datos de comercio de aldeáns gardados.",
   "swd.status.enderchest_saved": "> Contido do cofre de ender gardado.",
   "swd.status.container_saved": "> Contido do contedor gardado.",
-  "swd.status.saving_chunk": "> Gardando chunk %s"
+  "swd.status.saving_chunk": "> Gardando o chunk %s",
+  "swd.status.resume_saving": "> Retomando o gardado de chunks...",
+  "swd.status.queue_full": "> A cola de gardado está chea! Non se gardou &s",
+  "swd.status.itemframe_saved": "> Contido do marco de obxectos gardado.",
+  "swd.tooltip.resume_downloads.1": "Establece se o gardado debe retomarse",
+  "swd.tooltip.resume_downloads.2": "se se atopa outro gardado para o mundo.",
+  "swd.screen.config.label.resume_downloads": "Retomar gardado:",
+  "swd.tooltip.include_resource_packs.1": "Configura se os paquetes de recursos do servidor deben",
+  "swd.tooltip.include_resource_packs.2": "gardarse co mundo descargado."
 }

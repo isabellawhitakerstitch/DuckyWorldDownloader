@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Herritar salerosketen datuak gordeta.",
   "swd.status.enderchest_saved": "> Ender-kutxaren edukia gordeta.",
   "swd.status.container_saved": "> Edukiontziaren edukia gordeta.",
-  "swd.status.saving_chunk": "> Chunk-a gordetzen: %s"
+  "swd.status.saving_chunk": "> %s chunk-a gordetzen",
+  "swd.status.resume_saving": "> Chunk-ak gordetzen jarraitzen...",
+  "swd.status.queue_full": "> Gordetze-ilara beteta dago! Ez da &s gorde",
+  "swd.status.itemframe_saved": "> Objektu-markoaren edukia gorde da.",
+  "swd.tooltip.resume_downloads.1": "Ezarri gordetzea berrekin behar den",
+  "swd.tooltip.resume_downloads.2": "munduarentzako beste gordetze bat aurkitzen bada.",
+  "swd.screen.config.label.resume_downloads": "Berrekin gordetzea:"
 }
 

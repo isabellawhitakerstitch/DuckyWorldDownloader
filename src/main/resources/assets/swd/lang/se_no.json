@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Gilliolbmuid gávpedieđut vurkejuvvon.",
   "swd.status.enderchest_saved": "> Ender-giisá sisdoallu vurkejuvvon.",
   "swd.status.container_saved": "> Lihti sisdoallu vurkejuvvon.",
-  "swd.status.saving_chunk": "> Vurkemin chunkka %s"
+  "swd.status.saving_chunk": "> Vurkechunk %s",
+  "swd.status.resume_saving": "> Joatká chunk-vurkema...",
+  "swd.status.queue_full": "> Vurkenráidu lea dievva! It vurken &s",
+  "swd.status.itemframe_saved": "> Dávvirrámma sisdoallu lea vurkejuvvon.",
+  "swd.tooltip.resume_downloads.1": "Mearrit galgá go vurken joatkit",
+  "swd.tooltip.resume_downloads.2": "jos gávdno nubbi vurken dán máilmmi várás.",
+  "swd.screen.config.label.resume_downloads": "Joatkke vurkema:",
+  "swd.tooltip.save_world_to.1": "Mearrit vurkejuvvon máilmmi namma.",
+  "swd.tooltip.save_world_to.2": "Jus dán nammii gullá máilbmi jo gávdno,",
+  "swd.tooltip.save_world_to.3": "ođđa chunks čállet badjel oasit dan máilmmis.",
+  "swd.tooltip.auto_download.1": "Mearrit galget go máilmmit viežžat",
+  "swd.tooltip.auto_download.2": "automáhtalaččat go serverii čiegat.",
+  "swd.tooltip.include_entities.1": "Mearrit galget go entiteahtat vurkejuvvot",
+  "swd.tooltip.include_entities.2": "ovttas viežžojuvvon máilmmiin.",
+  "swd.tooltip.include_player_data.1": "Mearrit galget go speallodieđut vurkejuvvot",
+  "swd.tooltip.include_player_data.2": "ovttas viežžojuvvon máilmmiin.",
+  "swd.tooltip.include_resource_packs.1": "Mearrit galget go servera resursapakkat",
+  "swd.tooltip.include_resource_packs.2": "vurkejuvvot viežžojuvvon máilmmiin."
 }

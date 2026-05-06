@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dane handlu wieśniakōw zapisane.",
   "swd.status.enderchest_saved": "> Zawartość skrzini enderu zapisanŏ.",
   "swd.status.container_saved": "> Zawartość kontynera zapisanŏ.",
-  "swd.status.saving_chunk": "> Zapisowanie chunka %s"
+  "swd.status.saving_chunk": "> Zapisowanie chunka %s",
+  "swd.status.resume_saving": "> Przywrŏcanie zapisowaniŏ chunkōw...",
+  "swd.status.queue_full": "> Kolejka zapisu je połnŏ! %s niy ôstoł zapisany",
+  "swd.status.itemframe_saved": "> Zawartość ramki na przedmiot ôstała zapisanŏ.",
+  "swd.tooltip.resume_downloads.1": "Szteluj, eli zapisowanie mo być przywrōcone,",
+  "swd.tooltip.resume_downloads.2": "eli ôstanie sagiynte inksze zapisanie tygo świata.",
+  "swd.screen.config.label.resume_downloads": "Przywrōć zapisowanie:",
+  "swd.tooltip.save_world_to.1": "Ustaw miano zachowanego świata.",
+  "swd.tooltip.save_world_to.2": "Jak świat z tům mianům już je,",
+  "swd.tooltip.save_world_to.3": "nowe chunki przepiszům części tego świata.",
+  "swd.tooltip.auto_download.1": "Ustaw, cy światy majům być pobierane",
+  "swd.tooltip.auto_download.2": "autůmatycznie przi przidůwaniu do serwera.",
+  "swd.tooltip.include_entities.1": "Ustaw, cy encje majům być zachowane",
+  "swd.tooltip.include_entities.2": "razem z pobranym światym.",
+  "swd.tooltip.include_player_data.1": "Ustaw, cy dane gracza majům być zachowane",
+  "swd.tooltip.include_player_data.2": "razem z pobranym światym.",
+  "swd.tooltip.include_resource_packs.1": "Ustaw, cy paki zasobůw serwera majům",
+  "swd.tooltip.include_resource_packs.2": "być zachowane z pobranym światym."
 }

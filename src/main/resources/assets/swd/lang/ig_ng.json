@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Echekwara data ahia onye obodo.",
   "swd.status.enderchest_saved": "> Echekwara ihe dị n'ime igbe ender.",
   "swd.status.container_saved": "> Echekwara ihe dị n'ime akpa.",
-  "swd.status.saving_chunk": "> Na-echekwa chunk %s"
+  "swd.status.saving_chunk": "> Na-echekwa chunk %s",
+  "swd.status.resume_saving": "> Na-amaliteghachi ịchekwa chunks...",
+  "swd.status.queue_full": "> Ndepụta nchekwa ejuola! Echekwaghị &s",
+  "swd.status.itemframe_saved": "> Echekwara ihe dị na item frame.",
+  "swd.tooltip.resume_downloads.1": "Tọọ ma a ga-amaliteghachi nchekwa",
+  "swd.tooltip.resume_downloads.2": "ma ọ bụrụ na achọpụta nchekwa ọzọ maka ụwa.",
+  "swd.screen.config.label.resume_downloads": "Maliteghachi nchekwa:",
+  "swd.tooltip.save_world_to.1": "Tọọ aha ụwa echekwara.",
+  "swd.tooltip.save_world_to.2": "Ọ bụrụ na ụwa nwere aha a adịlarị,",
+  "swd.tooltip.save_world_to.3": "ihe ọhụụ chunks ga-edochi akụkụ ụwa ahụ.",
+  "swd.tooltip.auto_download.1": "Tọọ ma ụwa kwesịrị ịlaghachi",
+  "swd.tooltip.auto_download.2": "n'ozuzu mgbe ị sonyeere sava.",
+  "swd.tooltip.include_entities.1": "Tọọ ma e kwesịrị ichekwa ihe ndị dị na ya",
+  "swd.tooltip.include_entities.2": "yana ụwa emere ntanetị.",
+  "swd.tooltip.include_player_data.1": "Tọọ ma e kwesịrị ichekwa data onye egwuregwu",
+  "swd.tooltip.include_player_data.2": "yana ụwa emere ntanetị.",
+  "swd.tooltip.include_resource_packs.1": "Tọọ ma a kwesịrị ichekwa ihe ndị sava",
+  "swd.tooltip.include_resource_packs.2": "yana ụwa emere ntanetị."
 }

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Данните за търговия на жители запазени.",
   "swd.status.enderchest_saved": "> Съдържанието на Ендър ковчега запазено.",
   "swd.status.container_saved": "> Съдържанието на контейнера запазено.",
-  "swd.status.saving_chunk": "> Запазване на чанк %s"
+  "swd.status.saving_chunk": "> Запазване на чанк %s",
+  "swd.status.resume_saving": "> Възобновяване на запазването на чанкове...",
+  "swd.status.queue_full": "> Опашката за запазване е пълна! Не се запази &s",
+  "swd.status.itemframe_saved": "> Съдържанието на рамката за предмети е запазено.",
+  "swd.tooltip.resume_downloads.1": "Задайте дали запазването трябва да се възобнови,",
+  "swd.tooltip.resume_downloads.2": "ако бъде намерен друг запис за света.",
+  "swd.screen.config.label.resume_downloads": "Възобновяване на запазването:"
 }
 

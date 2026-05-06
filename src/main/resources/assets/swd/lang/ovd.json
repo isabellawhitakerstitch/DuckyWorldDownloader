@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Handelsdata firi landsbybuär spard.",
   "swd.status.enderchest_saved": "> Innyld i enderkistą spard.",
   "swd.status.container_saved": "> Innyld i behållarn spard.",
-  "swd.status.saving_chunk": "> Sparar chunk %s"
+  "swd.status.saving_chunk": "> Sparer chunk %s",
+  "swd.status.resume_saving": "> Fortsetter å spara chunks...",
+  "swd.status.queue_full": "> Sparkuön ir full! Spared int &s",
+  "swd.status.itemframe_saved": "> Inneolde i ramma ir spara.",
+  "swd.tooltip.resume_downloads.1": "Ställ in um sparandę ska fortsettå",
+  "swd.tooltip.resume_downloads.2": "um anner sparfiler firi verden findes.",
+  "swd.screen.config.label.resume_downloads": "Fortsett å spara:",
+  "swd.tooltip.save_world_to.1": "Sett namneð på den sparade werlden.",
+  "swd.tooltip.save_world_to.2": "Um en werld með þetta name reðan finns,",
+  "swd.tooltip.save_world_to.3": "skriwer nyo chunks öwer delar aff þen werlden.",
+  "swd.tooltip.auto_download.1": "Sett um werldar ska laðas niðer",
+  "swd.tooltip.auto_download.2": "automatist wið ingong til tjener.",
+  "swd.tooltip.include_entities.1": "Sett um entities ska sparas",
+  "swd.tooltip.include_entities.2": "tillsamans með den niðerladdade werlden.",
+  "swd.tooltip.include_player_data.1": "Sett um spelardata ska sparas",
+  "swd.tooltip.include_player_data.2": "tillsamans með den niðerladdade werlden.",
+  "swd.tooltip.include_resource_packs.1": "Sett um resurspaket frå tjeneren ska",
+  "swd.tooltip.include_resource_packs.2": "sparas með den niðerladdade werlden."
 }

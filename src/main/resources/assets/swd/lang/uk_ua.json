@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Дані про торгівлю селян збережено.",
   "swd.status.enderchest_saved": "> Вміст ендер-скрині збережено.",
   "swd.status.container_saved": "> Вміст контейнера збережено.",
-  "swd.status.saving_chunk": "> Збереження чанку %s"
+  "swd.status.saving_chunk": "> Сохранение чанка %s",
+  "swd.status.resume_saving": "> Возобновление сохранения чанков...",
+  "swd.status.queue_full": "> Очередь сохранения заполнена! Не сохранено: &s",
+  "swd.status.itemframe_saved": "> Содержимое рамки сохранено.",
+  "swd.tooltip.resume_downloads.1": "Укажите, следует ли возобновить сохранение,",
+  "swd.tooltip.resume_downloads.2": "если найдено другое сохранение для этого мира.",
+  "swd.screen.config.label.resume_downloads": "Возобновить сохранение:",
+  "swd.tooltip.save_world_to.1": "Встановіть назву збереженого світу.",
+  "swd.tooltip.save_world_to.2": "Якщо вже існує світ з такою назвою,",
+  "swd.tooltip.save_world_to.3": "нові чанки перезапишуть частини цього світу.",
+  "swd.tooltip.auto_download.1": "Встановіть, чи мають світи завантажуватися",
+  "swd.tooltip.auto_download.2": "автоматично при підключенні до сервера.",
+  "swd.tooltip.include_entities.1": "Встановіть, чи мають сутності зберігатися",
+  "swd.tooltip.include_entities.2": "разом із завантаженим світом.",
+  "swd.tooltip.include_player_data.1": "Встановіть, чи мають дані гравця зберігатися",
+  "swd.tooltip.include_player_data.2": "разом із завантаженим світом.",
+  "swd.tooltip.include_resource_packs.1": "Встановіть, чи мають пакети ресурсів сервера",
+  "swd.tooltip.include_resource_packs.2": "зберігатися із завантаженим світом."
 }

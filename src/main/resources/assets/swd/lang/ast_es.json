@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Datos de comerciu d'aldeanu guardaos.",
   "swd.status.enderchest_saved": "> Conteníu del cofre d'ender guardáu.",
   "swd.status.container_saved": "> Conteníu del contenedor guardáu.",
-  "swd.status.saving_chunk": "> Guardando chunk %s"
+  "swd.status.saving_chunk": "> Guardando chunk %s",
+  "swd.status.resume_saving": "> Reanudando'l guardáu de chunks...",
+  "swd.status.queue_full": "> ¡La cola de guardáu ta enllena! Nun se guardó &s",
+  "swd.status.itemframe_saved": "> Conteníu del marcu d'oxetos guardáu.",
+  "swd.tooltip.resume_downloads.1": "Afitar si'l guardáu tien de reanudase",
+  "swd.tooltip.resume_downloads.2": "si s'atopa otru guardáu pal mundu.",
+  "swd.screen.config.label.resume_downloads": "Reanudar guardáu:"
 }
 

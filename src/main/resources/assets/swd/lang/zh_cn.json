@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> 村民交易数据已保存。",
   "swd.status.enderchest_saved": "> 末影箱内容已保存。",
   "swd.status.container_saved": "> 容器内容已保存。",
-  "swd.status.saving_chunk": "> 正在保存区块 %s"
+  "swd.status.saving_chunk": "> 正在保存区块 %s",
+  "swd.status.resume_saving": "> 正在恢复保存区块...",
+  "swd.status.queue_full": "> 保存队列已满！未能保存 &s",
+  "swd.status.itemframe_saved": "> 物品展示框内容已保存。",
+  "swd.tooltip.resume_downloads.1": "设置如果找到该世界的其他存档时，",
+  "swd.tooltip.resume_downloads.2": "是否应恢复保存过程。",
+  "swd.screen.config.label.resume_downloads": "恢复保存："
 }

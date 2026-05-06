@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Податоците за трговија со селаните се зачувани.",
   "swd.status.enderchest_saved": "> Содржината на ендер-ковчегот е зачувана.",
   "swd.status.container_saved": "> Содржината на контејнерот е зачувана.",
-  "swd.status.saving_chunk": "> Се зачувува парче %s"
+  "swd.status.saving_chunk": "> Зачувување на парче %s",
+  "swd.status.resume_saving": "> Продолжување со зачувување на парчиња...",
+  "swd.status.queue_full": "> Редот за зачувување е полн! Не се зачува &s",
+  "swd.status.itemframe_saved": "> Содржината на рамката за предмети е зачувана.",
+  "swd.tooltip.resume_downloads.1": "Поставете дали зачувувањето треба да продолжи",
+  "swd.tooltip.resume_downloads.2": "ако се најде друго зачувување за светот.",
+  "swd.screen.config.label.resume_downloads": "Продолжи со зачувување:",
+  "swd.tooltip.save_world_to.1": "Поставете го името на зачуваниот свет.",
+  "swd.tooltip.save_world_to.2": "Ако веќе постои свет со ова име,",
+  "swd.tooltip.save_world_to.3": "новите парчиња ќе ги препишат деловите на тој свет.",
+  "swd.tooltip.auto_download.1": "Поставете дали световите треба да се преземаат",
+  "swd.tooltip.auto_download.2": "автоматски при приклучување на сервер.",
+  "swd.tooltip.include_entities.1": "Поставете дали ентитетите треба да се зачуваат",
+  "swd.tooltip.include_entities.2": "заедно со преземениот свет.",
+  "swd.tooltip.include_player_data.1": "Поставете дали податоците на играчот треба да се зачуваат",
+  "swd.tooltip.include_player_data.2": "заедно со преземениот свет.",
+  "swd.tooltip.include_resource_packs.1": "Поставете дали пакетите со ресурси на серверот треба",
+  "swd.tooltip.include_resource_packs.2": "да се зачуваат со преземениот свет."
 }

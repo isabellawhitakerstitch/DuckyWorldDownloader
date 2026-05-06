@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dane torgovli seljanov shranjene.",
   "swd.status.enderchest_saved": "> Sodržimost ender-skrini shranjena.",
   "swd.status.container_saved": "> Sodržimost kontejnery shranjena.",
-  "swd.status.saving_chunk": "> Shranjenje čunka %s"
+  "swd.status.saving_chunk": "> Shranjenje čunka %s",
+  "swd.status.resume_saving": "> Prodolženje shranjenja čunkov...",
+  "swd.status.queue_full": "> Črěda shranjenja jest polna! Ne shranjeno &s",
+  "swd.status.itemframe_saved": "> Sodržanje ramky dľa predmetov shranjeno.",
+  "swd.tooltip.resume_downloads.1": "Postaviti, li shranjenje iměje byti prodolženo,",
+  "swd.tooltip.resume_downloads.2": "ako drugto shranjenje dľa světa bude najdeno.",
+  "swd.screen.config.label.resume_downloads": "Prodolžiti shranjenje:",
+  "swd.tooltip.save_world_to.1": "Ustanov ime sčuvanogo světa.",
+  "swd.tooltip.save_world_to.2": "Jesli svět s tutym imenom uže suščestvuje,",
+  "swd.tooltip.save_world_to.3": "nove chunky prepisyvajut časti togo světa.",
+  "swd.tooltip.auto_download.1": "Ustanov, jesli světy imajut byvati sčityvany",
+  "swd.tooltip.auto_download.2": "automatično pri prisojediněnju k serveru.",
+  "swd.tooltip.include_entities.1": "Ustanov, jesli suščestva imajut byvati sčuvany",
+  "swd.tooltip.include_entities.2": "vmeste s sčitanym světom.",
+  "swd.tooltip.include_player_data.1": "Ustanov, jesli danně igrača imajut byvati sčuvany",
+  "swd.tooltip.include_player_data.2": "vmeste s sčitanym světom.",
+  "swd.tooltip.include_resource_packs.1": "Ustanov, jesli resursnye pakety servera imajut",
+  "swd.tooltip.include_resource_packs.2": "byvati sčuvany s sčitanym světom."
 }

@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Kyläläisen kauppatiedot tallennettu.",
   "swd.status.enderchest_saved": "> Ender-arkun sisältö tallennettu.",
   "swd.status.container_saved": "> Säiliön sisältö tallennettu.",
-  "swd.status.saving_chunk": "> Tallennetaan palaa %s"
+  "swd.status.saving_chunk": "> Tallennetaan lohkoa %s",
+  "swd.status.resume_saving": "> Jatketaan lohkojen tallennusta...",
+  "swd.status.queue_full": "> Tallennusjono on täynnä! Ei tallennettu &s",
+  "swd.status.itemframe_saved": "> Esinekehyksen sisältö tallennettu.",
+  "swd.tooltip.resume_downloads.1": "Määritä, pitäisikö tallennusta jatkaa,",
+  "swd.tooltip.resume_downloads.2": "jos maailmalle löytyy toinen tallennus.",
+  "swd.screen.config.label.resume_downloads": "Jatka tallennusta:"
 }
 

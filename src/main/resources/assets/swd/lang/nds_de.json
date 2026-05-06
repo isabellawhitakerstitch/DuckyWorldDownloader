@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dörpslüüd-Hanneldaten spiekert.",
   "swd.status.enderchest_saved": "> Enderkist-Inholt spiekert.",
   "swd.status.container_saved": "> Kist-Inholt spiekert.",
-  "swd.status.saving_chunk": "> Spieker Chunk %s"
+  "swd.status.saving_chunk": "> Spieker Chunk %s",
+  "swd.status.resume_saving": "> Wiedermaken mit dat Spiekern vun Chunks...",
+  "swd.status.queue_full": "> Spieker-Slang is vull! &s wörr nich spiekert",
+  "swd.status.itemframe_saved": "> Inholt vun den Rahmen is spiekert.",
+  "swd.tooltip.resume_downloads.1": "Legg fast, of dat Spiekern wiedermaakt warrn schall,",
+  "swd.tooltip.resume_downloads.2": "wenn en anner Spiekerstand för disse Welt funnen warrt.",
+  "swd.screen.config.label.resume_downloads": "Wiedermaken mit Spiekern:",
+  "swd.tooltip.save_world_to.1": "Sett den Namen vun de speekerte Welt fast.",
+  "swd.tooltip.save_world_to.2": "Wenn al en Welt mit dissen Namen existeert,",
+  "swd.tooltip.save_world_to.3": "überschrievt de nieen Chunks Delen vun de Welt.",
+  "swd.tooltip.auto_download.1": "Sett fast, ob Welten automatsch daalladen weern schöllt",
+  "swd.tooltip.auto_download.2": "wenn een en Server beidreden deit.",
+  "swd.tooltip.include_entities.1": "Sett fast, ob Entitäten mit speekert weern schöllt",
+  "swd.tooltip.include_entities.2": "tosammen mit de daalladene Welt.",
+  "swd.tooltip.include_player_data.1": "Sett fast, ob Spelerdaten mit speekert weern schöllt",
+  "swd.tooltip.include_player_data.2": "tosammen mit de daalladene Welt.",
+  "swd.tooltip.include_resource_packs.1": "Sett fast, ob Server-Ressource-Pakke speekert weern schöllt",
+  "swd.tooltip.include_resource_packs.2": "mit de daalladene Welt."
 }

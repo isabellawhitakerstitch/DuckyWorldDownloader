@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Landsbybeboer-handelsdata gemt.",
   "swd.status.enderchest_saved": "> Enderchest-indhold gemt.",
   "swd.status.container_saved": "> Containerindhold gemt.",
-  "swd.status.saving_chunk": "> Gemmer chunk %s"
+  "swd.status.saving_chunk": "> Gemmer chunk %s",
+  "swd.status.resume_saving": "> Genoptager gemning af chunks...",
+  "swd.status.queue_full": "> Gemmekøen er fuld! Gemte ikke &s",
+  "swd.status.itemframe_saved": "> Indhold i tingramme gemt.",
+  "swd.tooltip.resume_downloads.1": "Indstil om gemning skal genoptages",
+  "swd.tooltip.resume_downloads.2": "hvis der findes en anden gemt fil for verdenen.",
+  "swd.screen.config.label.resume_downloads": "Genoptag gemning:"
 }
 

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Datele de tranzacție ale săteanului salvate.",
   "swd.status.enderchest_saved": "> Conținutul cufărului ender salvat.",
   "swd.status.container_saved": "> Conținutul containerului salvat.",
-  "swd.status.saving_chunk": "> Se salvează chunk-ul %s"
+  "swd.status.saving_chunk": "> Se salvează chunk-ul %s",
+  "swd.status.resume_saving": "> Se reia salvarea chunk-urilor...",
+  "swd.status.queue_full": "> Coada de salvare este plină! Nu s-a salvat &s",
+  "swd.status.itemframe_saved": "> Conținutul ramei de obiecte a fost salvat.",
+  "swd.tooltip.resume_downloads.1": "Setează dacă salvarea ar trebui reluată",
+  "swd.tooltip.resume_downloads.2": "dacă se găsește o altă salvare pentru lume.",
+  "swd.screen.config.label.resume_downloads": "Reluare salvare:",
+  "swd.tooltip.save_world_to.1": "Setați numele lumii salvate.",
+  "swd.tooltip.save_world_to.2": "Dacă o lume cu acest nume există deja,",
+  "swd.tooltip.save_world_to.3": "noile fragmente vor suprascrie părți din acea lume.",
+  "swd.tooltip.auto_download.1": "Setați dacă lumile trebuie descărcate",
+  "swd.tooltip.auto_download.2": "automat la conectarea la server.",
+  "swd.tooltip.include_entities.1": "Setați dacă entitățile trebuie salvate",
+  "swd.tooltip.include_entities.2": "împreună cu lumea descărcată.",
+  "swd.tooltip.include_player_data.1": "Setați dacă datele jucătorului trebuie salvate",
+  "swd.tooltip.include_player_data.2": "împreună cu lumea descărcată.",
+  "swd.tooltip.include_resource_packs.1": "Setați dacă pachetele de resurse ale serverului trebuie",
+  "swd.tooltip.include_resource_packs.2": "salvate cu lumea descărcată."
 }

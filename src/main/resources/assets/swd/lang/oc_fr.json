@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Donnadas de comèrci de vilatges salvadas.",
   "swd.status.enderchest_saved": "> Contengut del coffre de l'ender salvat.",
   "swd.status.container_saved": "> Contengut del contenant salvat.",
-  "swd.status.saving_chunk": "> Salvagarda del chunk %s"
+  "swd.status.saving_chunk": "> Salvament del tròç %s",
+  "swd.status.resume_saving": "> Represa del salvament dels tròç...",
+  "swd.status.queue_full": "> La fila d'espèra es plena ! Pas pogut salvar &s",
+  "swd.status.itemframe_saved": "> Contengut del quadre d'objècte salvat.",
+  "swd.tooltip.resume_downloads.1": "Definís se lo salvament deu reprendre",
+  "swd.tooltip.resume_downloads.2": "se un autre salvament per aqueste mond es trobat.",
+  "swd.screen.config.label.resume_downloads": "Reprendre lo salvament :",
+  "swd.tooltip.save_world_to.1": "Definissètz lo nom del mond salvadet.",
+  "swd.tooltip.save_world_to.2": "Se un mond amb aqueste nom existís ja,",
+  "swd.tooltip.save_world_to.3": "los nouveths chunks ecrason partidas d'aqueth mond.",
+  "swd.tooltip.auto_download.1": "Definissètz se los monds devon èsser telecargats",
+  "swd.tooltip.auto_download.2": "automaticament en se connectant a un servidor.",
+  "swd.tooltip.include_entities.1": "Definissètz se las entitats devon èsser salvadas",
+  "swd.tooltip.include_entities.2": "amb lo mond telecargat.",
+  "swd.tooltip.include_player_data.1": "Definissètz se las donadas del jogaire devon èsser salvadas",
+  "swd.tooltip.include_player_data.2": "amb lo mond telecargat.",
+  "swd.tooltip.include_resource_packs.1": "Definissètz se los pacòts de ressorsas del servidor",
+  "swd.tooltip.include_resource_packs.2": "devon èsser salvats amb lo mond telecargat."
 }

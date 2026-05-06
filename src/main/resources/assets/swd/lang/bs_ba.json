@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Podaci o trgovini seljaka sačuvani.",
   "swd.status.enderchest_saved": "> Sadržaj Ender škrinje sačuvan.",
   "swd.status.container_saved": "> Sadržaj kontejnera sačuvan.",
-  "swd.status.saving_chunk": "> Spremalnje chunka %s"
+  "swd.status.saving_chunk": "> Spašavanje chunka %s",
+  "swd.status.resume_saving": "> Nastavljanje spašavanja chunkova...",
+  "swd.status.queue_full": "> Red za spašavanje je pun! Nije spašeno &s",
+  "swd.status.itemframe_saved": "> Sadržaj okvira za predmete je spašen.",
+  "swd.tooltip.resume_downloads.1": "Postavite da li se spašavanje treba nastaviti",
+  "swd.tooltip.resume_downloads.2": "ako je pronađeno drugo spašavanje za ovaj svijet.",
+  "swd.screen.config.label.resume_downloads": "Nastavi spašavanje:"
 }
 

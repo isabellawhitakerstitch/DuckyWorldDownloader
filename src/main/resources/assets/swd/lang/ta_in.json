@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> கிராமவாசி வர்த்தக தரவு சேமிக்கப்பட்டது.",
   "swd.status.enderchest_saved": "> எண்டர் பெட்டி உள்ளடக்கம் சேமிக்கப்பட்டது.",
   "swd.status.container_saved": "> கொள்கலன் உள்ளடக்கம் சேமிக்கப்பட்டது.",
-  "swd.status.saving_chunk": "> சங்கு %s சேமிக்கப்படுகிறது"
+  "swd.status.saving_chunk": "> சுங்க் %s சேமிக்கப்படுகிறது",
+  "swd.status.resume_saving": "> சுங்குகளைச் சேமிப்பதைத் தொடர்கிறது...",
+  "swd.status.queue_full": "> சேமிப்பு வரிசை நிறைந்தது! &s சேமிக்கப்படவில்லை",
+  "swd.status.itemframe_saved": "> உருப்படி சட்டத்தின் உள்ளடக்கம் சேமிக்கப்பட்டது.",
+  "swd.tooltip.resume_downloads.1": "சேமிப்பதைத் தொடர வேண்டுமா என்பதை அமைத்திடு",
+  "swd.tooltip.resume_downloads.2": "இந்த உலகிற்கு மற்றொரு சேமிப்பு கண்டறியப்பட்டால்.",
+  "swd.screen.config.label.resume_downloads": "சேமிப்பைத் தொடர்:",
+  "swd.tooltip.save_world_to.1": "சேமிக்கப்பட்ட உலகின் பெயரை அமைக்கவும்.",
+  "swd.tooltip.save_world_to.2": "இந்தப் பெயரில் ஒரு உலகம் ஏற்கனவே இருந்தால்,",
+  "swd.tooltip.save_world_to.3": "புதிய துண்டுகள் அந்த உலகின் பகுதிகளை மேலெழுதும்.",
+  "swd.tooltip.auto_download.1": "சேவையகத்தில் சேரும்போது உலகங்கள்",
+  "swd.tooltip.auto_download.2": "தானாகவே பதிவிறக்கம் செய்யப்பட வேண்டுமா என அமைக்கவும்.",
+  "swd.tooltip.include_entities.1": "பதிவிறக்கப்பட்ட உலகத்துடன் உருவங்கள்",
+  "swd.tooltip.include_entities.2": "சேமிக்கப்பட வேண்டுமா என அமைக்கவும்.",
+  "swd.tooltip.include_player_data.1": "பதிவிறக்கப்பட்ட உலகத்துடன் வீரர் தரவு",
+  "swd.tooltip.include_player_data.2": "சேமிக்கப்பட வேண்டுமா என அமைக்கவும்.",
+  "swd.tooltip.include_resource_packs.1": "சேவையகத்தின் வள தொகுப்புகள்",
+  "swd.tooltip.include_resource_packs.2": "பதிவிறக்கப்பட்ட உலகத்துடன் சேமிக்கப்பட வேண்டுமா என அமைக்கவும்."
 }

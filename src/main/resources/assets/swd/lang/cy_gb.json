@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Data masnach pentrefwr wedi'i gadw.",
   "swd.status.enderchest_saved": "> Cynnwys cist Ender wedi'i gadw.",
   "swd.status.container_saved": "> Cynnwys cynhwysydd wedi'i gadw.",
-  "swd.status.saving_chunk": "> Cadw cyfci %s"
+  "swd.status.saving_chunk": "> Yn cadw rhan %s",
+  "swd.status.resume_saving": "> Yn ailddechrau cadw rhannau...",
+  "swd.status.queue_full": "> Mae'r rhes gadw'n llawn! Heb gadw &s",
+  "swd.status.itemframe_saved": "> Cadwyd cynnwys y ffrâm eitem.",
+  "swd.tooltip.resume_downloads.1": "Gosodwch a ddylid ailddechrau cadw",
+  "swd.tooltip.resume_downloads.2": "os canfyddir rhan arall sydd wedi'i chadw ar gyfer y byd.",
+  "swd.screen.config.label.resume_downloads": "Ailddechrau cadw:"
 }
 

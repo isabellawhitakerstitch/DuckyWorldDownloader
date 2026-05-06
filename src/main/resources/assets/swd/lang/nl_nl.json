@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Dorpsbewoner handelsgegevens opgeslagen.",
   "swd.status.enderchest_saved": "> Endkist inhoud opgeslagen.",
   "swd.status.container_saved": "> Container inhoud opgeslagen.",
-  "swd.status.saving_chunk": "> Chunk %s opslaan"
+  "swd.status.saving_chunk": "> Chunk %s opslaan",
+  "swd.status.resume_saving": "> Opslaan van chunks hervatten...",
+  "swd.status.queue_full": "> Opslagrij is vol! %s is niet opgeslagen",
+  "swd.status.itemframe_saved": "> Inhoud van itemlijst opgeslagen.",
+  "swd.tooltip.resume_downloads.1": "Stel in of opslaan hervat moet worden",
+  "swd.tooltip.resume_downloads.2": "als er een andere save voor de wereld is gevonden.",
+  "swd.screen.config.label.resume_downloads": "Opslaan hervatten:"
 }

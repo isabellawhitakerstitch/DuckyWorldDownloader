@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Roadennoù marc'hadourezh ar vilajourien enrollet.",
   "swd.status.enderchest_saved": "> Endalc'had kist ender enrollet.",
   "swd.status.container_saved": "> Endalc'had ar c'hontenour enrollet.",
-  "swd.status.saving_chunk": "> Enrollañ kunk %s"
+  "swd.status.saving_chunk": "> O enrollañ ar c'hantenn %s",
+  "swd.status.resume_saving": "> O kenderc'hel da enrollañ ar c'hantennoù...",
+  "swd.status.queue_full": "> Leun eo al lostenn enrollañ ! N'eo ket bet enrollet &s",
+  "swd.status.itemframe_saved": "> Danvez ar sternad a zo bet enrollet.",
+  "swd.tooltip.resume_downloads.1": "Lakaat mard eo ret kenderc'hel da enrollañ",
+  "swd.tooltip.resume_downloads.2": "ma vez kavet un enrolladenn all evit ar bed-mañ.",
+  "swd.screen.config.label.resume_downloads": "Kenderc'hel da enrollañ :"
 }
 

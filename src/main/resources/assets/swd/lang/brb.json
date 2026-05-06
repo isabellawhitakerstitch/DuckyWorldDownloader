@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Handelaargegevens opgeslagen.",
   "swd.status.enderchest_saved": "> Inhoud van Enderborst opgeslagen.",
   "swd.status.container_saved": "> Inhoud van container opgeslagen.",
-  "swd.status.saving_chunk": "> Chunk opslaan: %s"
+  "swd.status.saving_chunk": "> Chunk %s aon 't opslaon",
+  "swd.status.resume_saving": "> Opslaon van chunks hervatten...",
+  "swd.status.queue_full": "> Opslaogrij is vol! &s is nie opgeslaoge",
+  "swd.status.itemframe_saved": "> Inhoud van itemlijst opgeslaoge.",
+  "swd.tooltip.resume_downloads.1": "Stel in of opslaon hervat moet worre",
+  "swd.tooltip.resume_downloads.2": "as d'r un andere save voor de wereld gevonnen is.",
+  "swd.screen.config.label.resume_downloads": "Opslaon hervatten:"
 }
 

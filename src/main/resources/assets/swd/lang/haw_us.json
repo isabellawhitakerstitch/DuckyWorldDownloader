@@ -17,5 +17,19 @@
   "swd.status.villager_trade_saved": "> Ua mālama ʻia ka ʻike kālepa kamaʻāina.",
   "swd.status.enderchest_saved": "> Ua mālama ʻia ka pahu ender.",
   "swd.status.container_saved": "> Ua mālama ʻia ka pahu waiwai.",
-  "swd.status.saving_chunk": "> Ke mālama nei i ka chunk %s"
+  "swd.status.saving_chunk": "> Ke mālama nei i ka ʻāpana %s",
+  "swd.status.resume_saving": "> Hoʻomau i ka mālama ʻana i nā ʻāpana...",
+  "swd.status.queue_full": "> Piha ka lālani mālama! ʻAʻole i mālama ʻia ʻo &s",
+  "swd.status.itemframe_saved": "> Mālama ʻia ka mea i loko o ka mōlina mea.",
+  "swd.tooltip.resume_downloads.1": "Hoʻonohonoho inā pono e hoʻomau i ka mālama ʻana",
+  "swd.tooltip.resume_downloads.2": "inā loaʻa kahi mālama ʻē aʻe no ka honua.",
+  "swd.screen.config.label.resume_downloads": "Hoʻomau i ka mālama ʻana:",
+  "swd.tooltip.auto_download.1": "Hoʻonohonoho inā e hoʻoiho ʻia nā honua",
+  "swd.tooltip.auto_download.2": "ʻokoʻa i ka hui ʻana i ka kikowaena.",
+  "swd.tooltip.include_entities.1": "Hoʻonohonoho inā e mālama ʻia nā mea",
+  "swd.tooltip.include_entities.2": "me ka honua i hoʻoiho ʻia.",
+  "swd.tooltip.include_player_data.1": "Hoʻonohonoho inā e mālama ʻia nā ʻikepili o ka mea pāʻani",
+  "swd.tooltip.include_player_data.2": "me ka honua i hoʻoiho ʻia.",
+  "swd.tooltip.include_resource_packs.1": "Hoʻonohonoho inā e mālama ʻia nā ʻūpena kumu o ka kikowaena",
+  "swd.tooltip.include_resource_packs.2": "me ka honua i hoʻoiho ʻia."
 }

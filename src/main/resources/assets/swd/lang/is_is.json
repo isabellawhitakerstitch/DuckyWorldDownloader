@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Verslunargögn þorpsbúa vistuð.",
   "swd.status.enderchest_saved": "> Innihald ender-kistu vistað.",
   "swd.status.container_saved": "> Innihald geymslu vistað.",
-  "swd.status.saving_chunk": "> Vistar bút %s"
+  "swd.status.saving_chunk": "> Vista bút %s",
+  "swd.status.resume_saving": "> Framheld vistun búta...",
+  "swd.status.queue_full": "> Vistunarröð er full! Vistaði ekki &s",
+  "swd.status.itemframe_saved": "> Innihald hlutamma vistað.",
+  "swd.tooltip.resume_downloads.1": "Veldu hvort halda eigi vistun áfram",
+  "swd.tooltip.resume_downloads.2": "ef önnur vistun finnst fyrir heiminn.",
+  "swd.screen.config.label.resume_downloads": "Halda vistun áfram:",
+  "swd.tooltip.save_world_to.1": "Stilltu nafn á vistaða heiminn.",
+  "swd.tooltip.save_world_to.2": "Ef heimur með þessu nafni er þegar til,",
+  "swd.tooltip.save_world_to.3": "munu nýjar hólf skrifa yfir hlutar þess heims.",
+  "swd.tooltip.auto_download.1": "Stilltu hvort heimar eigi að sækjast",
+  "swd.tooltip.auto_download.2": "sjálfkrafa þegar þú skráir þig inn á þjón.",
+  "swd.tooltip.include_entities.1": "Stilltu hvort einingar eigi að vistast",
+  "swd.tooltip.include_entities.2": "ásamt niðurhalað heiminum.",
+  "swd.tooltip.include_player_data.1": "Stilltu hvort leikmanagögn eigi að vistast",
+  "swd.tooltip.include_player_data.2": "ásamt niðurhalað heiminum.",
+  "swd.tooltip.include_resource_packs.1": "Stilltu hvort forðapakkar þjónsins eigi",
+  "swd.tooltip.include_resource_packs.2": "að vistast með niðurhalað heiminum."
 }

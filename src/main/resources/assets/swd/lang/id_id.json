@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Data perdagangan penduduk desa disimpan.",
   "swd.status.enderchest_saved": "> Isi peti ender disimpan.",
   "swd.status.container_saved": "> Isi kontainer disimpan.",
-  "swd.status.saving_chunk": "> Menyimpan chunk %s"
+  "swd.status.saving_chunk": "> Menyimpan chunk %s",
+  "swd.status.resume_saving": "> Melanjutkan penyimpanan chunk...",
+  "swd.status.queue_full": "> Antrean simpan penuh! Tidak menyimpan &s",
+  "swd.status.itemframe_saved": "> Konten bingkai item disimpan.",
+  "swd.tooltip.resume_downloads.1": "Atur apakah penyimpanan harus dilanjutkan",
+  "swd.tooltip.resume_downloads.2": "jika penyimpanan lain untuk dunia ini ditemukan.",
+  "swd.screen.config.label.resume_downloads": "Lanjutkan menyimpan:",
+  "swd.tooltip.save_world_to.1": "Tetapkan nama dunia yang disimpan.",
+  "swd.tooltip.save_world_to.2": "Jika dunia dengan nama ini sudah ada,",
+  "swd.tooltip.save_world_to.3": "chunk baru menimpa bagian dunia tersebut.",
+  "swd.tooltip.auto_download.1": "Tetapkan apakah dunia harus diunduh",
+  "swd.tooltip.auto_download.2": "secara otomatis saat bergabung ke server.",
+  "swd.tooltip.include_entities.1": "Tetapkan apakah entitas harus disimpan",
+  "swd.tooltip.include_entities.2": "bersama dengan dunia yang diunduh.",
+  "swd.tooltip.include_player_data.1": "Tetapkan apakah data pemain harus disimpan",
+  "swd.tooltip.include_player_data.2": "bersama dengan dunia yang diunduh.",
+  "swd.tooltip.include_resource_packs.1": "Tetapkan apakah paket sumber daya server harus",
+  "swd.tooltip.include_resource_packs.2": "disimpan bersama dengan dunia yang diunduh."
 }

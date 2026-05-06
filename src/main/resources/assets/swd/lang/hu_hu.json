@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Falusi kereskedelmi adatok mentve.",
   "swd.status.enderchest_saved": "> Ender-láda tartalma mentve.",
   "swd.status.container_saved": "> Tároló tartalma mentve.",
-  "swd.status.saving_chunk": "> %s chunk mentése"
+  "swd.status.saving_chunk": "> Chunk mentése: %s",
+  "swd.status.resume_saving": "> Chunkok mentésének folytatása...",
+  "swd.status.queue_full": "> A mentési sor megtelt! &s nem lett elmentve",
+  "swd.status.itemframe_saved": "> Tárgykeret tartalma elmentve.",
+  "swd.tooltip.resume_downloads.1": "Állítsd be, hogy folytatódjon-e a mentés,",
+  "swd.tooltip.resume_downloads.2": "ha a világhoz található egy másik mentés.",
+  "swd.screen.config.label.resume_downloads": "Mentés folytatása:",
+  "swd.tooltip.save_world_to.1": "Állítsd be a mentett világ nevét.",
+  "swd.tooltip.save_world_to.2": "Ha már létezik egy ilyen nevű világ,",
+  "swd.tooltip.save_world_to.3": "az új darabok felülírják a világ egyes részeit.",
+  "swd.tooltip.auto_download.1": "Állítsd be, hogy a világok automatikusan",
+  "swd.tooltip.auto_download.2": "töltődjenek-e le szerverre csatlakozáskor.",
+  "swd.tooltip.include_entities.1": "Állítsd be, hogy az entitások mentésre kerüljenek-e",
+  "swd.tooltip.include_entities.2": "a letöltött világgal együtt.",
+  "swd.tooltip.include_player_data.1": "Állítsd be, hogy a játékosadatok mentésre kerüljenek-e",
+  "swd.tooltip.include_player_data.2": "a letöltött világgal együtt.",
+  "swd.tooltip.include_resource_packs.1": "Állítsd be, hogy a szerver erőforráscsomagjai",
+  "swd.tooltip.include_resource_packs.2": "mentésre kerüljenek-e a letöltött világgal."
 }

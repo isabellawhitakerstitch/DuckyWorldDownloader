@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dörpsbewoner-handelgegaeves opgeslage.",
   "swd.status.enderchest_saved": "> Enderkist-inhoud opgeslage.",
   "swd.status.container_saved": "> Container-inhoud opgeslage.",
-  "swd.status.saving_chunk": "> Chunk %s opsloon"
+  "swd.status.saving_chunk": "> Chunk %s opslaan",
+  "swd.status.resume_saving": "> Opslaan van chunks hervatten...",
+  "swd.status.queue_full": "> Opslagrij is vol! %s is niet opgeslagen",
+  "swd.status.itemframe_saved": "> Inhoud van itemlijst opgeslagen.",
+  "swd.tooltip.resume_downloads.1": "Stel in of opslaan hervat moet worden",
+  "swd.tooltip.resume_downloads.2": "als er een andere save voor de wereld is gevonden.",
+  "swd.screen.config.label.resume_downloads": "Opslaan hervatten:",
+  "swd.tooltip.save_world_to.1": "Stel de naam in van de opgesloage welt.",
+  "swd.tooltip.save_world_to.2": "As dao al ein welt met diese naam bestoet,",
+  "swd.tooltip.save_world_to.3": "zulle de nuuie chunks dele van die welt uverschrieve.",
+  "swd.tooltip.auto_download.1": "Stel in of welten automatisch gedownload",
+  "swd.tooltip.auto_download.2": "moete weure bie 't betreeje van ein server.",
+  "swd.tooltip.include_entities.1": "Stel in of entiteite opgesloage moete weure",
+  "swd.tooltip.include_entities.2": "same met de gedownloade welt.",
+  "swd.tooltip.include_player_data.1": "Stel in of spelersgegevens opgesloage moete weure",
+  "swd.tooltip.include_player_data.2": "same met de gedownloade welt.",
+  "swd.tooltip.include_resource_packs.1": "Stel in of server-bronpakkette opgesloage",
+  "swd.tooltip.include_resource_packs.2": "moete weure met de gedownloade welt."
 }

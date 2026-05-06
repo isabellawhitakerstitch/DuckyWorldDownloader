@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> 주민 거래 데이터가 저장되었습니다.",
   "swd.status.enderchest_saved": "> 엔더 상자 내용물이 저장되었습니다.",
   "swd.status.container_saved": "> 보관함 내용물이 저장되었습니다.",
-  "swd.status.saving_chunk": "> 청크 %s 저장 중"
+  "swd.status.saving_chunk": "> 청크 %s 저장 중",
+  "swd.status.resume_saving": "> 청크 저장 재개 중...",
+  "swd.status.queue_full": "> 저장 대기열이 가득 찼습니다! &s 저장 실패",
+  "swd.status.itemframe_saved": "> 아이템 액자 내용물 저장됨.",
+  "swd.tooltip.resume_downloads.1": "해당 월드의 다른 저장 데이터가 발견될 경우",
+  "swd.tooltip.resume_downloads.2": "저장을 재개할지 여부를 설정합니다.",
+  "swd.screen.config.label.resume_downloads": "저장 재개:"
 }

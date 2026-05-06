@@ -56,9 +56,7 @@ public class SwdClient implements ClientModInitializer {
         });
 
         ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
-            ScreenEvents.remove(screen).register((closedScreen) -> {
-                SaveManager.onScreenClosed(closedScreen);
-            });
+            ScreenEvents.remove(screen).register(SaveManager::onScreenClosed);
         });
 
         ClientLifecycleEvents.CLIENT_STOPPING.register(client -> {
@@ -79,6 +77,7 @@ public class SwdClient implements ClientModInitializer {
 
         UseEntityCallback.EVENT.register((player, level, hand, entity, hitResult) -> {
             SaveManager.lastClicked = entity;
+            SaveManager.onEntityInteract(entity);
             return InteractionResult.PASS;
         });
 

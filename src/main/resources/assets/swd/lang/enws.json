@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Merchant barters preserved.",
   "swd.status.enderchest_saved": "> Void coffer contents preserved.",
   "swd.status.container_saved": "> Vessel contents preserved.",
-  "swd.status.saving_chunk": "> Preserving land %s"
+  "swd.status.saving_chunk": "> Preserving the realm's fragment %s",
+  "swd.status.resume_saving": "> Hark! The preservation of fragments doth resume...",
+  "swd.status.queue_full": "> The scroll is full! I couldst not scribe &s",
+  "swd.status.itemframe_saved": "> The tapestry within the frame is secured.",
+  "swd.tooltip.resume_downloads.1": "Decree if the labor shouldst be taken up anew",
+  "swd.tooltip.resume_downloads.2": "should another chronicle of this world be found.",
+  "swd.screen.config.label.resume_downloads": "Resume the labor:"
 }

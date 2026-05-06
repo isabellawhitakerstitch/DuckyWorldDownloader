@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dorfbewohner-Handelsdate gespäichert.",
   "swd.status.enderchest_saved": "> Inhalt vun der Endertru ginn gespäichert.",
   "swd.status.container_saved": "> Containerinhalt gespäichert.",
-  "swd.status.saving_chunk": "> Späichere Chunk %s"
+  "swd.status.saving_chunk": "> Chunk %s gëtt gespäichert",
+  "swd.status.resume_saving": "> Virufueren mam Späicheren vun den Chunks...",
+  "swd.status.queue_full": "> D'Späicher-Waardeschlaang ass voll! &s gouf net gespäichert",
+  "swd.status.itemframe_saved": "> Inhalt vum Kader gespäichert.",
+  "swd.tooltip.resume_downloads.1": "Luecht fest, ob d'Späichere soll virugefouert ginn,",
+  "swd.tooltip.resume_downloads.2": "wann nach eng aner Späicherung vun dëser Welt fonnt gëtt.",
+  "swd.screen.config.label.resume_downloads": "Späichere virufueren:",
+  "swd.tooltip.save_world_to.1": "Setzt den Numm vun der gespäicherter Welt.",
+  "swd.tooltip.save_world_to.2": "Wann eng Welt mat dësem Numm scho existéiert,",
+  "swd.tooltip.save_world_to.3": "iwwerschreiwen déi nei Chunks Deeler vun där Welt.",
+  "swd.tooltip.auto_download.1": "Setzt ob Welten automatesch erofgeluede solle ginn",
+  "swd.tooltip.auto_download.2": "wann een engem Server bäitritt.",
+  "swd.tooltip.include_entities.1": "Setzt ob Entitéite mat gespäichert solle ginn",
+  "swd.tooltip.include_entities.2": "zesumme mat der erofgeluedener Welt.",
+  "swd.tooltip.include_player_data.1": "Setzt ob Spillerdaten mat gespäichert solle ginn",
+  "swd.tooltip.include_player_data.2": "zesumme mat der erofgeluedener Welt.",
+  "swd.tooltip.include_resource_packs.1": "Setzt ob Server-Ressourcepakete mat gespäichert",
+  "swd.tooltip.include_resource_packs.2": "solle ginn mat der erofgeluedener Welt."
 }

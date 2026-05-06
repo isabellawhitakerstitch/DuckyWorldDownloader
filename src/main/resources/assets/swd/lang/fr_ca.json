@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Données de commerce de villageois enregistrées.",
   "swd.status.enderchest_saved": "> Contenu du coffre de l'End enregistré.",
   "swd.status.container_saved": "> Contenu du conteneur enregistré.",
-  "swd.status.saving_chunk": "> Enregistrement du chunk %s"
+  "swd.status.saving_chunk": "> Sauvegarde du tronçon %s",
+  "swd.status.resume_saving": "> Reprise de la sauvegarde des tronçons...",
+  "swd.status.queue_full": "> La file d'attente est pleine ! N'a pas pu sauvegarder &s",
+  "swd.status.itemframe_saved": "> Contenu du cadre d'objet sauvegardé.",
+  "swd.tooltip.resume_downloads.1": "Définit si la sauvegarde doit reprendre",
+  "swd.tooltip.resume_downloads.2": "si une autre sauvegarde pour ce monde est trouvée.",
+  "swd.screen.config.label.resume_downloads": "Reprendre la sauvegarde :"
 }
 

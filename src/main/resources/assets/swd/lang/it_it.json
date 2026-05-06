@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Scambi dei villici salvati.",
   "swd.status.enderchest_saved": "> Contenuto del baule di ender salvato.",
   "swd.status.container_saved": "> Contenuto del contenitore salvato.",
-  "swd.status.saving_chunk": "> Salvataggio del chunk %s"
+  "swd.status.saving_chunk": "> Salvataggio del chunk %s",
+  "swd.status.resume_saving": "> Ripresa del salvataggio dei chunk...",
+  "swd.status.queue_full": "> La coda di salvataggio è piena! Non è stato salvato &s",
+  "swd.status.itemframe_saved": "> Contenuto dell'item frame salvato.",
+  "swd.tooltip.resume_downloads.1": "Imposta se il salvataggio deve riprendere",
+  "swd.tooltip.resume_downloads.2": "se viene trovato un altro salvataggio per questo mondo.",
+  "swd.screen.config.label.resume_downloads": "Riprendi salvataggio:"
 }

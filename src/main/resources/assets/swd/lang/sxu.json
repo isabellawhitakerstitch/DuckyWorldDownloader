@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Dorfbewohner-Handelsdadn gespeichert.",
   "swd.status.enderchest_saved": "> Enderkistn-Inhalt gespeichert.",
   "swd.status.container_saved": "> Kistn-Inhalt gespeichert.",
-  "swd.status.saving_chunk": "> Speichre Chunk %s"
+  "swd.status.saving_chunk": "> Isch speischere den Chunk %s",
+  "swd.status.resume_saving": "> Geht weidor mit’m Speischorn...",
+  "swd.status.queue_full": "> De Schlange is voll! Hab &s ni gespeischort",
+  "swd.status.itemframe_saved": "> Das Zeich im Rahmen is nu ooch gespeischort.",
+  "swd.tooltip.resume_downloads.1": "Hia kannste einstelln, ob’r weiter speischorn soll,",
+  "swd.tooltip.resume_downloads.2": "wenn’r noch ’ne andre Datei von dor Welt find’t.",
+  "swd.screen.config.label.resume_downloads": "Speischorn weitormachen:",
+  "swd.tooltip.save_world_to.1": "Setz den Namen vun der gespeicherten Welt.",
+  "swd.tooltip.save_world_to.2": "Wenn scho ene Welt mid dem Namen gibd,",
+  "swd.tooltip.save_world_to.3": "schreiben die neien Chunks Teile vun der Welt iwwer.",
+  "swd.tooltip.auto_download.1": "Setz ob Welten automatisch runnergeladen wern solln",
+  "swd.tooltip.auto_download.2": "wenn mer eem Server beidritt.",
+  "swd.tooltip.include_entities.1": "Setz ob Entitäten midgespeichert wern solln",
+  "swd.tooltip.include_entities.2": "zamm mid der runnergeladen Welt.",
+  "swd.tooltip.include_player_data.1": "Setz ob Spielerdaten midgespeichert wern solln",
+  "swd.tooltip.include_player_data.2": "zamm mid der runnergeladen Welt.",
+  "swd.tooltip.include_resource_packs.1": "Setz ob Server-Ressourcepakete gespeichert wern solln",
+  "swd.tooltip.include_resource_packs.2": "mid der runnergeladen Welt."
 }

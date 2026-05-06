@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Тосгоны иргэдийн арилжааны өгөгдлийг хадгаллаа.",
   "swd.status.enderchest_saved": "> Эндер авдарны агуулгыг хадгаллаа.",
   "swd.status.container_saved": "> Савны агуулгыг хадгаллаа.",
-  "swd.status.saving_chunk": "> %s чанкыг хадгалж байна"
+  "swd.status.saving_chunk": "> Хэсгийг %s хадгалж байна",
+  "swd.status.resume_saving": "> Хэсгүүдийг хадгалахыг үргэлжлүүлж байна...",
+  "swd.status.queue_full": "> Хадгалах дараалал дүүрсэн байна! &s хадгалагдсангүй",
+  "swd.status.itemframe_saved": "> Эд зүйлсийн жаазны агуулгыг хадгалав.",
+  "swd.tooltip.resume_downloads.1": "Хадгалалтыг үргэлжлүүлэх эсэхийг тохируулна уу",
+  "swd.tooltip.resume_downloads.2": "хэрэв дэлхийн өөр хадгалалт олдвол.",
+  "swd.screen.config.label.resume_downloads": "Хадгалалтыг үргэлжлүүлэх:",
+  "swd.tooltip.save_world_to.1": "Хадгалагдсан дэлхийн нэрийг тохируул.",
+  "swd.tooltip.save_world_to.2": "Хэрэв энэ нэртэй дэлхий байгаа бол,",
+  "swd.tooltip.save_world_to.3": "шинэ хэсгүүд тэр дэлхийн хэсгүүдийг дарж бичнэ.",
+  "swd.tooltip.auto_download.1": "Серверт нэгдэх үед дэлхийнүүд",
+  "swd.tooltip.auto_download.2": "автоматаар татагдах эсэхийг тохируул.",
+  "swd.tooltip.include_entities.1": "Тэмдэглэгдсэн объектуудыг татаж авсан",
+  "swd.tooltip.include_entities.2": "дэлхийн хамт хадгалах эсэхийг тохируул.",
+  "swd.tooltip.include_player_data.1": "Тоглогчийн өгөгдлийг татаж авсан",
+  "swd.tooltip.include_player_data.2": "дэлхийн хамт хадгалах эсэхийг тохируул.",
+  "swd.tooltip.include_resource_packs.1": "Серверийн нөөцийн багцуудыг татаж авсан",
+  "swd.tooltip.include_resource_packs.2": "дэлхийн хамт хадгалах эсэхийг тохируул."
 }

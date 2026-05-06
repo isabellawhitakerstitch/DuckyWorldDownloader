@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Id-dejta tal-kummerċ tar-raħħala ġiet issejvjata.",
   "swd.status.enderchest_saved": "> Il-kontenut tal-enderchest ġie ssejvjat.",
   "swd.status.container_saved": "> Il-kontenut tal-kontenitur ġie ssejvjat.",
-  "swd.status.saving_chunk": "> Qed issejvja chunk %s"
+  "swd.status.saving_chunk": "> Qed isalva chunk %s",
+  "swd.status.resume_saving": "> Tkompli s-salvar ta' chunks...",
+  "swd.status.queue_full": "> Il-kju tas-salvar huwa mimli! Ma salvajtx &s",
+  "swd.status.itemframe_saved": "> Il-kontenut tal-item frame ġie salvat.",
+  "swd.tooltip.resume_downloads.1": "Issettja jekk is-salvar għandux jitkompla",
+  "swd.tooltip.resume_downloads.2": "jekk jinstab salvar ieħor għad-dinja.",
+  "swd.screen.config.label.resume_downloads": "Kompli salva:",
+  "swd.tooltip.save_world_to.1": "Issettja l-isem tad-dinja mħażżna.",
+  "swd.tooltip.save_world_to.2": "Jekk dinja b'dan l-isem diġà teżisti,",
+  "swd.tooltip.save_world_to.3": "il-chunks ġodda jissostitwixxu partijiet minn dik id-dinja.",
+  "swd.tooltip.auto_download.1": "Issettja jekk id-dinjiet għandhomx jiġu mniżżla",
+  "swd.tooltip.auto_download.2": "awtomatikament meta tingħaqad ma' server.",
+  "swd.tooltip.include_entities.1": "Issettja jekk l-entitajiet għandhomx jiġu mħażżna",
+  "swd.tooltip.include_entities.2": "flimkien mad-dinja mniżżla.",
+  "swd.tooltip.include_player_data.1": "Issettja jekk id-data tal-plejer għandhiex tiġi mħażżna",
+  "swd.tooltip.include_player_data.2": "flimkien mad-dinja mniżżla.",
+  "swd.tooltip.include_resource_packs.1": "Issettja jekk il-pakketti tar-riżorsi tas-server",
+  "swd.tooltip.include_resource_packs.2": "għandhomx jiġu mħażżna mad-dinja mniżżla."
 }

@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Köylü takas verileri kaydedildi.",
   "swd.status.enderchest_saved": "> Ender sandığı içeriği kaydedildi.",
   "swd.status.container_saved": "> Konteyner içeriği kaydedildi.",
-  "swd.status.saving_chunk": "> Yığın %s kaydediliyor"
+  "swd.status.saving_chunk": "> Chunk %s kaydediliyor",
+  "swd.status.resume_saving": "> Chunk'ları kaydetmeye devam ediliyor...",
+  "swd.status.queue_full": "> Kayıt kuyruğu dolu! &s kaydedilemedi",
+  "swd.status.itemframe_saved": "> Eşya çerçevesi içeriği kaydedildi.",
+  "swd.tooltip.resume_downloads.1": "Bu dünya için başka bir kayıt bulunursa",
+  "swd.tooltip.resume_downloads.2": "kaydetme işleminin devam edip etmeyeceğini ayarlayın.",
+  "swd.screen.config.label.resume_downloads": "Kaydetmeye devam et:"
 }

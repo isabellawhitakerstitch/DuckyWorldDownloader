@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Komercaj datumoj de vilaĝano konservitaj.",
   "swd.status.enderchest_saved": "> Enhavo de Ender-kesto konservita.",
   "swd.status.container_saved": "> Enhavo de ujo konservita.",
-  "swd.status.saving_chunk": "> Konservante pecon %s"
+  "swd.status.saving_chunk": "> Konservante pecon %s",
+  "swd.status.resume_saving": "> Daŭrigante konservadon de pecoj...",
+  "swd.status.queue_full": "> Konserva vico estas plena! Ne konservis &s",
+  "swd.status.itemframe_saved": "> Enhavo de aĵkadro konservita.",
+  "swd.tooltip.resume_downloads.1": "Agordu ĉu konservado devus esti daŭrigita",
+  "swd.tooltip.resume_downloads.2": "se alia konservo por la mondo estas trovita.",
+  "swd.screen.config.label.resume_downloads": "Daŭrigi konservadon:"
 }
 

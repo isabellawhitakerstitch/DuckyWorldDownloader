@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Kaimiečių prekybos duomenys išsaugoti.",
   "swd.status.enderchest_saved": "> Enderio skrynios turinys išsaugotas.",
   "swd.status.container_saved": "> Konteinerio turinys išsaugotas.",
-  "swd.status.saving_chunk": "> Saugomas chunkas %s"
+  "swd.status.saving_chunk": "> Įrašomas gabalas %s",
+  "swd.status.resume_saving": "> Tęsiamas gabalų įrašymas...",
+  "swd.status.queue_full": "> Įrašymo eilė pilna! Neįrašyta &s",
+  "swd.status.itemframe_saved": "> Daikto rėmelio turinys įrašytas.",
+  "swd.tooltip.resume_downloads.1": "Nustatykite, ar įrašymas turėtų būti tęsiamas,",
+  "swd.tooltip.resume_downloads.2": "jei randamas kitas šio pasaulio įrašas.",
+  "swd.screen.config.label.resume_downloads": "Tęsti įrašymą:",
+  "swd.tooltip.save_world_to.1": "Nustatykite išsaugoto pasaulio pavadinimą.",
+  "swd.tooltip.save_world_to.2": "Jei pasaulis šiuo pavadinimu jau egzistuoja,",
+  "swd.tooltip.save_world_to.3": "nauji fragmentai perrašys to pasaulio dalis.",
+  "swd.tooltip.auto_download.1": "Nustatykite, ar pasauliai turi būti atsiunčiami",
+  "swd.tooltip.auto_download.2": "automatiškai prisijungus prie serverio.",
+  "swd.tooltip.include_entities.1": "Nustatykite, ar objektai turi būti išsaugoti",
+  "swd.tooltip.include_entities.2": "kartu su atsisiųstu pasauliu.",
+  "swd.tooltip.include_player_data.1": "Nustatykite, ar žaidėjo duomenys turi būti išsaugoti",
+  "swd.tooltip.include_player_data.2": "kartu su atsisiųstu pasauliu.",
+  "swd.tooltip.include_resource_packs.1": "Nustatykite, ar serverio išteklių paketai turi",
+  "swd.tooltip.include_resource_packs.2": "būti išsaugoti su atsisiųstu pasauliu."
 }

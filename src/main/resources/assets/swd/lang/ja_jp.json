@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> 村人の取引データを保存しました。",
   "swd.status.enderchest_saved": "> エンダーチェストの中身を保存しました。",
   "swd.status.container_saved": "> コンテナーの中身を保存しました。",
-  "swd.status.saving_chunk": "> チャンク %s を保存中"
+  "swd.status.saving_chunk": "> チャンク %s を保存しています",
+  "swd.status.resume_saving": "> チャンクの保存を再開しています...",
+  "swd.status.queue_full": "> 保存キューがいっぱいです！ &s を保存できませんでした",
+  "swd.status.itemframe_saved": "> 額縁のコンテンツを保存しました。",
+  "swd.tooltip.resume_downloads.1": "このワールドの別のセーブデータが見つかった場合、",
+  "swd.tooltip.resume_downloads.2": "保存を再開するかどうかを設定します。",
+  "swd.screen.config.label.resume_downloads": "保存を再開:"
 }

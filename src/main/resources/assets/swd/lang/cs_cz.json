@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Data obchodu vesničanů uložena.",
   "swd.status.enderchest_saved": "> Obsah Ender truhly uložen.",
   "swd.status.container_saved": "> Obsah kontejneru uložen.",
-  "swd.status.saving_chunk": "> Ukládání chunku %s"
+  "swd.status.saving_chunk": "> Ukládání chunku %s",
+  "swd.status.resume_saving": "> Pokračování v ukládání chunků...",
+  "swd.status.queue_full": "> Fronta pro ukládání je plná! Neuloženo &s",
+  "swd.status.itemframe_saved": "> Obsah rámečku na předměty byl uložen.",
+  "swd.tooltip.resume_downloads.1": "Nastavte, zda má ukládání pokračovat,",
+  "swd.tooltip.resume_downloads.2": "pokud je pro tento svět nalezeno jiné uložení.",
+  "swd.screen.config.label.resume_downloads": "Pokračovat v ukládání:"
 }
 

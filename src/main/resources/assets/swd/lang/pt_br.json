@@ -25,5 +25,11 @@
   "swd.status.villager_trade_saved": "> Trocas de aldeões salvas.",
   "swd.status.enderchest_saved": "> Conteúdo do baú do fim salvo.",
   "swd.status.container_saved": "> Conteúdo do contêiner salvo.",
-  "swd.status.saving_chunk": "> Salvando chunk %s"
+  "swd.status.saving_chunk": "> Salvando chunk %s",
+  "swd.status.resume_saving": "> Retomando o salvamento de chunks...",
+  "swd.status.queue_full": "> A fila de salvamento está cheia! Não foi possível salvar &s",
+  "swd.status.itemframe_saved": "> Conteúdo da moldura salvo.",
+  "swd.tooltip.resume_downloads.1": "Define se o salvamento deve ser retomado",
+  "swd.tooltip.resume_downloads.2": "se outro salvamento para o mundo for encontrado.",
+  "swd.screen.config.label.resume_downloads": "Retomar salvamento:"
 }

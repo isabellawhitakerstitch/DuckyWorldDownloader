@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Даныя гандлю вяскоўцаў захаваны.",
   "swd.status.enderchest_saved": "> Змест эндер-скрыні захаваны.",
   "swd.status.container_saved": "> Змест кантэйнера захаваны.",
-  "swd.status.saving_chunk": "> Захаванне чанка %s"
+  "swd.status.saving_chunk": "> Захаванне чанка %s",
+  "swd.status.resume_saving": "> Аднаўленне захавання чанкаў...",
+  "swd.status.queue_full": "> Чарга захавання поўная! Не захавана &s",
+  "swd.status.itemframe_saved": "> Змесціва рамкі для прадметаў захавана.",
+  "swd.tooltip.resume_downloads.1": "Вызначце, ці варта працягваць захаванне,",
+  "swd.tooltip.resume_downloads.2": "калі знойдзена іншае захаванне для гэтага свету.",
+  "swd.screen.config.label.resume_downloads": "Аднавіць захаванне:"
 }
 

@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Xogta ganacsiga tuulada waa la kaydiyay.",
   "swd.status.enderchest_saved": "> Waxyaabaha ku jira sanduuqa ender waa la kaydiyay.",
   "swd.status.container_saved": "> Waxyaabaha ku jira weelka waa la kaydiyay.",
-  "swd.status.saving_chunk": "> Waxaa la kaydinayaa qaybta %s"
+  "swd.status.saving_chunk": "> Keydinta chunk-ga %s",
+  "swd.status.resume_saving": "> Dib u bilaabida keydinta chunk-yada...",
+  "swd.status.queue_full": "> Safka keydinta waa buuxaa! Lama keydin &s",
+  "swd.status.itemframe_saved": "> Macluumaadka sanduuqa alaabta waa la keydiyay.",
+  "swd.tooltip.resume_downloads.1": "Deji haddii keydinta dib loo bilaabayo",
+  "swd.tooltip.resume_downloads.2": "haddii la helo keyd kale oo adduunka ah.",
+  "swd.screen.config.label.resume_downloads": "Dib u bilow keydinta:",
+  "swd.tooltip.save_world_to.1": "Deji magaca adduunka la keydsaday.",
+  "swd.tooltip.save_world_to.2": "Haddii adduun magacaas leh horay u jiray,",
+  "swd.tooltip.save_world_to.3": "chunks cusub ayaa qaybo ka badali doona adduunkaas.",
+  "swd.tooltip.auto_download.1": "Deji haddii adduunadu u soo dejinayaan",
+  "swd.tooltip.auto_download.2": "si toos ah markaad servarka ku biirto.",
+  "swd.tooltip.include_entities.1": "Deji haddii shayada la keydsanayo",
+  "swd.tooltip.include_entities.2": "xagga adduunka la soo dejiyay.",
+  "swd.tooltip.include_player_data.1": "Deji haddii xogta ciyaartoyga la keydsanayo",
+  "swd.tooltip.include_player_data.2": "xagga adduunka la soo dejiyay.",
+  "swd.tooltip.include_resource_packs.1": "Deji haddii xirmooyin kheyraadka servarka",
+  "swd.tooltip.include_resource_packs.2": "la keydsanayo adduunka la soo dejiyay."
 }

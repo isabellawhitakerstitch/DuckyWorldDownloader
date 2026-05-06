@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Villager trade data saved.",
   "swd.status.enderchest_saved": "> Enderchest content saved.",
   "swd.status.container_saved": "> Container content saved.",
-  "swd.status.saving_chunk": "> Saving chunk %s"
+  "swd.status.saving_chunk": "> Saving chunk %s",
+  "swd.status.resume_saving": "> Resuming saving chunks...",
+  "swd.status.queue_full": "> Save queue is full! Did not save &s",
+  "swd.status.itemframe_saved": "> Item frame content saved.",
+  "swd.tooltip.resume_downloads.1": "Set whether saving should be resumed",
+  "swd.tooltip.resume_downloads.2": "if another save for the world is found.",
+  "swd.screen.config.label.resume_downloads": "Resume saving:"
 }
 

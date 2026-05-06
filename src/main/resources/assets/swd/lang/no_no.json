@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Handelsdata for landsbybeboere lagret.",
   "swd.status.enderchest_saved": "> Innhold i enderkiste lagret.",
   "swd.status.container_saved": "> Innhold i beholder lagret.",
-  "swd.status.saving_chunk": "> Lagrer chunk %s"
+  "swd.status.saving_chunk": "> Lagrer chunk %s",
+  "swd.status.resume_saving": "> Gjenopptar lagring av chunks...",
+  "swd.status.queue_full": "> Lagringskøen er full! Lagret ikke &s",
+  "swd.status.itemframe_saved": "> Innholdet i gjenstandsrammen er lagret.",
+  "swd.tooltip.resume_downloads.1": "Velg om lagring skal gjenopptas",
+  "swd.tooltip.resume_downloads.2": "hvis en annen lagring for verdenen blir funnet.",
+  "swd.screen.config.label.resume_downloads": "Gjenoppta lagring:",
+  "swd.tooltip.save_world_to.1": "Angi navnet på den lagrede verdenen.",
+  "swd.tooltip.save_world_to.2": "Hvis en verden med dette navnet allerede eksisterer,",
+  "swd.tooltip.save_world_to.3": "vil nye biter overskrive deler av den verdenen.",
+  "swd.tooltip.auto_download.1": "Angi om verdener skal lastes ned",
+  "swd.tooltip.auto_download.2": "automatisk ved tilkobling til server.",
+  "swd.tooltip.include_entities.1": "Angi om enheter skal lagres",
+  "swd.tooltip.include_entities.2": "sammen med den nedlastede verdenen.",
+  "swd.tooltip.include_player_data.1": "Angi om spillerdata skal lagres",
+  "swd.tooltip.include_player_data.2": "sammen med den nedlastede verdenen.",
+  "swd.tooltip.include_resource_packs.1": "Angi om serverressurspakker skal",
+  "swd.tooltip.include_resource_packs.2": "lagres med den nedlastede verdenen."
 }

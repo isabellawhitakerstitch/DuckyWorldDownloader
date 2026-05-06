@@ -25,6 +25,12 @@
   "swd.status.villager_trade_saved": "> Dorfbewohner-Handelsdatn gspeichert.",
   "swd.status.enderchest_saved": "> Endertruhn-Inhalt gspeichert.",
   "swd.status.container_saved": "> Behälterinhalt gspeichert.",
-  "swd.status.saving_chunk": "> Chunk wird gspeichert: %s"
+  "swd.status.saving_chunk": "> Speicha Chunk %s",
+  "swd.status.resume_saving": "> Weida mit'm Speichan vo Chunks...",
+  "swd.status.queue_full": "> Speichaschlanga is voi! &s is ned gspeichat worn",
+  "swd.status.itemframe_saved": "> Inhoid vom Ramma gspeichat.",
+  "swd.tooltip.resume_downloads.1": "Stell ei, ob as Speichan weidagemocht wern soi,",
+  "swd.tooltip.resume_downloads.2": "wann a andana Speichastand fia de Wejd gfundn wead.",
+  "swd.screen.config.label.resume_downloads": "Speichan weidamocha:"
 }
 

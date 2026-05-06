@@ -14,5 +14,22 @@
   "swd.status.villager_trade_saved": "> Údaje o obchode dedinčanov uložené.",
   "swd.status.enderchest_saved": "> Obsah ender truhlice uložený.",
   "swd.status.container_saved": "> Obsah kontajnera uložený.",
-  "swd.status.saving_chunk": "> Ukladá sa chunk %s"
+  "swd.status.saving_chunk": "> Ukladanie chunku %s",
+  "swd.status.resume_saving": "> Pokračovanie v ukladaní chunkov...",
+  "swd.status.queue_full": "> Fronta na ukladanie je plná! Neuložené &s",
+  "swd.status.itemframe_saved": "> Obsah rámu na predmety bol uložený.",
+  "swd.tooltip.resume_downloads.1": "Nastavte, či má ukladanie pokračovať,",
+  "swd.tooltip.resume_downloads.2": "ak sa pre tento svet nájde iné uloženie.",
+  "swd.screen.config.label.resume_downloads": "Pokračovať v ukladaní:",
+  "swd.tooltip.save_world_to.1": "Nastavte názov uloženého sveta.",
+  "swd.tooltip.save_world_to.2": "Ak svet s týmto názvom už existuje,",
+  "swd.tooltip.save_world_to.3": "nové chunky prepíšu časti tohto sveta.",
+  "swd.tooltip.auto_download.1": "Nastavte, či sa majú svety sťahovať",
+  "swd.tooltip.auto_download.2": "automaticky pri pripojení na server.",
+  "swd.tooltip.include_entities.1": "Nastavte, či sa majú entity uložiť",
+  "swd.tooltip.include_entities.2": "spolu so stiahnutým svetom.",
+  "swd.tooltip.include_player_data.1": "Nastavte, či sa majú dáta hráča uložiť",
+  "swd.tooltip.include_player_data.2": "spolu so stiahnutým svetom.",
+  "swd.tooltip.include_resource_packs.1": "Nastavte, či sa majú balíky zdrojov servera",
+  "swd.tooltip.include_resource_packs.2": "uložiť so stiahnutým svetom."
 }
