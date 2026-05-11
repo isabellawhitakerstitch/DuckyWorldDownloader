@@ -1385,6 +1385,12 @@ public class SaveManager {
         version.putByte("Snapshot", IS_SNAPSHOT);
         data.put("Version", version);
 
+        CompoundTag gameRulesV2 = new CompoundTag();
+        gameRulesV2.putByte("minecraft:do_daylight_cycle", (byte) 1);
+        gameRulesV2.putByte("minecraft:do_weather_cycle", (byte) 1);
+        gameRulesV2.putInt("minecraft:random_tick_speed", 0);
+        data.put("game_rules", gameRulesV2);
+
         CompoundTag dataPacks = new CompoundTag();
         ListTag enabled = new ListTag();
         enabled.add(StringTag.valueOf("vanilla"));
@@ -1474,7 +1480,7 @@ public class SaveManager {
         data.putByte("minecraft:universal_anger", (byte) 0);
         data.putByte("minecraft:keep_inventory", (byte) 0);
         data.putByte("minecraft:spawn_patrols", (byte) 1);
-        data.putInt("minecraft:random_tick_speed", 3);
+        data.putInt("minecraft:random_tick_speed", 0);
         data.putByte("minecraft:fire_damage", (byte) 1);
         data.putByte("minecraft:entity_drops", (byte) 1);
         data.putByte("minecraft:advance_time", (byte) 1);
