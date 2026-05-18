@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "id": "swd",
   "version": "${version}",
-  "name": "Simple World Downloader",
-  "description": "Allows you to download worlds from servers.",
-  "authors": ["J0KER2J0KER"],
+  "name": "Ducky World Downloader",
+  "description": "Allows you to download worlds from Unstable Events.",
+  "authors": ["Duckygang21"],
   "contact": {
     "homepage": "https://github.com/J0KER2J0KER/SimpleWorldDownloader",
     "sources": "https://github.com/J0KER2J0KER/SimpleWorldDownloader",
